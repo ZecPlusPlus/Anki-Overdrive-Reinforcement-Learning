@@ -1,0 +1,3 @@
+.venv
+.anki_venv
+__pycache__/*
