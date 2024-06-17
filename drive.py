@@ -3,7 +3,7 @@ import threading
 import queue
 import logging
 import bluepy.btle as btle
-
+import time
 class Overdrive:
     def __init__(self, addr):
         """Initiate an Anki Overdrive connection object,
@@ -193,7 +193,7 @@ class Overdrive:
         finalCommand = struct.pack("B", len(command)) + command
         if self._writeChar is None:
             self._reconnect = True
-        print("Final", command)    
+        #print("Final", command)    
         self._writeQueue.put(finalCommand)
 
     def setLocationChangeCallback(self, func):
@@ -259,16 +259,20 @@ class OverdriveDelegate(btle.DefaultDelegate):
         self.handle = None
         self.notificationsRecvd = 0
         self.overdrive = overdrive
+        self.current_time = None
+        self.last_time = None
+        self.Transistion_time = None
         btle.DefaultDelegate.__init__(self)
 
     def handleNotification(self, handle, data):
-        print("Data",data)
+        #print("Data",data)
         if self.handle == handle:
             self.notificationsRecvd += 1
             (commandId,) = struct.unpack_from("B", data, 1)
             if commandId == 0x27:
                 # Location position
                 location, piece, offset, speed, clockwiseVal = struct.unpack_from("<BBfHB", data, 2)
+                print("Piece:",piece)
                 clockwise = False
                 if clockwiseVal == 0x47:
                     clockwise = True
@@ -276,7 +280,12 @@ class OverdriveDelegate(btle.DefaultDelegate):
                 #threading.Thread(target=self.overdrive._locationChangeCallback, args=(location, piece, offset, speed, clockwise)).start()
                 #threading.Thread(target=self.overdrive._locationChangeCallback, args=(location, piece, offset, speed, clockwise)).start()
             if commandId == 0x29:
-                #piece, piecePrev, offset, direction = struct.unpack_from("<BBfB", data, 2)
+                piece, piecePrev, offset, direction = struct.unpack_from("<BBfB", data, 2)
+                if self.last_time is not None:
+                    self.current_time = time.perf_counter()
+                    self.Transistion_time = self.current_time - self.last_time
+                    print(f"Transition time: {self.Transistion_time} seconds")
+                self.last_time = time.perf_counter() 
                 self.overdrive._transitionCallback()
                 #threading.Thread(target=self.overdrive._transitionCallback).start()
             elif commandId == 0x17:
@@ -286,4 +295,3 @@ class OverdriveDelegate(btle.DefaultDelegate):
     def setHandle(self, handle):
         self.handle = handle
         self.notificationsRecvd = 0
-

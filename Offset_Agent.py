@@ -105,7 +105,7 @@ class OverdriveEnv(gym.Env):
         truncated = False
 
         # Example condition for done: every 100 steps
-        if self.current_steps >= self.max_steps:
+        if self.car.piece == 34:
             print("Episode finished")
             done = True
 

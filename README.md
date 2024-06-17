@@ -6,9 +6,6 @@ This repository contains various Python scripts and modules designed for the det
 
 ## File Descriptions
 
-### `car_detection.py`
-This script detects green and red cars to demonstrate the learning process.
-
 ### `controller.py`
 This file implements a controller to steer the car based on the detection inputs and other parameters.
 
@@ -17,9 +14,6 @@ This script sends commands to the embedded hardware, effectively linking the sof
 
 ### `Location_test.py`
 This script allows the car to drive at a constant speed to test if the correct location callbacks are being received.
-
-### `Prasentation_file.py`
-This demonstration file runs the car detection and controls the movements of both cars in the environment, showcasing the detection and driving capabilities.
 
 ### `RL_agent_piece_policy.py`
 This reinforcement learning agent calculates rewards based on the time it takes for the car to reach the next piece. Faster completion results in a reward, while longer durations result in penalties.
@@ -33,8 +27,6 @@ This script uses Proximal Policy Optimization (PPO) to learn the driving policy.
 ### `Offset_Agent.py`
 This script is a tryout file which uses instead of right and left commands the offset. It has an 11 action space instead of 4 action space. 
 
-### `Car_detection_laps.py`
-This script uses the camera to track the cars(red and green) and if they finish a lap, a lap counter gets added up by one. 
 
  
 ## Reinforcement Model:
