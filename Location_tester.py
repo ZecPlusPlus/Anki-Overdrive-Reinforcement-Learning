@@ -10,7 +10,6 @@ last_piece_time = None
 def time_to_next_piece(addr, location, offset, piece, speed, clockwise):
     global current_piece, last_piece_time
     current_time = time.perf_counter()
-    
     with lock:
         if piece != current_piece:
             if current_piece is not None:
@@ -24,7 +23,12 @@ def time_to_next_piece(addr, location, offset, piece, speed, clockwise):
     # Print out addr, piece ID, location ID of the vehicle, this print everytime when location changed
     # print("Location from " + addr + " : " + "Piece=" + str(piece) + " Location=" + str(location) + " Clockwise=" + str(clockwise))
 
-car = Overdrive("CB:76:55:B9:54:67")
+car = Overdrive("DC:7E:B8:5F:BF:46")
+car.changeSpeed(500,500)
+time.sleep(3)
+print("test")
+
+print(car._delegate.Transistion_time)
 car.setLocationChangeCallback(time_to_next_piece)  
  # Switch to next right lane with speed = 1000, acceleration = 1000
 input("Press Enter to exit\n")  # Hold the program so it won't end abruptly
