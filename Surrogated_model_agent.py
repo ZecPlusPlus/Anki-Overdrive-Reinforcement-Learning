@@ -23,7 +23,7 @@ class OverdriveEnv(gym.Env):
         self.car.setLocationChangeCallback(self._location_change_callback)
         self.laptime = 0
         # Action space: 0 = speed up, 1 = speed down, 2 = offset(-64) , 3 = offset(-48)  , 4 = offset(-32)  , 5 = offset(-16)  , 6 = offset(0)  , 7 = offset(16), 8 = offset(32), 9 = offset(48) , 10 = offset(64)
-        self.action_space = spaces.Discrete(5)
+        self.action_space = spaces.Discrete(9)
         self.lap_counter = 0
         # Observation space: speed, piece, offset
         self.observation_space = spaces.Box(
@@ -48,8 +48,12 @@ class OverdriveEnv(gym.Env):
         self.previous_cumulative_time = None
         self.num_pieces = 0  # Variable to count the number of pieces
         self.speed_before = 250
-    
-
+        
+        self.state_before=[]
+        self.state_after=[]
+        self.action_list=[]
+        self.rewards_list=[]
+        self.done_list =[]
     #Need to delete this
     def _location_change_callback(self, addr, location, piece, offset, speed, clockwise):
         current_time = time.perf_counter()
@@ -76,23 +80,47 @@ class OverdriveEnv(gym.Env):
 
     def step(self, action):
         # Execute the action
+        self.state_before.append(self.state)
         self.speed_before = self.car.speed
-        
+        #Left
         if action == 0:
-            speed_minus50 = int(self.speed_before-800/100*25)
-            self.car.changeSpeed(max(300,speed_minus50),500)
-        if action == 1:
-            speed_minus25 = int(self.speed_before-800/100*50)
+            speed_minus25 = int(self.speed_before-800/100*25)
             self.car.changeSpeed(max(300,speed_minus25),500)
+            self.car.changeLaneLeft(self.car.speed,500)
+        if action == 1:
+            speed_plus25 = int(self.speed_before+ 800/100*25)
+            self.car.changeSpeed(min(700,speed_plus25),500)
+            self.car.changeLaneLeft(self.car.speed,500)
         if action == 2:
             self.car.changeSpeed(self.speed_before,500)
+            self.car.changeLaneLeft(self.car.speed,500)
+        #Right    
         if action == 3:
-            speed_plus25 = int(self.speed_before+ 800/100*25)
-            self.car.changeSpeed(min(800,speed_plus25),500)
+            speed_minus25 = int(self.speed_before - 800/100*25)
+            self.car.changeSpeed(max(300,speed_minus25),500)
+            self.car.changeLaneRight(self.car.speed,500)
+            
         if action == 4:
-            speed_plus50 = int(self.speed_before+ 800/100*50)
-            self.car.changeSpeed(min(800,speed_plus50),500)
-                         
+            speed_plus25 = int(self.speed_before + 800/100*25)
+            self.car.changeSpeed(min(700,speed_plus25),500)
+            self.car.changeLaneRight(self.car.speed,500)
+        if action == 5:
+            self.car.changeSpeed(self.speed_before,500)
+            self.car.changeLaneRight(self.car.speed,500)
+            
+        #Keep    
+        
+        if action == 6:
+            speed_minus25 = int(self.speed_before- 800/100*25)
+            self.car.changeSpeed(max(300,speed_minus25),500)
+        if action == 7:
+            speed_plus25 = int(self.speed_before+ 800/100*25)
+            self.car.changeSpeed(min(700,speed_plus25),500)
+        if action == 8:
+            self.car.changeSpeed(self.speed_before,500)
+           
+        
+
         done = False
         truncated = False
         old_piece = self.car.piece
@@ -112,25 +140,32 @@ class OverdriveEnv(gym.Env):
         
         self.state = [self.car.speed, self.car.piece, self.car.offset, self.action_taken , reward]
         
-        if (old_piece == 34 and self.state[1] == 33) or (old_piece == 34 and self.state[1]==40) :
-            current_time = time.perf_counter()
-            self.lap_counter +=1
-            print(self.lap_counter, current_time - self.lap_time_start)
-            #reward -= current_time - self.lap_time_start
-            current_lap_timer = current_time - self.lap_time_start
-            writer.add_scalar("Timer_lap/train",current_lap_timer, self.lap_counter)    
-            done = True
+        if(old_piece == 17 or old_piece == 34):
+
+            if self.state[1] == 33 or self.state[1]==40:
+            
+                current_time = time.perf_counter()
+                self.lap_counter +=1
+                print(self.lap_counter, current_time - self.lap_time_start)
+                #reward -= current_time - self.lap_time_start
+                current_lap_timer = current_time - self.lap_time_start
+                writer.add_scalar("Timer_lap/train",current_lap_timer, self.lap_counter)    
+                done = True
 
         self.state = self.normalize(np.array([self.state]))[0]    
         current_time = time.perf_counter() - self.global_time    
         writer.add_scalar("Time/train",reward, current_time)   
         # Check if the episode is donelap_counter = current_time - 
         self.current_steps += 1
-        print("Reward",reward,"Action:",action,"Before speed", self.speed_before, "Speed now", self.car.speed)   
+
+        print("Reward",reward,"Action:",action,"Before speed", self.speed_before, "Speed now", self.car.speed,"Old_piece:",old_piece, "New_piece:",self.car.piece)   
 
         
         self.action_taken = action
-
+        self.rewards_list.append(reward)
+        self.action_list.append(action)
+        self.state_after.append(self.state)
+        self.done_list.append(done)
         return np.array(self.state, dtype=np.float32), reward, done, truncated, {}
 
     def reset(self, seed=None, options=None):
@@ -165,7 +200,7 @@ class OverdriveEnv(gym.Env):
     
 
 # Usage example
-addr = "C9:96:EB:8F:03:0B" #"C9:96:EB:8F:03:0B" DC:7E:B8:5F:BF:46
+addr = "DC:7E:B8:5F:BF:46" #"C9:96:EB:8F:03:0B" DC:7E:B8:5F:BF:46
 car = Overdrive(addr)  # Assuming the car connection class is available
 env = OverdriveEnv(car)
 # Wrapper for quantum agent, remove comment, when using VQC
@@ -186,27 +221,21 @@ policy_kwargs = dict(activation_fn=th.nn.ReLU,
 #model = PPO('MlpPolicy',env,verbose=2,n_steps=9,learning_rate=0.0001,gamma=0.99,policy_kwargs=policy_kwargs,gae_lambda=0.95,batch_size=9)
 model = A2C('MlpPolicy',env,verbose=2,n_steps=8,learning_rate=0.0001,gamma=0.99,policy_kwargs=policy_kwargs,gae_lambda=0.95)
 
-model.learn(total_timesteps=5000,progress_bar = True)
-
 #with open('interactions.pkl', 'wb') as f:
 #    pickle.dump(env.interactions, f)
 
 
-print("training finished")
-# Save the model
-model.save("overdrive_ppo")
-
-#with open('interactions.pkl', 'rb') as f:
-#    interactions = pickle.load(f)
-
-
-# Load the model
-model = DQN.load("overdrive_ppo")
-
 # Test the trained model
 obs, _ = env.reset()
-for _ in range(1000):
+
+for _ in range(100):
     action, _states = model.predict(obs)
     obs, rewards, done, truncated, info = env.step(action)
     if done or truncated:
         obs, _ = env.reset()
+upper_file = "_0"
+np.save("States"+upper_file+".npy",np.array(env.state_before))        
+np.save("Next_States"+upper_file+".npy",np.array(env.state_after))
+np.save("Actions"+upper_file+".npy",np.array(env.action_list))
+np.save("Rewards"+upper_file+".npy",np.array(env.rewards_list))
+np.save("Done_Counter"+upper_file+".npy",np.array(env.done_list))
