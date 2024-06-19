@@ -18,7 +18,7 @@ class CustomOverdrive(Overdrive):
         current_time = time.time()  
         #print("Location from " + addr + " : " + "Piece=" + str(piece) + " Location=" + str(location) + " Clockwise=" + str(clockwise) + " Speed=" + str(speed))
         # Check if the piece has changed and if the time since last trigger is greater than minimum interval
-        
+        print(offset)
         
         with lock:
             if self.last_piece != piece and (piece not in self.piece_timestamp or current_time - self.piece_timestamp[piece] > self.piece_minimum_interval):
@@ -30,14 +30,14 @@ class CustomOverdrive(Overdrive):
                 self.piece_timestamp[piece] = current_time  # Update the timestamp for the current piece
 
 def main():
-    addr =  "C9:96:EB:8F:03:0B " #DC:7E:B8:5F:BF:46  C9:96:EB:8F:03:0B # CB:76:55:B9:54:67, CF:45:33:60:24:69 Mac-Adress of your AnkiCar -> sudo bluetoothctl -> Scan on -> Look for Anki car(Normally smth with with Anki... Drive 0')
+    addr =  " DC:7E:B8:5F:BF:46 " #DC:7E:B8:5F:BF:46  C9:96:EB:8F:03:0B # CB:76:55:B9:54:67, CF:45:33:60:24:69 Mac-Adress of your AnkiCar -> sudo bluetoothctl -> Scan on -> Look for Anki car(Normally smth with with Anki... Drive 0')
     car = CustomOverdrive(addr)
     
     # Register the callback
     car.setLocationChangeCallback(car.locationChangeCallback)
 
     # Start the car with an initial speed and acceleration
-    initial_speed = 500
+    initial_speed = 300
     initial_accel = 500
     car.changeSpeed(initial_speed, initial_accel)
     print(f"Car started with speed {initial_speed} and acceleration {initial_accel}.")

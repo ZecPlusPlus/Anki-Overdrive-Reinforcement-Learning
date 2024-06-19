@@ -1,0 +1,8 @@
+Speed 300
+offset -64
+offset -41
+offset -18
+offset 0 
+offset 23
+offset 46
+offset 64

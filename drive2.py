@@ -4,13 +4,16 @@ import queue
 import logging
 import bluepy.btle as btle
 import time
+from queue import  Empty
 class Overdrive:
     def __init__(self, addr):
         """Initiate an Anki Overdrive connection object,
         and call connect() function.
+
         Parameters:
         addr -- Bluetooth MAC address for desired Anki Overdrive car.
         """
+        self.counter = 0
         self.addr = addr
         self._peripheral = btle.Peripheral()
         self._readChar = None
@@ -35,6 +38,7 @@ class Overdrive:
                 break
             except btle.BTLEException as e:
                 logging.getLogger("anki.overdrive").error(e.message)
+        #self.move_to_starting_point()
     def __del__(self):
         """Deconstructor for an Overdrive object"""
         self.disconnect()
@@ -55,15 +59,26 @@ class Overdrive:
         if self._btleSubThread is None:
             self._transferExecution()
 
+    def move_to_starting_point(self):
+        self.changeSpeed(600,500)
+        while not self._delegate.starting_point_trigger:
+            continue
+        self.changeSpeed(0,15000)
+
+
     def _transferExecution(self):
         """Fork a thread for handling BTLE notification, for internal use only."""
         self._btleSubThread = threading.Thread(target=self._executor)
         self._btleSubThread.start()
+        self._locationThread = threading.Thread(target=self._location_changed_thread)
+        self._locationThread.start()
+
     def disconnect(self):
         """Disconnect from the Overdrive."""
         if self._connected and (self._btleSubThread is None or not self._btleSubThread.is_alive()):
             self._disconnect()
         self._connected = False
+
     def _disconnect(self):
         """Internal function. Disconnect from the Overdrive."""
         try:
@@ -71,6 +86,7 @@ class Overdrive:
             self._peripheral.disconnect()
         except btle.BTLEException as e:
             logging.getLogger("anki.overdrive").error(e.message)
+
     def changeSpeed(self, speed, accel):
         """Change speed for Overdrive.
         
@@ -80,43 +96,58 @@ class Overdrive:
         """
         command = struct.pack("<BHHB", 0x24, speed, accel, 0x01)
         self.sendCommand(command)
+
     def doUturn(self):
         command = struct.pack("<Bbb", 0x32, 3, 0)
         self.sendCommand(command)
+
     def changeLaneRight(self, speed, accel):
         """Switch to adjacent right lane.
+
         Parameters:
         speed -- Desired speed. (from 0 - 1000)
         accel -- Desired acceleration. (from 0 - 1000)
         """
-        self.changeLane(speed, accel, 44.5)
+
+        self.changeLane(speed, accel, 23)
+
     def changeLaneLeft(self, speed, accel):
         """Switch to adjacent left lane.
+
         Parameters:
         speed -- Desired speed. (from 0 - 1000)
         accel -- Desired acceleration. (from 0 - 1000)
         """
-        self.changeLane(speed, accel, -44.5)
+
+        self.changeLane(speed, accel, -23)
+
     def changeLane(self, speed, accel, offset):
         """Change lane.
+
         Parameters:
         speed -- Desired speed. (from 0 - 1000)
         accel -- Desired acceleration. (from 0 - 1000)
         offset -- Offset from current lane. (negative for left, positive for right)
         """
+
+        
         command = struct.pack("<BHHf", 0x25, speed, accel, offset)
         self.sendCommand(command)
+
     def setLane(self, offset):
         """Set internal lane offset (unused).
+
         Parameters:
         offset -- Desired offset.
         """
         
         command = struct.pack("<Bf", 0x2c, offset)
         self.sendCommand(command)
+
     def turnOnSdkMode(self):
         """Turn on SDK mode for Overdrive."""
         self.sendCommand(b"\x90\x01\x01")
+
     def enableNotify(self):
         """Repeatly enable notification, until success."""
         while True:
@@ -127,9 +158,26 @@ class Overdrive:
             if self.getNotificationsReceived() > 0:
                 break
             logging.getLogger("anki.overdrive").error("Set notify failed")
+
     def ping(self):
         """Ping command."""
         self.sendCommand(b"\x16")
+
+    def _location_changed_thread(self):
+        while self._connected:
+            try:
+                
+                (piece, piecePrev, offset, direction) = self._delegate.location_queue.get_nowait()
+        
+                if(self.counter % 9 == 0):
+                    print("Lap completed")
+                #print("Piece", piece, "offset", offset)
+                self.counter +=1
+            except Empty as empty_ex:
+                continue
+            except Exception as ex:
+                raise ex
+            
     def _executor(self):
         """Notification thread, for internal use only."""
         data = None  # Initialize data variable to None
@@ -160,9 +208,12 @@ class Overdrive:
                 self._reconnect = True  # Set reconnect flag to retry
         self._disconnect()  # Disconnect when the connection is no longer active
         self._btleSubThread = None  # Reset the Bluetooth sub-thread
+
+
     def getNotificationsReceived(self):
         """Get notifications received count."""
         return self._delegate.notificationsRecvd
+
     def sendCommand(self, command):
         """Send raw command to Overdrive
         
@@ -174,14 +225,18 @@ class Overdrive:
             self._reconnect = True
         #print("Final", command)    
         self._writeQueue.put(finalCommand)
+
     def setLocationChangeCallback(self, func):
         """Set location change callback.
+
         Parameters:
         func -- Function for callback. (see _locationChangeCallback() for details)
         """
         self._locationChangeCallbackFunc = func
+
     def _locationChangeCallback(self, location,  piece, offset, speed, clockwise):
         """Location change callback wrapper.
+
         Parameters:
         addr -- MAC address of car
         location -- Received location ID on piece.
@@ -192,12 +247,15 @@ class Overdrive:
         """
         if self._locationChangeCallbackFunc is not None:
             self._locationChangeCallbackFunc(self.addr, location,  piece, offset, speed, clockwise)
+
     def setPongCallback(self, func):
         """Set pong callback.
+
         Parameters:
         func -- Function for callback. (see _pongCallback() for details)
         """
         self._pongCallbackFunc = func
+
     def _pongCallback(self):
         """Pong callback wrapper.
         
@@ -206,12 +264,15 @@ class Overdrive:
         """ 
         if self._pongCallbackFunc is not None:
             self._pongCallbackFunc(self.addr)
+
     def setTransitionCallback(self, func):
         """Set piece transition callback.
+
         Parameters:
         func -- Function for callback. (see _transitionCallback() for details)
         """
         self._transitionCallbackFunc = func
+
     def _transitionCallback(self):
         """Piece transition callback wrapper.
         
@@ -223,31 +284,34 @@ class Overdrive:
     
 class OverdriveDelegate(btle.DefaultDelegate):
     """Notification delegate object for Bluepy, for internal use only."""
-
+    
     def __init__(self, overdrive):
+        self.starting_point_trigger = False
         self.flag = False
         self.handle = None
         self.notificationsRecvd = 0
         self.overdrive = overdrive
         self.current_time = None
         self.last_time = None
+        self.location_queue = queue.Queue()
         self.Transistion_time = None
+        self.offset = 0
         btle.DefaultDelegate.__init__(self)
-        self.track_map = [33,40,18,20,36,39,18,17,34]
-        self.track_counter = 0
-        self.offset = 0.0
+
     def handleNotification(self, handle, data):
         #print("Data",data)
         if self.handle == handle:
             self.notificationsRecvd += 1
             (commandId,) = struct.unpack_from("B", data, 1)
             if commandId == 0x27:
-                #self.flag = True
+                self.flag = True
                 # Location position
                 location, piece, offset, speed, clockwiseVal = struct.unpack_from("<BBfHB", data, 2)
-                #print("Piece:",piece,"Location",location)
-                #print("Piece:",piece)
-                
+                if not self.starting_point_trigger :
+                    if piece == 34 and location in list(range(0,50,2)):
+                        self.starting_point_trigger=True
+                      
+                print("Piece",piece,"Location",location)
                 clockwise = False
                 if clockwiseVal == 0x47:
                     clockwise = True
@@ -256,24 +320,22 @@ class OverdriveDelegate(btle.DefaultDelegate):
                 #threading.Thread(target=self.overdrive._locationChangeCallback, args=(location, piece, offset, speed, clockwise)).start()
             if commandId == 0x29:
                 self.flag = True
+           
+                #print("unpack",location, piece, offset, speed)
                 
-                 
                 piece, piecePrev, offset, direction = struct.unpack_from("<BBfB", data, 2)
-                self.offset = offset 
-                if self.last_time is not None:
-                    self.current_time = time.perf_counter()
-                    self.Transistion_time = self.current_time - self.last_time
-                    #print(f"Transition time: {self.Transistion_time} seconds")
-            
-                    #print(f"Transition time: {self.Transistion_time} seconds")
-                self.last_time = time.perf_counter() 
-                self.track_counter += 1
+                
+                self.location_queue.put((piece, piecePrev, offset, direction))
                 self.overdrive._transitionCallback()
                 #threading.Thread(target=self.overdrive._transitionCallback).start()
             elif commandId == 0x17:
                 #self.flag = True
                 self.overdrive._pongCallback()
                 #threading.Thread(target=self.overdrive._pongCallback).start()
+            elif commandId == 0x2a:
+                print("0x2a")
+            elif commandId == 0x1b:
+                print("Hallo",struct.unpack_from("<H", data, 2)[0])    
 
     def setHandle(self, handle):
         self.handle = handle
