@@ -83,20 +83,22 @@ class Overdrive:
     def doUturn(self):
         command = struct.pack("<Bbb", 0x32, 3, 0)
         self.sendCommand(command)
+
     def changeLaneRight(self, speed, accel):
         """Switch to adjacent right lane.
         Parameters:
         speed -- Desired speed. (from 0 - 1000)
         accel -- Desired acceleration. (from 0 - 1000)
         """
-        self.changeLane(speed, accel, 44.5)
+        self.changeLane(speed, accel, 30)
     def changeLaneLeft(self, speed, accel):
         """Switch to adjacent left lane.
         Parameters:
         speed -- Desired speed. (from 0 - 1000)
         accel -- Desired acceleration. (from 0 - 1000)
         """
-        self.changeLane(speed, accel, -44.5)
+        self.changeLane(speed, accel, -30)
+
     def changeLane(self, speed, accel, offset):
         """Change lane.
         Parameters:
@@ -106,14 +108,15 @@ class Overdrive:
         """
         command = struct.pack("<BHHf", 0x25, speed, accel, offset)
         self.sendCommand(command)
+
     def setLane(self, offset):
         """Set internal lane offset (unused).
         Parameters:
         offset -- Desired offset.
         """
-        
         command = struct.pack("<Bf", 0x2c, offset)
         self.sendCommand(command)
+
     def turnOnSdkMode(self):
         """Turn on SDK mode for Overdrive."""
         self.sendCommand(b"\x90\x01\x01")

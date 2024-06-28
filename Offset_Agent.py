@@ -23,7 +23,7 @@ class OverdriveEnv(gym.Env):
         self.car.setLocationChangeCallback(self._location_change_callback)
         self.laptime = 0
         # Action space: 0 = speed up, 1 = speed down, 2 = offset(-64) , 3 = offset(-48)  , 4 = offset(-32)  , 5 = offset(-16)  , 6 = offset(0)  , 7 = offset(16), 8 = offset(32), 9 = offset(48) , 10 = offset(64)
-        self.action_space = spaces.Discrete(5)
+        self.action_space = spaces.Discrete(12)
         self.lap_counter = 0
         # Observation space: Transistion time, offset, piece ,next_piece, Curve/straight
         self.observation_space = spaces.Box(
@@ -32,15 +32,15 @@ class OverdriveEnv(gym.Env):
             dtype=np.float32
         )
         self.current_speed = 250
-        self.track_map = [33,40,18,20,36,39,18,17,34]
-        self.rotation_pieces = [18,20,17]
-        self.straight_pieces = [33,40,34,36,39]
+        self.track_map = [33,57,18,23,36,39,20,18,34]                                #self.track_map = [33,40,18,20,36,39,18,17,34]
+        self.rotation_pieces = [18,20,23]
+        self.straight_pieces = [33,34,36,57,39]
         self.action_taken = np.array([2,2])
         self.epsilon = 1e-8
 
         self.global_time = time.perf_counter()
         # Initial state
-        self.state = [3,self.car._delegate.offset,34, 33 , 1, 2,2]
+        self.state = [3,self.car._delegate.offset, 34, 33 , 1, 2,2]
         self.start_time = time.perf_counter()
         
         self.max_steps = 100 # Maximum number of steps per episode
@@ -74,28 +74,79 @@ class OverdriveEnv(gym.Env):
         self.car.speed = speed
     
     def normalize(self, obs):
-        obs = (obs-self.observation_space.low)/(self.observation_space.high - self.observation_space.low)
+       
+        low = self.observation_space.low
+        high = self.observation_space.high
+        if low is None or high is None:
+            raise ValueError("low or high is None, please check the initialization.")
+        if low is not None and high is not None:
+            obs = (obs - low) / (high - low + self.epsilon)
+        print(obs)    
         return obs
     
     def step(self, action):
         # Execute the action
         self.speed_before = self.car.speed
-        
+    
+        if action == 0:  # speed 800 + offset -40
+            new_speed = 800
+            self.car.changeSpeed(new_speed, 15000)
+            self.car.changeLane(new_speed, 15000, -50)
+        elif action == 1:  # speed 600 + offset -40
+            new_speed = 600
+            self.car.changeSpeed(new_speed, 15000)
+            self.car.changeLane(new_speed, 15000, -50)
+        elif action == 2:  # offset -40
+            new_speed = 400
+            self.car.changeSpeed(new_speed, 15000)
+            self.car.changeLane(new_speed, 800, -50)
+        elif action == 3:  # speed 800 + offset 0
+            new_speed = 800
+            self.car.changeSpeed(new_speed, 15000)
+            self.car.changeLane(new_speed, 800, 0)
+        elif action == 4:  # speed 600 + offset 0
+            new_speed = 600
+            self.car.changeSpeed(new_speed, 15000)
+            self.car.changeLane(new_speed, 800, 0)
+        elif action == 5:  # offset 0
+            new_speed = 400
+            self.car.changeSpeed(new_speed, 15000)
+            self.car.changeLane(new_speed, 800, 0)
+        elif action == 6:  # speed 800 + offset 40
+            new_speed = 800
+            self.car.changeSpeed(new_speed, 15000)
+            self.car.changeLane(new_speed, 800, 40)
+        elif action == 7:  # speed 600 + offset 40
+            new_speed = 600
+            self.car.changeSpeed(new_speed, 15000)
+            self.car.changeLane(new_speed, 800, 40)
+        elif action == 8:  # offset 40
+            new_speed = 400
+            self.car.changeSpeed(new_speed, 15000)
+            self.car.changeLane(new_speed, 800, 40) 
+        elif action == 9:  # offset 40
+            new_speed = 400
+            self.car.changeSpeed(new_speed, 15000) 
+        elif action == 10:  # offset 40
+            new_speed = 600
+            self.car.changeSpeed(new_speed, 15000)  
+        elif action == 11:  
+            new_speed = 800
+            self.car.changeSpeed(new_speed, 15000)   
+
+        '''
         if action == 0:
-            
             self.car.changeSpeed(300,15000)
         if action == 1:
-           
             self.car.changeSpeed(400,15000)
         if action == 2:
             self.car.changeSpeed(600,15000)
         if action == 3:
-          
             self.car.changeSpeed(700,15000)
         if action == 4:
-            
             self.car.changeSpeed(800,15000)
-                         
+        '''
+
         done = False
         truncated = False
         old_piece = self.car.piece
@@ -106,15 +157,14 @@ class OverdriveEnv(gym.Env):
              
         self.car._delegate.flag = False
         
-        
-        
+    
         if self.car._delegate.Transistion_time is not None:
             reward = -self.car._delegate.Transistion_time
         else:    
             reward = 0
         current_piece = self.track_map[(self.car._delegate.track_counter-1)%9]
         next_piece = self.track_map[(self.car._delegate.track_counter)%9]
-        
+        print("Current_piece:",current_piece)
         piece_type = 0
         if next_piece in self.straight_pieces:
             piece_type = 1
@@ -174,7 +224,7 @@ class OverdriveEnv(gym.Env):
     
 
 # Usage example
-addr = " DC:7E:B8:5F:BF:46" #"C9:96:EB:8F:03:0B" DC:7E:B8:5F:BF:46
+addr = "CB:76:55:B9:54:67" #"C9:96:EB:8F:03:0B" DC:7E:B8:5F:BF:46 "CF:45:33:60:24:69" "CB:76:55:B9:54:67"
 car = Overdrive(addr)  # Assuming the car connection class is available
 env = OverdriveEnv(car)
 # Wrapper for quantum agent, remove comment, when using VQC
@@ -191,9 +241,9 @@ policy_kwargs = dict(activation_fn=th.nn.ReLU,
                      net_arch=[256,256,256])
 
 # Train the environment with PPO
-model = DQN('MlpPolicy', env, verbose=1,learning_starts=200,train_freq=5,target_update_interval=30,learning_rate=0.00001,exploration_initial_eps=1,exploration_fraction=0.1,gamma=0.99,exploration_final_eps=0,buffer_size=5000,policy_kwargs=policy_kwargs)
+#model = DQN('MlpPolicy', env, verbose=1,learning_starts=200,train_freq=5,target_update_interval=30,learning_rate=0.00001,exploration_initial_eps=1,exploration_fraction=0.1,gamma=0.99,exploration_final_eps=0,buffer_size=5000,policy_kwargs=policy_kwargs)
 #model = PPO('MlpPolicy',env,verbose=2,n_steps=9,learning_rate=0.0001,gamma=0.99,policy_kwargs=policy_kwargs,gae_lambda=0.95,batch_size=9)
-#model = A2C('MlpPolicy',env,verbose=2,n_steps=8,learning_rate=0.0001,gamma=0.99,policy_kwargs=policy_kwargs,gae_lambda=0.95)
+model = A2C('MlpPolicy',env,verbose=2,n_steps=13,learning_rate=0.0001,gamma=0.99,policy_kwargs=policy_kwargs,gae_lambda=0.95)
 
 model.learn(total_timesteps=5000,progress_bar = True)
 
