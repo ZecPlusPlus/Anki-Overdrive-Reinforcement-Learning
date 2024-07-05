@@ -4,6 +4,7 @@ import queue
 import logging
 import bluepy.btle as btle
 import time
+
 class Overdrive:
     def __init__(self, addr):
         """Initiate an Anki Overdrive connection object,
@@ -11,6 +12,7 @@ class Overdrive:
         Parameters:
         addr -- Bluetooth MAC address for desired Anki Overdrive car.
         """
+
         self.addr = addr
         self._peripheral = btle.Peripheral()
         self._readChar = None
@@ -59,11 +61,13 @@ class Overdrive:
         """Fork a thread for handling BTLE notification, for internal use only."""
         self._btleSubThread = threading.Thread(target=self._executor)
         self._btleSubThread.start()
+
     def disconnect(self):
         """Disconnect from the Overdrive."""
         if self._connected and (self._btleSubThread is None or not self._btleSubThread.is_alive()):
             self._disconnect()
         self._connected = False
+
     def _disconnect(self):
         """Internal function. Disconnect from the Overdrive."""
         try:
@@ -71,6 +75,7 @@ class Overdrive:
             self._peripheral.disconnect()
         except btle.BTLEException as e:
             logging.getLogger("anki.overdrive").error(e.message)
+
     def changeSpeed(self, speed, accel):
         """Change speed for Overdrive.
         
@@ -91,6 +96,7 @@ class Overdrive:
         accel -- Desired acceleration. (from 0 - 1000)
         """
         self.changeLane(speed, accel, 30)
+
     def changeLaneLeft(self, speed, accel):
         """Switch to adjacent left lane.
         Parameters:
@@ -120,6 +126,7 @@ class Overdrive:
     def turnOnSdkMode(self):
         """Turn on SDK mode for Overdrive."""
         self.sendCommand(b"\x90\x01\x01")
+
     def enableNotify(self):
         """Repeatly enable notification, until success."""
         while True:
@@ -130,9 +137,11 @@ class Overdrive:
             if self.getNotificationsReceived() > 0:
                 break
             logging.getLogger("anki.overdrive").error("Set notify failed")
+
     def ping(self):
         """Ping command."""
         self.sendCommand(b"\x16")
+
     def _executor(self):
         """Notification thread, for internal use only."""
         data = None  # Initialize data variable to None
@@ -163,9 +172,12 @@ class Overdrive:
                 self._reconnect = True  # Set reconnect flag to retry
         self._disconnect()  # Disconnect when the connection is no longer active
         self._btleSubThread = None  # Reset the Bluetooth sub-thread
+
     def getNotificationsReceived(self):
         """Get notifications received count."""
+
         return self._delegate.notificationsRecvd
+    
     def sendCommand(self, command):
         """Send raw command to Overdrive
         
@@ -177,12 +189,14 @@ class Overdrive:
             self._reconnect = True
         #print("Final", command)    
         self._writeQueue.put(finalCommand)
+
     def setLocationChangeCallback(self, func):
         """Set location change callback.
         Parameters:
         func -- Function for callback. (see _locationChangeCallback() for details)
         """
         self._locationChangeCallbackFunc = func
+
     def _locationChangeCallback(self, location,  piece, offset, speed, clockwise):
         """Location change callback wrapper.
         Parameters:
@@ -195,12 +209,14 @@ class Overdrive:
         """
         if self._locationChangeCallbackFunc is not None:
             self._locationChangeCallbackFunc(self.addr, location,  piece, offset, speed, clockwise)
+
     def setPongCallback(self, func):
         """Set pong callback.
         Parameters:
         func -- Function for callback. (see _pongCallback() for details)
         """
         self._pongCallbackFunc = func
+
     def _pongCallback(self):
         """Pong callback wrapper.
         
@@ -209,12 +225,14 @@ class Overdrive:
         """ 
         if self._pongCallbackFunc is not None:
             self._pongCallbackFunc(self.addr)
+
     def setTransitionCallback(self, func):
         """Set piece transition callback.
         Parameters:
         func -- Function for callback. (see _transitionCallback() for details)
         """
         self._transitionCallbackFunc = func
+
     def _transitionCallback(self):
         """Piece transition callback wrapper.
         
@@ -239,6 +257,7 @@ class OverdriveDelegate(btle.DefaultDelegate):
         self.track_map = [33,40,18,20,36,39,18,17,34]
         self.track_counter = 0
         self.offset = 0.0
+        
     def handleNotification(self, handle, data):
         #print("Data",data)
         if self.handle == handle:

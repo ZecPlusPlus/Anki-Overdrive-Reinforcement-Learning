@@ -16,6 +16,7 @@ from gym.wrappers.normalize import RunningMeanStd
 #from vqc_agent import VQCModel
 #from wrappers import ScalingObservationWrapper
 class OverdriveEnv(gym.Env):
+
     def __init__(self, car):
         super(OverdriveEnv, self).__init__()
 
@@ -27,10 +28,13 @@ class OverdriveEnv(gym.Env):
         self.lap_counter = 0
         # Observation space: Transistion time, offset, piece ,next_piece, Curve/straight
         self.observation_space = spaces.Box(
-            low=np.array([0, -70, 17, 17, 0,0,0]),
-            high=np.array([3,  70, 40, 40, 1,5,5]),
+
+            low=np.array([0, -70, 17, 17, 0, 0, 0]),
+            high=np.array([3, 70, 40, 40, 1, 5, 5]),
             dtype=np.float32
-        )
+
+        )   
+    
         self.current_speed = 250
         self.track_map = [33,57,18,23,36,39,20,18,34]                                #self.track_map = [33,40,18,20,36,39,18,17,34]
         self.rotation_pieces = [18,20,23]
@@ -74,15 +78,14 @@ class OverdriveEnv(gym.Env):
         self.car.speed = speed
     
     def normalize(self, obs):
-       
         low = self.observation_space.low
         high = self.observation_space.high
-        if low is None or high is None:
-            raise ValueError("low or high is None, please check the initialization.")
-        if low is not None and high is not None:
-            obs = (obs - low) / (high - low + self.epsilon)
-        print(obs)    
+        if obs[0] == None: 
+            obs[0] = 0.9 #This is needed bec sometimes in the start he doesnt get the first transistion time
+
+        obs = (obs - low) / (high - low + self.epsilon)
         return obs
+    
     
     def step(self, action):
         # Execute the action
@@ -91,15 +94,15 @@ class OverdriveEnv(gym.Env):
         if action == 0:  # speed 800 + offset -40
             new_speed = 800
             self.car.changeSpeed(new_speed, 15000)
-            self.car.changeLane(new_speed, 15000, -50)
+            self.car.changeLane(new_speed, 800, -40)
         elif action == 1:  # speed 600 + offset -40
             new_speed = 600
             self.car.changeSpeed(new_speed, 15000)
-            self.car.changeLane(new_speed, 15000, -50)
+            self.car.changeLane(new_speed, 800, -40)
         elif action == 2:  # offset -40
             new_speed = 400
             self.car.changeSpeed(new_speed, 15000)
-            self.car.changeLane(new_speed, 800, -50)
+            self.car.changeLane(new_speed, 800, -40)
         elif action == 3:  # speed 800 + offset 0
             new_speed = 800
             self.car.changeSpeed(new_speed, 15000)
@@ -164,7 +167,7 @@ class OverdriveEnv(gym.Env):
             reward = 0
         current_piece = self.track_map[(self.car._delegate.track_counter-1)%9]
         next_piece = self.track_map[(self.car._delegate.track_counter)%9]
-        print("Current_piece:",current_piece)
+        #print("Current_piece:",current_piece)
         piece_type = 0
         if next_piece in self.straight_pieces:
             piece_type = 1
@@ -173,7 +176,7 @@ class OverdriveEnv(gym.Env):
         if (current_piece == 34) and (next_piece == 33) :
             current_time = time.perf_counter()
             self.lap_counter +=1
-            print(self.lap_counter, current_time - self.lap_time_start)
+            print("Round:", self.lap_counter, "with Time", current_time - self.lap_time_start)
             #reward -= current_time - self.lap_time_start
             current_lap_timer = current_time - self.lap_time_start
             writer.add_scalar("Timer_lap/train",current_lap_timer, self.lap_counter)    
@@ -224,26 +227,24 @@ class OverdriveEnv(gym.Env):
     
 
 # Usage example
-addr = "CB:76:55:B9:54:67" #"C9:96:EB:8F:03:0B" DC:7E:B8:5F:BF:46 "CF:45:33:60:24:69" "CB:76:55:B9:54:67"
+addr = "CF:45:33:60:24:69" #"C9:96:EB:8F:03:0B" DC:7E:B8:5F:BF:46 "CF:45:33:60:24:69" "CB:76:55:B9:54:67"
 car = Overdrive(addr)  # Assuming the car connection class is available
 env = OverdriveEnv(car)
 # Wrapper for quantum agent, remove comment, when using VQC
 # env = ScalingObservationWrapper(env) 
 print("Env")
 
-
-
 # Check the environment
 #check_env(env)
 
 # if using VQC, remove comment
 policy_kwargs = dict(activation_fn=th.nn.ReLU,
-                     net_arch=[256,256,256])
+                     net_arch=[256,256,256,256])
 
 # Train the environment with PPO
-#model = DQN('MlpPolicy', env, verbose=1,learning_starts=200,train_freq=5,target_update_interval=30,learning_rate=0.00001,exploration_initial_eps=1,exploration_fraction=0.1,gamma=0.99,exploration_final_eps=0,buffer_size=5000,policy_kwargs=policy_kwargs)
+model = DQN('MlpPolicy', env, verbose=1,learning_starts=200,train_freq=5,target_update_interval=30,learning_rate=0.00001,exploration_initial_eps=1,exploration_fraction=0.1,gamma=0.99,exploration_final_eps=0,buffer_size=5000,policy_kwargs=policy_kwargs)
 #model = PPO('MlpPolicy',env,verbose=2,n_steps=9,learning_rate=0.0001,gamma=0.99,policy_kwargs=policy_kwargs,gae_lambda=0.95,batch_size=9)
-model = A2C('MlpPolicy',env,verbose=2,n_steps=13,learning_rate=0.0001,gamma=0.99,policy_kwargs=policy_kwargs,gae_lambda=0.95)
+#model = A2C('MlpPolicy',env ,verbose=2,n_steps=13,learning_rate=0.0001,gamma=0.99,policy_kwargs=policy_kwargs,gae_lambda=0.95)
 
 model.learn(total_timesteps=5000,progress_bar = True)
 
