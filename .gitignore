@@ -1,5 +1,5 @@
 .venv
-.anki_venv
+anki_venv/
 __pycache__/*
 .cleanrl
 .runs
