@@ -1,0 +1,2127 @@
+/home/zecplusplus/Documents/Fraunhofer/Anki-Overdrive-Code/Anki-Overdrive-Reinforcement-Learning/anki_venv/lib/python3.9/site-packages/gymnasium/spaces/box.py:130: UserWarning: [33mWARN: Box bound precision lowered by casting to float32
+  gym.logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+Reward 0 Action: 2 Before speed 261 Speed now 261
+Reward -2.219907506000254 Action: 3 Before speed 261 Speed now 247
+  0%|                                                                                                                                         | 2/3000 [00:01<35:11,  1.42it/s]
+
+  0%|▏                                                                                                                                        | 3/3000 [00:03<58:00,  1.16s/it]
+
+  0%|▏                                                                                                                                      | 4/3000 [00:05<1:09:54,  1.40s/it]
+
+  0%|▎                                                                                                                                      | 6/3000 [00:07<1:09:48,  1.40s/it]
+Reward -1.2020362210000712 Action: 0 Before speed 357 Speed now 452
+Reward -0.806175254000209 Action: 4 Before speed 452 Speed now 452
+
+  0%|▍                                                                                                                                        | 9/3000 [00:09<44:30,  1.12it/s]
+Round: 1 with Time 9.77866455100002
+Reward -0.9302392609997696 Action: 1 Before speed 452 Speed now 411
+global_step=8, episodic_return=[-10.589233]
+Reward -1.0496437070000866 Action: 1 Before speed 411 Speed now 321
+
+  0%|▍                                                                                                                                       | 11/3000 [00:11<42:36,  1.17it/s]
+
+  0%|▌                                                                                                                                       | 12/3000 [00:13<57:48,  1.16s/it]
+
+  0%|▌                                                                                                                                     | 13/3000 [00:15<1:11:52,  1.44s/it]
+
+
+  0%|▋                                                                                                                                     | 15/3000 [00:19<1:30:03,  1.81s/it]
+
+  1%|▋                                                                                                                                     | 16/3000 [00:21<1:35:40,  1.92s/it]
+
+  1%|▊                                                                                                                                     | 17/3000 [00:24<1:38:44,  1.99s/it]
+
+  1%|▊                                                                                                                                     | 18/3000 [00:26<1:40:29,  2.02s/it]
+Round: 2 with Time 16.38379506000001
+Reward -2.1040641519998644 Action: 4 Before speed 288 Speed now 235
+global_step=17, episodic_return=[-16.386213]
+
+  1%|▉                                                                                                                                     | 20/3000 [00:28<1:12:52,  1.47s/it]
+Reward -0.6299479309996059 Action: 0 Before speed 240 Speed now 320
+
+  1%|▉                                                                                                                                     | 21/3000 [00:29<1:11:10,  1.43s/it]
+
+  1%|█                                                                                                                                     | 23/3000 [00:32<1:06:58,  1.35s/it]
+Reward -1.2607171639997432 Action: 5 Before speed 379 Speed now 431
+
+  1%|█                                                                                                                                     | 24/3000 [00:33<1:06:36,  1.34s/it]
+
+  1%|█▏                                                                                                                                    | 26/3000 [00:35<1:01:32,  1.24s/it]
+Reward -1.023701779000021 Action: 3 Before speed 425 Speed now 325
+Round: 3 with Time 10.526909106000403
+Reward -0.9621145169999181 Action: 4 Before speed 325 Speed now 325
+
+  1%|█▎                                                                                                                                      | 28/3000 [00:37<58:48,  1.19s/it]
+Reward -1.2570007439999245 Action: 1 Before speed 325 Speed now 253
+
+  1%|█▎                                                                                                                                      | 29/3000 [00:38<52:41,  1.06s/it]
+
+  1%|█▍                                                                                                                                    | 31/3000 [00:41<1:04:28,  1.30s/it]
+Reward -1.048960291000185 Action: 0 Before speed 258 Speed now 337
+
+  1%|█▍                                                                                                                                    | 32/3000 [00:43<1:05:38,  1.33s/it]
+
+  1%|█▍                                                                                                                                    | 33/3000 [00:45<1:11:42,  1.45s/it]
+
+  1%|█▌                                                                                                                                    | 34/3000 [00:46<1:14:38,  1.51s/it]
+
+  1%|█▌                                                                                                                                    | 36/3000 [00:49<1:11:58,  1.46s/it]
+Round: 4 with Time 12.930050772999948
+Reward -1.2979381580003064 Action: 0 Before speed 309 Speed now 399
+global_step=35, episodic_return=[-12.932071]
+Reward -0.8364112310000564 Action: 2 Before speed 399 Speed now 402
+
+  1%|█▊                                                                                                                                      | 39/3000 [00:52<55:31,  1.13s/it]
+
+  1%|█▊                                                                                                                                    | 40/3000 [00:54<1:04:11,  1.30s/it]
+Reward -1.7115867960001196 Action: 1 Before speed 403 Speed now 294
+
+  1%|█▊                                                                                                                                    | 41/3000 [00:55<1:05:13,  1.32s/it]
+
+  1%|█▉                                                                                                                                    | 42/3000 [00:57<1:12:47,  1.48s/it]
+
+  1%|█▉                                                                                                                                    | 43/3000 [00:59<1:22:53,  1.68s/it]
+
+  2%|██                                                                                                                                    | 45/3000 [01:01<1:10:52,  1.44s/it]
+Round: 5 with Time 12.170167087999744
+Reward -1.1651895329996478 Action: 4 Before speed 342 Speed now 340
+global_step=44, episodic_return=[-13.072182]
+Reward -0.8458934159998535 Action: 0 Before speed 340 Speed now 442
+
+  2%|██▏                                                                                                                                     | 47/3000 [01:03<50:30,  1.03s/it]
+
+  2%|██▏                                                                                                                                   | 49/3000 [01:06<1:02:01,  1.26s/it]
+
+  2%|██▏                                                                                                                                   | 50/3000 [01:07<1:06:28,  1.35s/it]
+Reward -2.463567554000201 Action: 2 Before speed 341 Speed now 341
+
+  2%|██▎                                                                                                                                   | 52/3000 [01:10<1:03:31,  1.29s/it]
+Reward -1.1993404729996655 Action: 5 Before speed 450 Speed now 444
+
+  2%|██▍                                                                                                                                     | 54/3000 [01:12<53:50,  1.10s/it]
+Round: 6 with Time 10.209700371000054
+Reward -0.84828395500017 Action: 5 Before speed 444 Speed now 431
+global_step=53, episodic_return=[-11.11191]
+Reward -0.771776483999929 Action: 4 Before speed 431 Speed now 447
+
+  2%|██▌                                                                                                                                     | 57/3000 [01:14<44:22,  1.11it/s]
+Reward -1.0452950259996214 Action: 0 Before speed 430 Speed now 527
+
+  2%|██▋                                                                                                                                     | 59/3000 [01:15<40:04,  1.22it/s]
+Reward -0.7461065090001284 Action: 1 Before speed 574 Speed now 474
+
+  2%|██▊                                                                                                                                     | 61/3000 [01:18<48:24,  1.01it/s]
+Reward -1.1390120940000088 Action: 5 Before speed 474 Speed now 484
+
+  2%|██▊                                                                                                                                     | 63/3000 [01:20<48:47,  1.00it/s]
+Round: 7 with Time 8.085797205999825
+Reward -0.9910784839998996 Action: 4 Before speed 374 Speed now 379
+global_step=62, episodic_return=[-8.087714]
+Reward -0.754068861000178 Action: 0 Before speed 379 Speed now 496
+
+  2%|██▉                                                                                                                                     | 65/3000 [01:21<39:05,  1.25it/s]
+
+  2%|███                                                                                                                                     | 67/3000 [01:23<51:29,  1.05s/it]
+Reward -1.2585093530001359 Action: 2 Before speed 403 Speed now 403
+
+  2%|███                                                                                                                                     | 68/3000 [01:25<55:48,  1.14s/it]
+
+  2%|███                                                                                                                                   | 69/3000 [01:26<1:02:19,  1.28s/it]
+
+  2%|███▏                                                                                                                                  | 71/3000 [01:29<1:05:25,  1.34s/it]
+Reward -1.2291735640001207 Action: 0 Before speed 314 Speed now 516
+Round: 8 with Time 10.886022260000118
+Reward -1.1975846440000169 Action: 2 Before speed 516 Speed now 429
+
+  2%|███▎                                                                                                                                    | 73/3000 [01:31<56:39,  1.16s/it]
+Reward -0.8450158169998758 Action: 3 Before speed 429 Speed now 429
+
+  2%|███▍                                                                                                                                    | 75/3000 [01:33<53:14,  1.09s/it]
+Reward -1.342984756000078 Action: 4 Before speed 429 Speed now 429
+
+  3%|███▍                                                                                                                                    | 77/3000 [01:35<53:28,  1.10s/it]
+Reward -1.2631541850000758 Action: 2 Before speed 423 Speed now 423
+
+  3%|███▌                                                                                                                                    | 78/3000 [01:37<58:23,  1.20s/it]
+Reward -1.2824657790001766 Action: 4 Before speed 400 Speed now 411
+
+  3%|███▋                                                                                                                                    | 81/3000 [01:40<51:20,  1.06s/it]
+Round: 9 with Time 9.39324119999992
+Reward -0.9044180460000462 Action: 4 Before speed 477 Speed now 410
+global_step=80, episodic_return=[-10.295213]
+
+  3%|███▊                                                                                                                                    | 83/3000 [01:41<41:00,  1.19it/s]
+Reward -0.47841544999982943 Action: 5 Before speed 419 Speed now 408
+
+  3%|███▊                                                                                                                                    | 85/3000 [01:44<49:33,  1.02s/it]
+Reward -1.0802534109998305 Action: 0 Before speed 408 Speed now 491
+
+  3%|███▉                                                                                                                                    | 87/3000 [01:46<49:24,  1.02s/it]
+Reward -2.037343808999958 Action: 4 Before speed 491 Speed now 519
+
+  3%|████                                                                                                                                    | 89/3000 [01:48<47:09,  1.03it/s]
+Reward -0.8385518979998778 Action: 5 Before speed 519 Speed now 511
+Round: 10 with Time 8.665018078999765
+Reward -1.0167925199998535 Action: 2 Before speed 511 Speed now 511
+
+  3%|████▏                                                                                                                                   | 92/3000 [01:50<36:50,  1.32it/s]
+Reward -0.7267761979996976 Action: 4 Before speed 511 Speed now 511
+Reward -0.4158816800004388 Action: 2 Before speed 511 Speed now 511
+
+  3%|████▎                                                                                                                                   | 94/3000 [01:52<42:19,  1.14it/s]
+Reward -0.8966998419996344 Action: 4 Before speed 507 Speed now 507
+
+  3%|████▎                                                                                                                                   | 96/3000 [01:54<44:28,  1.09it/s]
+Reward -1.109501955000269 Action: 5 Before speed 501 Speed now 499
+
+  3%|████▍                                                                                                                                   | 98/3000 [01:55<42:04,  1.15it/s]
+Reward -0.6818765220000387 Action: 0 Before speed 520 Speed now 520
+Round: 11 with Time 7.440816930999972
+Reward -0.7289588659996298 Action: 2 Before speed 520 Speed now 520
+global_step=98, episodic_return=[-7.442504]
+Reward -0.5321714260003318 Action: 3 Before speed 520 Speed now 520
+
+  3%|████▌                                                                                                                                  | 102/3000 [01:58<34:03,  1.42it/s]
+Reward -0.8689721719997578 Action: 5 Before speed 520 Speed now 642
+Reward -0.5694934719999765 Action: 5 Before speed 642 Speed now 642
+
+  3%|████▋                                                                                                                                  | 104/3000 [01:59<32:30,  1.48it/s]
+Reward -0.9974704750002275 Action: 3 Before speed 516 Speed now 516
+
+  4%|████▊                                                                                                                                  | 106/3000 [02:01<39:44,  1.21it/s]
+Reward -0.9452418259998012 Action: 1 Before speed 562 Speed now 425
+Round: 12 with Time 7.077927791000093
+Reward -1.130128478000188 Action: 2 Before speed 425 Speed now 503
+
+  4%|████▊                                                                                                                                  | 108/3000 [02:03<45:23,  1.06it/s]
+Reward -0.7907210569997005 Action: 5 Before speed 503 Speed now 475
+
+  4%|████▉                                                                                                                                  | 110/3000 [02:04<36:25,  1.32it/s]
+Reward -2.0758084789998974 Action: 3 Before speed 475 Speed now 476
+
+  4%|█████                                                                                                                                  | 113/3000 [02:07<43:11,  1.11it/s]
+Reward -0.9398470559999623 Action: 3 Before speed 476 Speed now 476
+
+  4%|█████▏                                                                                                                                 | 114/3000 [02:08<47:48,  1.01it/s]
+Reward -1.1425401060000695 Action: 4 Before speed 461 Speed now 480
+Reward -0.6913319780001075 Action: 0 Before speed 480 Speed now 582
+Round: 13 with Time 7.913614814000084
+Reward -0.6534516730002906 Action: 4 Before speed 582 Speed now 644
+
+  4%|█████▎                                                                                                                                 | 117/3000 [02:11<40:51,  1.18it/s]
+Reward -0.6337759549996917 Action: 5 Before speed 644 Speed now 598
+Reward -0.366844473999663 Action: 5 Before speed 598 Speed now 581
+
+  4%|█████▍                                                                                                                                 | 120/3000 [02:13<35:02,  1.37it/s]
+Reward -0.6013652419997015 Action: 0 Before speed 570 Speed now 570
+Reward -0.568697517000146 Action: 4 Before speed 570 Speed now 570
+
+  4%|█████▌                                                                                                                                 | 123/3000 [02:15<34:27,  1.39it/s]
+Reward -0.7821819609998784 Action: 3 Before speed 672 Speed now 672
+Reward -0.7454375299998901 Action: 4 Before speed 672 Speed now 672
+Round: 14 with Time 6.058486784000252
+Reward -0.5994710650002162 Action: 0 Before speed 672 Speed now 672
+
+  4%|█████▋                                                                                                                                 | 126/3000 [02:17<33:26,  1.43it/s]
+Reward -0.5104917640001077 Action: 5 Before speed 672 Speed now 747
+Reward -0.30323188800002754 Action: 4 Before speed 747 Speed now 733
+Reward -1.649978958000156 Action: 4 Before speed 733 Speed now 734
+
+  4%|█████▊                                                                                                                                 | 130/3000 [02:19<27:51,  1.72it/s]
+Reward -1.5157820949997585 Action: 4 Before speed 734 Speed now 734
+
+  4%|█████▉                                                                                                                                 | 133/3000 [02:21<33:46,  1.41it/s]
+Reward -0.80373175800014 Action: 1 Before speed 734 Speed now 642
+Reward -0.7231410600002164 Action: 3 Before speed 642 Speed now 642
+Round: 15 with Time 5.783137333000013
+Reward -0.708232382999995 Action: 4 Before speed 642 Speed now 642
+
+  5%|██████                                                                                                                                 | 136/3000 [02:23<31:32,  1.51it/s]
+Reward -0.5443175739997059 Action: 2 Before speed 642 Speed now 642
+Reward -0.36140581000017846 Action: 5 Before speed 642 Speed now 642
+
+  5%|██████▏                                                                                                                                | 138/3000 [02:25<33:16,  1.43it/s]
+Reward -1.0167974269998012 Action: 2 Before speed 543 Speed now 564
+
+  5%|██████▎                                                                                                                                | 140/3000 [02:27<38:30,  1.24it/s]
+Reward -0.9581489729998793 Action: 1 Before speed 712 Speed now 617
+Reward -0.8424687609999637 Action: 5 Before speed 617 Speed now 605
+
+  5%|██████▍                                                                                                                                | 143/3000 [02:29<39:51,  1.19it/s]
+Round: 16 with Time 7.095011190999685
+Reward -0.7307280069999251 Action: 5 Before speed 605 Speed now 739
+global_step=143, episodic_return=[-7.0968094]
+Reward -0.4995162530003654 Action: 5 Before speed 739 Speed now 645
+
+  5%|██████▌                                                                                                                                | 146/3000 [02:31<28:26,  1.67it/s]
+Reward -0.8732656329998463 Action: 5 Before speed 620 Speed now 600
+Reward -0.7792606550001437 Action: 1 Before speed 600 Speed now 508
+
+  5%|██████▋                                                                                                                                | 149/3000 [02:33<34:17,  1.39it/s]
+
+  5%|██████▊                                                                                                                                | 151/3000 [02:35<43:50,  1.08it/s]
+Reward -1.0796153200003573 Action: 2 Before speed 504 Speed now 504
+
+  5%|██████▉                                                                                                                                | 153/3000 [02:37<46:52,  1.01it/s]
+Round: 17 with Time 7.549728394999875
+Reward -1.1104660129999502 Action: 1 Before speed 504 Speed now 404
+global_step=152, episodic_return=[-7.551729]
+Reward -0.8731745619998037 Action: 5 Before speed 404 Speed now 417
+
+  5%|██████▉                                                                                                                                | 155/3000 [02:39<38:50,  1.22it/s]
+Reward -1.3572515109999586 Action: 5 Before speed 398 Speed now 410
+
+  5%|███████                                                                                                                                | 157/3000 [02:41<46:53,  1.01it/s]
+
+  5%|███████▏                                                                                                                               | 159/3000 [02:43<48:43,  1.03s/it]
+Reward -1.1365099090003241 Action: 0 Before speed 432 Speed now 538
+Reward -0.9884987450000153 Action: 5 Before speed 538 Speed now 531
+
+  5%|███████▏                                                                                                                               | 161/3000 [02:45<43:26,  1.09it/s]
+Round: 18 with Time 8.343310319000011
+Reward -0.8181381009999313 Action: 5 Before speed 531 Speed now 536
+global_step=161, episodic_return=[-9.245033]
+Reward -0.6503793930000938 Action: 5 Before speed 536 Speed now 529
+
+  5%|███████▍                                                                                                                               | 164/3000 [02:47<32:43,  1.44it/s]
+Reward -1.0369905960001233 Action: 3 Before speed 538 Speed now 538
+
+  6%|███████▍                                                                                                                               | 166/3000 [02:49<38:14,  1.24it/s]
+Reward -0.8084436760000244 Action: 1 Before speed 538 Speed now 446
+
+  6%|███████▌                                                                                                                               | 168/3000 [02:51<44:59,  1.05it/s]
+Reward -1.2041239889999815 Action: 4 Before speed 449 Speed now 446
+
+  6%|███████▋                                                                                                                               | 170/3000 [02:53<50:02,  1.06s/it]
+Round: 19 with Time 8.433434858000055
+Reward -1.0652594900002441 Action: 4 Before speed 446 Speed now 446
+global_step=170, episodic_return=[-8.435414]
+
+  6%|███████▊                                                                                                                               | 173/3000 [02:56<38:50,  1.21it/s]
+Reward -0.45392042999992555 Action: 5 Before speed 445 Speed now 451
+
+  6%|███████▊                                                                                                                               | 174/3000 [02:57<44:31,  1.06it/s]
+Reward -0.9326142400000208 Action: 5 Before speed 421 Speed now 441
+
+  6%|███████▉                                                                                                                               | 176/3000 [02:59<43:40,  1.08it/s]
+Reward -1.292376584000067 Action: 5 Before speed 475 Speed now 429
+
+  6%|████████                                                                                                                               | 178/3000 [03:01<51:27,  1.09s/it]
+
+  6%|████████                                                                                                                               | 179/3000 [03:02<51:39,  1.10s/it]
+Round: 20 with Time 9.495149297000353
+Reward -1.5583909819997643 Action: 2 Before speed 306 Speed now 336
+global_step=179, episodic_return=[-9.497712]
+
+  6%|████████▏                                                                                                                              | 181/3000 [03:05<55:28,  1.18s/it]
+
+  6%|████████▏                                                                                                                              | 182/3000 [03:06<51:05,  1.09s/it]
+
+  6%|████████▏                                                                                                                            | 184/3000 [03:09<1:08:10,  1.45s/it]
+Reward -1.5566738580000674 Action: 4 Before speed 255 Speed now 253
+
+  6%|████████▏                                                                                                                            | 185/3000 [03:11<1:10:46,  1.51s/it]
+
+
+
+  6%|████████▎                                                                                                                            | 187/3000 [03:15<1:27:19,  1.86s/it]
+Reward -3.0596012909999444 Action: 4 Before speed 263 Speed now 244
+
+  6%|████████▎                                                                                                                            | 188/3000 [03:17<1:23:56,  1.79s/it]
+Round: 21 with Time 14.964051401000233
+Reward -2.5459379319999242 Action: 4 Before speed 241 Speed now 221
+
+  6%|████████▍                                                                                                                            | 189/3000 [03:19<1:21:53,  1.75s/it]
+Reward -1.4173561470001914 Action: 5 Before speed 221 Speed now 241
+
+  6%|████████▍                                                                                                                            | 191/3000 [03:21<1:05:21,  1.40s/it]
+
+  6%|████████▌                                                                                                                            | 192/3000 [03:23<1:17:15,  1.65s/it]
+
+  6%|████████▌                                                                                                                            | 193/3000 [03:25<1:16:51,  1.64s/it]
+
+  6%|████████▌                                                                                                                            | 194/3000 [03:26<1:16:35,  1.64s/it]
+
+  6%|████████▋                                                                                                                            | 195/3000 [03:29<1:25:25,  1.83s/it]
+
+  7%|████████▋                                                                                                                            | 196/3000 [03:31<1:30:06,  1.93s/it]
+
+  7%|████████▋                                                                                                                            | 197/3000 [03:32<1:25:45,  1.84s/it]
+Round: 22 with Time 15.418934086999798
+Reward -1.6473662339999464 Action: 4 Before speed 249 Speed now 250
+
+  7%|████████▊                                                                                                                            | 199/3000 [03:36<1:17:54,  1.67s/it]
+Reward -1.4109727300001396 Action: 5 Before speed 250 Speed now 241
+
+  7%|████████▊                                                                                                                            | 200/3000 [03:36<1:05:52,  1.41s/it]
+
+  7%|████████▉                                                                                                                            | 201/3000 [03:39<1:17:11,  1.65s/it]
+
+  7%|████████▉                                                                                                                            | 202/3000 [03:40<1:16:39,  1.64s/it]
+
+  7%|█████████                                                                                                                            | 204/3000 [03:44<1:17:16,  1.66s/it]
+Reward -1.6834695399998054 Action: 0 Before speed 252 Speed now 349
+
+  7%|█████████                                                                                                                            | 205/3000 [03:45<1:10:45,  1.52s/it]
+Reward -0.8971104779998313 Action: 4 Before speed 460 Speed now 452
+Round: 23 with Time 12.427728312999989
+Reward -0.9382029640000837 Action: 5 Before speed 452 Speed now 418
+
+  7%|█████████▎                                                                                                                             | 208/3000 [03:47<50:44,  1.09s/it]
+Reward -0.8015772600001583 Action: 5 Before speed 418 Speed now 441
+Reward -0.45018811099998857 Action: 5 Before speed 441 Speed now 441
+
+  7%|█████████▍                                                                                                                             | 210/3000 [03:49<46:51,  1.01s/it]
+Reward -0.9944462809999095 Action: 4 Before speed 441 Speed now 441
+
+  7%|█████████▌                                                                                                                             | 212/3000 [03:51<43:50,  1.06it/s]
+Reward -1.2644683240000631 Action: 5 Before speed 463 Speed now 446
+
+  7%|█████████▋                                                                                                                             | 214/3000 [03:53<50:04,  1.08s/it]
+Reward -1.7397313580003355 Action: 4 Before speed 452 Speed now 437
+Round: 24 with Time 8.422473741999966
+Reward -1.7393985520001478 Action: 4 Before speed 437 Speed now 459
+
+  7%|█████████▋                                                                                                                             | 216/3000 [03:55<44:24,  1.05it/s]
+Reward -0.7766138609999871 Action: 5 Before speed 459 Speed now 454
+
+  7%|█████████▊                                                                                                                             | 219/3000 [03:57<42:28,  1.09it/s]
+Reward -1.2654349690001254 Action: 2 Before speed 450 Speed now 450
+Reward -0.9622874609999599 Action: 4 Before speed 450 Speed now 450
+
+  7%|█████████▉                                                                                                                             | 221/3000 [03:59<42:09,  1.10it/s]
+
+  7%|█████████▉                                                                                                                             | 222/3000 [04:01<46:30,  1.00s/it]
+Reward -2.072300755999913 Action: 4 Before speed 440 Speed now 452
+
+  7%|██████████                                                                                                                             | 224/3000 [04:03<48:42,  1.05s/it]
+Round: 25 with Time 8.757876027999828
+Reward -0.9945297259996551 Action: 4 Before speed 452 Speed now 452
+global_step=224, episodic_return=[-9.659903]
+Reward -0.778393873999903 Action: 5 Before speed 452 Speed now 468
+
+  8%|██████████▏                                                                                                                            | 227/3000 [04:05<37:15,  1.24it/s]
+Reward -1.1977211309999802 Action: 4 Before speed 461 Speed now 451
+
+  8%|██████████▎                                                                                                                            | 229/3000 [04:07<41:05,  1.12it/s]
+Reward -1.7402988319999166 Action: 4 Before speed 417 Speed now 455
+
+  8%|██████████▍                                                                                                                            | 231/3000 [04:09<45:43,  1.01it/s]
+Reward -1.1690166690000297 Action: 5 Before speed 450 Speed now 450
+
+  8%|██████████▍                                                                                                                            | 233/3000 [04:11<45:19,  1.02it/s]
+Round: 26 with Time 8.183428925000044
+Reward -1.7357257749999007 Action: 4 Before speed 425 Speed now 446
+global_step=233, episodic_return=[-10.885306]
+Reward -0.7839275549999911 Action: 3 Before speed 446 Speed now 446
+
+  8%|██████████▌                                                                                                                            | 236/3000 [04:13<35:23,  1.30it/s]
+
+  8%|██████████▋                                                                                                                            | 238/3000 [04:15<42:35,  1.08it/s]
+Reward -0.9919080429999667 Action: 5 Before speed 454 Speed now 433
+Reward -0.870629689999987 Action: 0 Before speed 433 Speed now 539
+
+  8%|██████████▊                                                                                                                            | 240/3000 [04:17<44:40,  1.03it/s]
+Reward -0.9817554979999841 Action: 4 Before speed 536 Speed now 558
+
+  8%|██████████▉                                                                                                                            | 242/3000 [04:19<40:28,  1.14it/s]
+Round: 27 with Time 7.800089456000023
+Reward -0.719588455000121 Action: 4 Before speed 558 Speed now 566
+global_step=242, episodic_return=[-7.8018847]
+Reward -0.6616577889999462 Action: 5 Before speed 566 Speed now 543
+
+  8%|███████████                                                                                                                            | 245/3000 [04:21<30:25,  1.51it/s]
+Reward -0.988935371000025 Action: 4 Before speed 543 Speed now 525
+Reward -1.594249482000032 Action: 4 Before speed 525 Speed now 525
+
+  8%|███████████▏                                                                                                                           | 248/3000 [04:23<34:03,  1.35it/s]
+Reward -1.0521026000001257 Action: 2 Before speed 611 Speed now 611
+
+  8%|███████████▎                                                                                                                           | 250/3000 [04:25<40:47,  1.12it/s]
+Reward -1.559490820999963 Action: 4 Before speed 550 Speed now 550
+Round: 28 with Time 6.929966545999832
+Reward -0.7236713829997825 Action: 5 Before speed 550 Speed now 571
+global_step=251, episodic_return=[-9.631769]
+
+  8%|███████████▍                                                                                                                           | 254/3000 [04:28<29:07,  1.57it/s]
+Reward -0.36934339399977034 Action: 5 Before speed 553 Speed now 542
+
+  9%|███████████▌                                                                                                                           | 256/3000 [04:29<33:52,  1.35it/s]
+Reward -1.6220992900001874 Action: 4 Before speed 537 Speed now 538
+Reward -1.6157409900000856 Action: 4 Before speed 538 Speed now 525
+
+  9%|███████████▌                                                                                                                           | 258/3000 [04:31<37:27,  1.22it/s]
+Reward -0.9932831349997286 Action: 5 Before speed 528 Speed now 529
+
+  9%|███████████▋                                                                                                                           | 260/3000 [04:33<39:20,  1.16it/s]
+Round: 29 with Time 7.346150318000127
+Reward -1.0233902119998675 Action: 5 Before speed 529 Speed now 527
+global_step=260, episodic_return=[-10.047862]
+Reward -0.6729342150001685 Action: 4 Before speed 527 Speed now 527
+
+  9%|███████████▊                                                                                                                           | 263/3000 [04:35<31:30,  1.45it/s]
+Reward -1.0234443630001806 Action: 4 Before speed 527 Speed now 542
+
+  9%|███████████▉                                                                                                                           | 266/3000 [04:38<34:28,  1.32it/s]
+Reward -1.628575431000081 Action: 4 Before speed 535 Speed now 541
+
+  9%|████████████                                                                                                                           | 268/3000 [04:40<40:19,  1.13it/s]
+Reward -0.9861767600000348 Action: 5 Before speed 540 Speed now 546
+Reward -0.6566198699997585 Action: 4 Before speed 546 Speed now 546
+Round: 30 with Time 6.928844647000005
+Reward -1.6535453519999463 Action: 4 Before speed 546 Speed now 468
+
+  9%|████████████▏                                                                                                                          | 271/3000 [04:42<34:29,  1.32it/s]
+Reward -0.6659576429997287 Action: 5 Before speed 468 Speed now 541
+Reward -0.3837225860002036 Action: 5 Before speed 541 Speed now 536
+
+  9%|████████████▎                                                                                                                          | 274/3000 [04:44<33:39,  1.35it/s]
+Reward -1.6156443479998415 Action: 4 Before speed 539 Speed now 539
+
+  9%|████████████▍                                                                                                                          | 276/3000 [04:45<37:45,  1.20it/s]
+Reward -1.0803986149999218 Action: 5 Before speed 527 Speed now 534
+Reward -0.9910752880000473 Action: 5 Before speed 534 Speed now 522
+
+  9%|████████████▌                                                                                                                          | 278/3000 [04:47<38:13,  1.19it/s]
+Round: 31 with Time 6.900070270000015
+Reward -1.5244603780000943 Action: 4 Before speed 623 Speed now 472
+global_step=278, episodic_return=[-9.601817]
+Reward -0.6969193249997261 Action: 5 Before speed 472 Speed now 537
+
+  9%|████████████▋                                                                                                                          | 281/3000 [04:49<29:14,  1.55it/s]
+Reward -1.0735933860000841 Action: 2 Before speed 548 Speed now 548
+
+  9%|████████████▊                                                                                                                          | 284/3000 [04:52<34:43,  1.30it/s]
+Reward -0.6876822899998842 Action: 5 Before speed 548 Speed now 590
+
+ 10%|████████████▊                                                                                                                          | 286/3000 [04:54<39:58,  1.13it/s]
+Reward -0.9556247569998959 Action: 4 Before speed 535 Speed now 538
+Reward -1.5913559869999516 Action: 4 Before speed 538 Speed now 538
+Round: 32 with Time 7.132416201000069
+Reward -1.6185364590000062 Action: 4 Before speed 538 Speed now 594
+
+ 10%|█████████████                                                                                                                          | 289/3000 [04:56<34:03,  1.33it/s]
+Reward -0.6623498879998806 Action: 5 Before speed 594 Speed now 547
+Reward -0.3604197570002725 Action: 5 Before speed 547 Speed now 546
+
+ 10%|█████████████▏                                                                                                                         | 292/3000 [04:58<33:27,  1.35it/s]
+Reward -1.6143448169999828 Action: 4 Before speed 525 Speed now 564
+
+ 10%|█████████████▏                                                                                                                         | 294/3000 [05:00<37:29,  1.20it/s]
+Reward -1.0778366130002723 Action: 5 Before speed 597 Speed now 532
+Reward -0.9898174249997282 Action: 5 Before speed 532 Speed now 529
+
+ 10%|█████████████▎                                                                                                                         | 296/3000 [05:01<37:01,  1.22it/s]
+Round: 33 with Time 6.927617035999901
+Reward -1.6204371479997461 Action: 4 Before speed 486 Speed now 535
+global_step=296, episodic_return=[-9.629459]
+Reward -0.663260648999767 Action: 5 Before speed 535 Speed now 531
+
+ 10%|█████████████▍                                                                                                                         | 299/3000 [05:03<28:57,  1.55it/s]
+Reward -0.9912139490002119 Action: 4 Before speed 527 Speed now 514
+Reward -1.615269844999966 Action: 4 Before speed 514 Speed now 484
+
+ 10%|█████████████▌                                                                                                                         | 302/3000 [05:05<33:00,  1.36it/s]
+Reward -1.0518581889996312 Action: 5 Before speed 550 Speed now 526
+
+ 10%|█████████████▋                                                                                                                         | 304/3000 [05:07<39:23,  1.14it/s]
+Reward -0.7197056539998812 Action: 4 Before speed 537 Speed now 546
+Round: 34 with Time 6.929691199999979
+Reward -1.5913785100000495 Action: 4 Before speed 546 Speed now 527
+
+ 10%|█████████████▊                                                                                                                         | 307/3000 [05:10<33:37,  1.33it/s]
+Reward -0.6587101529999018 Action: 5 Before speed 527 Speed now 534
+Reward -0.39407275199982905 Action: 5 Before speed 534 Speed now 539
+
+ 10%|█████████████▉                                                                                                                         | 310/3000 [05:12<32:42,  1.37it/s]
+Reward -1.589973502000157 Action: 4 Before speed 523 Speed now 523
+Reward -1.6165096029998494 Action: 4 Before speed 523 Speed now 534
+
+ 10%|██████████████                                                                                                                         | 312/3000 [05:13<37:17,  1.20it/s]
+Reward -0.9884251909998056 Action: 5 Before speed 545 Speed now 528
+
+ 10%|██████████████▏                                                                                                                        | 315/3000 [05:16<35:01,  1.28it/s]
+Round: 35 with Time 6.89824977599983
+Reward -1.5884765199997672 Action: 4 Before speed 533 Speed now 475
+global_step=314, episodic_return=[-9.600061]
+Reward -0.692030695000085 Action: 5 Before speed 475 Speed now 534
+
+ 11%|██████████████▎                                                                                                                        | 317/3000 [05:17<28:32,  1.57it/s]
+Reward -1.015464286000224 Action: 4 Before speed 536 Speed now 530
+Reward -1.617624004999834 Action: 4 Before speed 530 Speed now 535
+
+ 11%|██████████████▍                                                                                                                        | 320/3000 [05:19<32:24,  1.38it/s]
+Reward -1.113321408000047 Action: 5 Before speed 539 Speed now 530
+
+ 11%|██████████████▍                                                                                                                        | 322/3000 [05:21<39:05,  1.14it/s]
+Reward -0.6645193819999804 Action: 4 Before speed 537 Speed now 537
+Round: 36 with Time 6.936646237999867
+Reward -1.6253270899996095 Action: 4 Before speed 537 Speed now 553
+global_step=323, episodic_return=[-9.638398]
+
+ 11%|██████████████▋                                                                                                                        | 326/3000 [05:24<28:30,  1.56it/s]
+Reward -0.3899858380000296 Action: 5 Before speed 539 Speed now 544
+Reward -1.019981949999874 Action: 4 Before speed 544 Speed now 524
+
+ 11%|██████████████▊                                                                                                                        | 328/3000 [05:25<32:15,  1.38it/s]
+Reward -1.6537790390001645 Action: 4 Before speed 524 Speed now 517
+
+ 11%|██████████████▊                                                                                                                        | 330/3000 [05:27<36:52,  1.21it/s]
+Reward -0.9863635589999831 Action: 5 Before speed 549 Speed now 524
+
+ 11%|██████████████▉                                                                                                                        | 333/3000 [05:30<35:10,  1.26it/s]
+Round: 37 with Time 6.922447523000301
+Reward -1.6229998399998293 Action: 4 Before speed 551 Speed now 485
+global_step=332, episodic_return=[-9.624542]
+Reward -0.6593420399999559 Action: 5 Before speed 485 Speed now 540
+
+ 11%|███████████████                                                                                                                        | 336/3000 [05:32<33:10,  1.34it/s]
+Reward -1.0084813930002383 Action: 4 Before speed 546 Speed now 529
+Reward -1.6279819550003594 Action: 4 Before speed 529 Speed now 529
+
+ 11%|███████████████▏                                                                                                                       | 338/3000 [05:33<32:19,  1.37it/s]
+Reward -1.0683932890001415 Action: 5 Before speed 529 Speed now 527
+
+ 11%|███████████████▎                                                                                                                       | 341/3000 [05:36<36:05,  1.23it/s]
+Reward -0.6631015689999913 Action: 4 Before speed 537 Speed now 537
+Round: 38 with Time 6.927188634999766
+Reward -1.6458215860001473 Action: 4 Before speed 537 Speed now 412
+global_step=341, episodic_return=[-9.629198]
+
+ 11%|███████████████▍                                                                                                                       | 344/3000 [05:38<28:17,  1.57it/s]
+Reward -0.3688313420002487 Action: 5 Before speed 553 Speed now 535
+Reward -1.0166540300001543 Action: 4 Before speed 535 Speed now 540
+
+ 12%|███████████████▌                                                                                                                       | 346/3000 [05:39<32:51,  1.35it/s]
+Reward -1.5848379869998097 Action: 4 Before speed 581 Speed now 545
+
+ 12%|███████████████▋                                                                                                                       | 348/3000 [05:41<36:36,  1.21it/s]
+Reward -0.9991046349996395 Action: 5 Before speed 519 Speed now 542
+Reward -0.690381456999603 Action: 4 Before speed 542 Speed now 525
+Round: 39 with Time 6.903102704000048
+Reward -1.5941913410000779 Action: 4 Before speed 525 Speed now 562
+
+ 12%|███████████████▊                                                                                                                       | 351/3000 [05:43<34:41,  1.27it/s]
+Reward -0.6508739380001316 Action: 5 Before speed 562 Speed now 533
+Reward -0.39774919599994973 Action: 5 Before speed 533 Speed now 536
+
+ 12%|███████████████▉                                                                                                                       | 354/3000 [05:45<32:46,  1.35it/s]
+Reward -1.5925878900001407 Action: 4 Before speed 524 Speed now 524
+
+ 12%|████████████████                                                                                                                       | 356/3000 [05:47<31:55,  1.38it/s]
+Reward -1.0527602720003415 Action: 5 Before speed 534 Speed now 538
+
+ 12%|████████████████▏                                                                                                                      | 359/3000 [05:50<35:58,  1.22it/s]
+Reward -0.6894447680001576 Action: 4 Before speed 535 Speed now 554
+Round: 40 with Time 6.891947595000147
+Reward -1.621094150999761 Action: 4 Before speed 554 Speed now 550
+global_step=359, episodic_return=[-9.593988]
+Reward -0.6573807159998069 Action: 5 Before speed 550 Speed now 536
+
+ 12%|████████████████▎                                                                                                                      | 362/3000 [05:51<28:11,  1.56it/s]
+Reward -1.022899217000031 Action: 4 Before speed 523 Speed now 534
+
+ 12%|████████████████▍                                                                                                                      | 365/3000 [05:54<32:02,  1.37it/s]
+Reward -1.5916222170002583 Action: 4 Before speed 515 Speed now 552
+
+ 12%|████████████████▌                                                                                                                      | 367/3000 [05:56<38:19,  1.15it/s]
+Reward -0.986918751000303 Action: 5 Before speed 517 Speed now 531
+Reward -0.6937647699996887 Action: 4 Before speed 531 Speed now 531
+Round: 41 with Time 6.927583825000056
+Reward -1.6196884119998685 Action: 4 Before speed 531 Speed now 549
+
+ 12%|████████████████▌                                                                                                                      | 369/3000 [05:57<34:38,  1.27it/s]
+Reward -0.6324484070000835 Action: 5 Before speed 549 Speed now 537
+Reward -0.3890171080001892 Action: 5 Before speed 537 Speed now 524
+
+ 12%|████████████████▋                                                                                                                      | 372/3000 [05:59<32:54,  1.33it/s]
+Reward -1.5887705909998657 Action: 4 Before speed 531 Speed now 556
+
+ 12%|████████████████▉                                                                                                                      | 375/3000 [06:02<36:07,  1.21it/s]
+Reward -1.0500367479999113 Action: 5 Before speed 541 Speed now 523
+Reward -0.985112358999686 Action: 5 Before speed 523 Speed now 538
+
+ 13%|████████████████▉                                                                                                                      | 377/3000 [06:03<35:25,  1.23it/s]
+Round: 42 with Time 6.837590859000102
+Reward -1.5894724399999176 Action: 4 Before speed 538 Speed now 538
+global_step=377, episodic_return=[-9.539551]
+Reward -0.6913321120000546 Action: 5 Before speed 538 Speed now 526
+
+ 13%|█████████████████                                                                                                                      | 380/3000 [06:05<27:57,  1.56it/s]
+Reward -1.0206139249999069 Action: 4 Before speed 534 Speed now 525
+
+ 13%|█████████████████▏                                                                                                                     | 383/3000 [06:08<31:53,  1.37it/s]
+Reward -1.6231740659999558 Action: 4 Before speed 509 Speed now 527
+
+ 13%|█████████████████▎                                                                                                                     | 385/3000 [06:10<38:07,  1.14it/s]
+Reward -0.986610832000224 Action: 5 Before speed 537 Speed now 535
+Reward -0.7245602890002374 Action: 4 Before speed 535 Speed now 533
+Round: 43 with Time 7.015213187000427
+Reward -1.645545647000199 Action: 4 Before speed 533 Speed now 635
+
+ 13%|█████████████████▍                                                                                                                     | 388/3000 [06:12<32:43,  1.33it/s]
+Reward -0.6300606320000952 Action: 5 Before speed 635 Speed now 531
+Reward -0.3937758339998254 Action: 5 Before speed 531 Speed now 525
+
+ 13%|█████████████████▌                                                                                                                     | 391/3000 [06:14<32:32,  1.34it/s]
+Reward -1.6300582739999299 Action: 4 Before speed 524 Speed now 523
+
+ 13%|█████████████████▋                                                                                                                     | 393/3000 [06:16<36:14,  1.20it/s]
+Reward -1.0769739420002225 Action: 5 Before speed 555 Speed now 521
+Reward -0.9948351769999135 Action: 4 Before speed 521 Speed now 538
+
+ 13%|█████████████████▊                                                                                                                     | 395/3000 [06:17<35:21,  1.23it/s]
+Round: 44 with Time 6.870817742999861
+Reward -1.5892901269998219 Action: 4 Before speed 538 Speed now 538
+global_step=395, episodic_return=[-10.472395]
+Reward -0.6891647219999868 Action: 5 Before speed 538 Speed now 537
+
+ 13%|█████████████████▉                                                                                                                     | 398/3000 [06:19<27:27,  1.58it/s]
+Reward -1.0202731859999403 Action: 4 Before speed 531 Speed now 527
+Reward -1.6194902289998026 Action: 4 Before speed 527 Speed now 534
+
+ 13%|██████████████████                                                                                                                     | 401/3000 [06:22<31:46,  1.36it/s]
+Reward -1.0527533889999177 Action: 5 Before speed 538 Speed now 545
+
+ 13%|██████████████████▏                                                                                                                    | 403/3000 [06:24<37:53,  1.14it/s]
+Reward -1.6249055080001198 Action: 4 Before speed 531 Speed now 531
+Round: 45 with Time 6.956489369999872
+Reward -1.5902344000000084 Action: 4 Before speed 531 Speed now 467
+
+ 14%|██████████████████▎                                                                                                                    | 406/3000 [06:26<32:27,  1.33it/s]
+Reward -0.6644968189998508 Action: 5 Before speed 467 Speed now 544
+Reward -0.3618049169999722 Action: 5 Before speed 544 Speed now 534
+
+ 14%|██████████████████▍                                                                                                                    | 409/3000 [06:28<31:15,  1.38it/s]
+Reward -1.5695121969996761 Action: 4 Before speed 543 Speed now 543
+Reward -1.6413540359998477 Action: 4 Before speed 543 Speed now 530
+
+ 14%|██████████████████▍                                                                                                                    | 411/3000 [06:29<35:34,  1.21it/s]
+Reward -1.0000818690000415 Action: 4 Before speed 527 Speed now 524
+
+ 14%|██████████████████▋                                                                                                                    | 414/3000 [06:32<33:47,  1.28it/s]
+Round: 46 with Time 6.878413152999656
+Reward -1.5878829239999503 Action: 4 Before speed 524 Speed now 524
+global_step=413, episodic_return=[-10.480412]
+Reward -0.6807833930001834 Action: 5 Before speed 524 Speed now 540
+
+ 14%|██████████████████▊                                                                                                                    | 417/3000 [06:34<32:11,  1.34it/s]
+Reward -0.9885985040000378 Action: 4 Before speed 529 Speed now 525
+Reward -1.618156603999887 Action: 4 Before speed 525 Speed now 541
+
+ 14%|██████████████████▊                                                                                                                    | 419/3000 [06:35<31:34,  1.36it/s]
+Reward -1.0456865979999748 Action: 5 Before speed 567 Speed now 546
+
+ 14%|██████████████████▉                                                                                                                    | 421/3000 [06:37<37:45,  1.14it/s]
+Reward -1.5882806020003044 Action: 4 Before speed 534 Speed now 532
+Round: 47 with Time 6.888468344000103
+Reward -1.5579099690002294 Action: 4 Before speed 532 Speed now 532
+global_step=422, episodic_return=[-10.490673]
+
+ 14%|███████████████████▏                                                                                                                   | 425/3000 [06:40<27:01,  1.59it/s]
+Reward -0.3561238890001732 Action: 5 Before speed 530 Speed now 539
+Reward -1.0270174099996439 Action: 4 Before speed 539 Speed now 531
+
+ 14%|███████████████████▏                                                                                                                   | 427/3000 [06:42<31:44,  1.35it/s]
+Reward -1.5863558469999588 Action: 4 Before speed 530 Speed now 531
+
+ 14%|███████████████████▎                                                                                                                   | 429/3000 [06:43<35:16,  1.21it/s]
+Reward -0.9901438460001373 Action: 4 Before speed 536 Speed now 545
+
+ 14%|███████████████████▍                                                                                                                   | 432/3000 [06:46<33:49,  1.27it/s]
+Round: 48 with Time 6.9263866790001885
+Reward -1.6478162810002686 Action: 4 Before speed 545 Speed now 489
+global_step=431, episodic_return=[-10.528293]
+Reward -0.6941199369998685 Action: 5 Before speed 489 Speed now 543
+
+ 14%|███████████████████▌                                                                                                                   | 435/3000 [06:48<31:53,  1.34it/s]
+Reward -0.9905959760003498 Action: 4 Before speed 527 Speed now 533
+Reward -1.5887132039996685 Action: 4 Before speed 533 Speed now 533
+
+ 15%|███████████████████▋                                                                                                                   | 437/3000 [06:49<31:01,  1.38it/s]
+Reward -1.081892716999846 Action: 5 Before speed 499 Speed now 540
+
+ 15%|███████████████████▊                                                                                                                   | 440/3000 [06:52<34:48,  1.23it/s]
+Reward -1.5864109600001028 Action: 4 Before speed 532 Speed now 532
+Round: 49 with Time 6.841765951999605
+Reward -1.5622133509999911 Action: 4 Before speed 532 Speed now 532
+global_step=440, episodic_return=[-10.443494]
+Reward -0.6989603560000432 Action: 5 Before speed 532 Speed now 526
+
+ 15%|███████████████████▉                                                                                                                   | 443/3000 [06:54<27:14,  1.56it/s]
+Reward -1.0167223159996865 Action: 4 Before speed 530 Speed now 535
+
+ 15%|████████████████████                                                                                                                   | 446/3000 [06:56<30:53,  1.38it/s]
+Reward -1.5868877750002865 Action: 4 Before speed 521 Speed now 532
+
+ 15%|████████████████████                                                                                                                   | 447/3000 [06:57<35:26,  1.20it/s]
+Reward -0.9583949470002153 Action: 4 Before speed 537 Speed now 519
+Reward -1.6162089170001308 Action: 4 Before speed 519 Speed now 420
+Round: 50 with Time 6.959963711
+Reward -1.5965731230002347 Action: 4 Before speed 420 Speed now 530
+
+ 15%|████████████████████▎                                                                                                                  | 450/3000 [06:59<33:24,  1.27it/s]
+Reward -0.6573563800002376 Action: 5 Before speed 530 Speed now 533
+Reward -0.3894640270000309 Action: 5 Before speed 533 Speed now 543
+
+ 15%|████████████████████▍                                                                                                                  | 453/3000 [07:02<32:01,  1.33it/s]
+Reward -1.5678883870004028 Action: 4 Before speed 523 Speed now 523
+
+ 15%|████████████████████▌                                                                                                                  | 456/3000 [07:04<35:16,  1.20it/s]
+Reward -1.0596259029998691 Action: 5 Before speed 537 Speed now 538
+Reward -0.9774911559998145 Action: 4 Before speed 538 Speed now 528
+
+ 15%|████████████████████▌                                                                                                                  | 458/3000 [07:06<34:20,  1.23it/s]
+Round: 51 with Time 6.922959551000076
+Reward -1.6469158499998229 Action: 4 Before speed 528 Speed now 490
+global_step=458, episodic_return=[-10.525007]
+Reward -0.6631103439999606 Action: 5 Before speed 490 Speed now 542
+
+ 15%|████████████████████▋                                                                                                                  | 461/3000 [07:07<27:08,  1.56it/s]
+Reward -0.9989999959998386 Action: 4 Before speed 542 Speed now 534
+
+ 15%|████████████████████▉                                                                                                                  | 464/3000 [07:10<30:57,  1.37it/s]
+Reward -1.6174654460000055 Action: 4 Before speed 563 Speed now 520
+
+ 16%|████████████████████▉                                                                                                                  | 466/3000 [07:12<37:01,  1.14it/s]
+Reward -0.992218953000247 Action: 4 Before speed 526 Speed now 533
+Reward -1.5899963920000117 Action: 4 Before speed 533 Speed now 607
+Round: 52 with Time 6.930599948000236
+Reward -1.6240194329997393 Action: 4 Before speed 607 Speed now 526
+
+ 16%|█████████████████████                                                                                                                  | 469/3000 [07:14<31:41,  1.33it/s]
+Reward -0.656785466999736 Action: 5 Before speed 526 Speed now 532
+Reward -0.3649301259997628 Action: 5 Before speed 532 Speed now 531
+
+ 16%|█████████████████████▏                                                                                                                 | 472/3000 [07:16<30:49,  1.37it/s]
+Reward -1.5880887509996682 Action: 4 Before speed 523 Speed now 523
+
+ 16%|█████████████████████▎                                                                                                                 | 474/3000 [07:18<35:14,  1.19it/s]
+Reward -1.0930517119995784 Action: 5 Before speed 527 Speed now 531
+Reward -0.9764492389999759 Action: 4 Before speed 531 Speed now 521
+
+ 16%|█████████████████████▍                                                                                                                 | 476/3000 [07:20<35:04,  1.20it/s]
+Round: 53 with Time 6.865963027999896
+Reward -1.523187756000334 Action: 4 Before speed 521 Speed now 521
+global_step=476, episodic_return=[-10.467378]
+Reward -0.69356552499994 Action: 5 Before speed 521 Speed now 528
+
+ 16%|█████████████████████▌                                                                                                                 | 479/3000 [07:21<27:21,  1.54it/s]
+Reward -0.9781999870001528 Action: 4 Before speed 522 Speed now 530
+
+ 16%|█████████████████████▋                                                                                                                 | 482/3000 [07:24<30:51,  1.36it/s]
+Reward -1.6202657540001382 Action: 4 Before speed 526 Speed now 556
+
+ 16%|█████████████████████▊                                                                                                                 | 484/3000 [07:26<36:45,  1.14it/s]
+Reward -0.9770620599997528 Action: 5 Before speed 522 Speed now 546
+Reward -0.6926530709997678 Action: 4 Before speed 546 Speed now 546
+Round: 54 with Time 6.959664865999912
+Reward -1.5893895430002885 Action: 4 Before speed 546 Speed now 521
+
+ 16%|█████████████████████▉                                                                                                                 | 487/3000 [07:28<31:13,  1.34it/s]
+Reward -0.6622733230001359 Action: 5 Before speed 521 Speed now 543
+Reward -0.38989030700031435 Action: 5 Before speed 543 Speed now 539
+
+ 16%|██████████████████████                                                                                                                 | 490/3000 [07:30<30:20,  1.38it/s]
+Reward -1.5617538769996826 Action: 4 Before speed 529 Speed now 529
+Reward -1.6508451280000371 Action: 4 Before speed 529 Speed now 522
+
+ 16%|██████████████████████▏                                                                                                                | 492/3000 [07:32<34:31,  1.21it/s]
+Reward -0.9912626059999639 Action: 5 Before speed 538 Speed now 532
+
+ 16%|██████████████████████▎                                                                                                                | 495/3000 [07:34<32:41,  1.28it/s]
+Round: 55 with Time 6.902601597999819
+Reward -1.5935004730003128 Action: 4 Before speed 532 Speed now 532
+global_step=494, episodic_return=[-9.604387]
+Reward -0.6831156910002392 Action: 5 Before speed 532 Speed now 537
+
+ 17%|██████████████████████▎                                                                                                                | 497/3000 [07:35<26:51,  1.55it/s]
+Reward -0.9944261170003301 Action: 4 Before speed 536 Speed now 546
+Reward -1.6197278839998943 Action: 4 Before speed 546 Speed now 574
+
+ 17%|██████████████████████▌                                                                                                                | 500/3000 [07:38<30:09,  1.38it/s]
+Reward -1.0819411779998518 Action: 5 Before speed 524 Speed now 516
+
+ 17%|██████████████████████▌                                                                                                                | 502/3000 [07:40<36:42,  1.13it/s]
+Reward -0.6526487689998248 Action: 4 Before speed 536 Speed now 536
+Round: 56 with Time 6.902213970000048
+Reward -1.596481690999917 Action: 4 Before speed 536 Speed now 536
+global_step=503, episodic_return=[-9.603981]
+
+ 17%|██████████████████████▊                                                                                                                | 506/3000 [07:42<26:45,  1.55it/s]
+Reward -0.39775957499978176 Action: 5 Before speed 525 Speed now 543
+
+ 17%|██████████████████████▊                                                                                                                | 508/3000 [07:44<30:38,  1.36it/s]
+Reward -1.617088397000225 Action: 4 Before speed 518 Speed now 509
+Reward -1.6121661940000194 Action: 4 Before speed 509 Speed now 533
+
+ 17%|██████████████████████▉                                                                                                                | 510/3000 [07:46<34:19,  1.21it/s]
+Reward -0.9975085859996398 Action: 5 Before speed 549 Speed now 528
+
+ 17%|███████████████████████                                                                                                                | 513/3000 [07:48<32:35,  1.27it/s]
+Round: 57 with Time 6.946588318000067
+Reward -1.5901301429998056 Action: 4 Before speed 523 Speed now 604
+global_step=512, episodic_return=[-9.648645]
+Reward -0.6888140420001037 Action: 5 Before speed 604 Speed now 524
+
+ 17%|███████████████████████▏                                                                                                               | 516/3000 [07:50<31:02,  1.33it/s]
+Reward -0.9882036720000542 Action: 4 Before speed 522 Speed now 527
+Reward -1.5968369680002978 Action: 4 Before speed 527 Speed now 527
+
+ 17%|███████████████████████▎                                                                                                               | 518/3000 [07:51<30:28,  1.36it/s]
+Reward -1.0432813289999103 Action: 5 Before speed 524 Speed now 535
+
+ 17%|███████████████████████▍                                                                                                               | 520/3000 [07:53<36:22,  1.14it/s]
+Reward -0.6849027779999233 Action: 4 Before speed 523 Speed now 523
+Round: 58 with Time 6.943614362000062
+Reward -1.6053992259998267 Action: 4 Before speed 523 Speed now 523
+global_step=521, episodic_return=[-9.645385]
+
+ 17%|███████████████████████▌                                                                                                               | 524/3000 [07:56<26:41,  1.55it/s]
+Reward -0.40002633099993545 Action: 5 Before speed 533 Speed now 517
+Reward -0.9847630710000885 Action: 4 Before speed 517 Speed now 540
+
+ 18%|███████████████████████▋                                                                                                               | 526/3000 [07:58<30:28,  1.35it/s]
+Reward -1.622257434000312 Action: 4 Before speed 516 Speed now 527
+
+ 18%|███████████████████████▊                                                                                                               | 528/3000 [07:59<34:08,  1.21it/s]
+Reward -1.0202429670002857 Action: 5 Before speed 528 Speed now 538
+
+ 18%|███████████████████████▉                                                                                                               | 531/3000 [08:02<32:43,  1.26it/s]
+Round: 59 with Time 6.976917981000042
+Reward -1.6184501740002815 Action: 4 Before speed 558 Speed now 521
+global_step=530, episodic_return=[-9.678723]
+Reward -0.6284936390002258 Action: 5 Before speed 521 Speed now 538
+
+ 18%|████████████████████████                                                                                                               | 534/3000 [08:04<30:32,  1.35it/s]
+Reward -0.9845313560003888 Action: 4 Before speed 524 Speed now 530
+Reward -1.5890455159996235 Action: 4 Before speed 530 Speed now 530
+
+ 18%|████████████████████████                                                                                                               | 536/3000 [08:05<30:09,  1.36it/s]
+Reward -1.0503860809999424 Action: 5 Before speed 531 Speed now 526
+
+ 18%|████████████████████████▎                                                                                                              | 539/3000 [08:08<33:38,  1.22it/s]
+Reward -0.6893409409999549 Action: 4 Before speed 523 Speed now 523
+Round: 60 with Time 6.835011710999879
+Reward -1.560980304000077 Action: 4 Before speed 523 Speed now 523
+global_step=539, episodic_return=[-9.536974]
+Reward -0.6883188819997486 Action: 5 Before speed 523 Speed now 541
+
+ 18%|████████████████████████▍                                                                                                              | 542/3000 [08:10<26:14,  1.56it/s]
+Reward -1.0217437649998828 Action: 4 Before speed 525 Speed now 518
+
+ 18%|████████████████████████▌                                                                                                              | 545/3000 [08:12<29:57,  1.37it/s]
+Reward -1.6240922089999912 Action: 4 Before speed 532 Speed now 543
+
+ 18%|████████████████████████▌                                                                                                              | 547/3000 [08:14<35:48,  1.14it/s]
+Reward -0.9901910329999737 Action: 5 Before speed 517 Speed now 540
+Reward -0.6835720779999974 Action: 4 Before speed 540 Speed now 540
+Round: 61 with Time 6.956847609999841
+Reward -1.6249401509998278 Action: 4 Before speed 540 Speed now 557
+
+ 18%|████████████████████████▋                                                                                                              | 549/3000 [08:16<32:16,  1.27it/s]
+Reward -0.671739597999931 Action: 5 Before speed 557 Speed now 551
+Reward -0.38698551200013753 Action: 5 Before speed 551 Speed now 542
+
+ 18%|████████████████████████▊                                                                                                              | 552/3000 [08:18<30:25,  1.34it/s]
+Reward -1.588586294000288 Action: 4 Before speed 514 Speed now 514
+
+ 18%|████████████████████████▉                                                                                                              | 555/3000 [08:20<33:57,  1.20it/s]
+Reward -1.0891556840001613 Action: 5 Before speed 547 Speed now 528
+
+ 19%|█████████████████████████                                                                                                              | 557/3000 [08:22<33:37,  1.21it/s]
+Reward -0.6983923689999756 Action: 4 Before speed 531 Speed now 534
+Round: 62 with Time 6.9055885329999
+Reward -1.5848734420000254 Action: 4 Before speed 534 Speed now 595
+global_step=557, episodic_return=[-9.607577]
+Reward -0.6605161420002332 Action: 5 Before speed 595 Speed now 537
+
+ 19%|█████████████████████████▏                                                                                                             | 560/3000 [08:24<26:00,  1.56it/s]
+Reward -1.0157978189999994 Action: 4 Before speed 534 Speed now 534
+
+ 19%|█████████████████████████▎                                                                                                             | 563/3000 [08:26<29:32,  1.37it/s]
+Reward -1.5924263050000262 Action: 4 Before speed 567 Speed now 538
+
+ 19%|█████████████████████████▍                                                                                                             | 565/3000 [08:28<35:23,  1.15it/s]
+Reward -0.9647325959999762 Action: 5 Before speed 530 Speed now 532
+Reward -0.7518537810001362 Action: 4 Before speed 532 Speed now 518
+Round: 63 with Time 6.917962959000306
+Reward -1.5481394610000279 Action: 4 Before speed 518 Speed now 415
+
+ 19%|█████████████████████████▌                                                                                                             | 568/3000 [08:30<30:11,  1.34it/s]
+Reward -0.660927374000039 Action: 5 Before speed 415 Speed now 530
+Reward -0.3895034800002577 Action: 5 Before speed 530 Speed now 547
+
+ 19%|█████████████████████████▋                                                                                                             | 571/3000 [08:32<29:49,  1.36it/s]
+Reward -1.6195230489996901 Action: 4 Before speed 529 Speed now 524
+
+ 19%|█████████████████████████▊                                                                                                             | 573/3000 [08:34<33:29,  1.21it/s]
+Reward -1.0548615650000102 Action: 5 Before speed 523 Speed now 549
+Reward -1.0192490289996385 Action: 5 Before speed 549 Speed now 531
+
+ 19%|█████████████████████████▉                                                                                                             | 575/3000 [08:36<33:06,  1.22it/s]
+Round: 64 with Time 6.926749026999914
+Reward -1.612289163999685 Action: 4 Before speed 629 Speed now 552
+global_step=575, episodic_return=[-9.628577]
+Reward -0.6656363470001452 Action: 5 Before speed 552 Speed now 535
+
+ 19%|██████████████████████████                                                                                                             | 578/3000 [08:37<25:37,  1.58it/s]
+Reward -1.0146184840000387 Action: 4 Before speed 537 Speed now 532
+
+ 19%|██████████████████████████▏                                                                                                            | 581/3000 [08:40<29:18,  1.38it/s]
+Reward -1.6167460840000785 Action: 4 Before speed 532 Speed now 548
+
+ 19%|██████████████████████████▏                                                                                                            | 583/3000 [08:42<35:23,  1.14it/s]
+Reward -0.9819892919999802 Action: 5 Before speed 534 Speed now 534
+Reward -0.6901447710001776 Action: 4 Before speed 534 Speed now 544
+Round: 65 with Time 6.900413022000066
+Reward -1.591538396999931 Action: 4 Before speed 544 Speed now 558
+
+ 20%|██████████████████████████▎                                                                                                            | 586/3000 [08:44<30:03,  1.34it/s]
+Reward -0.6639170590001413 Action: 5 Before speed 558 Speed now 536
+Reward -0.38710287200001403 Action: 5 Before speed 536 Speed now 537
+
+ 20%|██████████████████████████▌                                                                                                            | 589/3000 [08:46<29:34,  1.36it/s]
+Reward -1.590974528999959 Action: 4 Before speed 530 Speed now 530
+
+ 20%|██████████████████████████▌                                                                                                            | 591/3000 [08:48<33:34,  1.20it/s]
+Reward -1.0853064259999883 Action: 5 Before speed 495 Speed now 541
+Reward -0.9821355059998496 Action: 5 Before speed 541 Speed now 524
+
+ 20%|██████████████████████████▋                                                                                                            | 594/3000 [08:50<31:32,  1.27it/s]
+Round: 66 with Time 6.928737921999982
+Reward -1.619099073000052 Action: 4 Before speed 524 Speed now 368
+global_step=593, episodic_return=[-9.630528]
+Reward -0.6879873490001955 Action: 5 Before speed 368 Speed now 543
+
+ 20%|██████████████████████████▊                                                                                                            | 597/3000 [08:52<30:10,  1.33it/s]
+Reward -1.0244047710002633 Action: 4 Before speed 541 Speed now 524
+Reward -1.587095354000121 Action: 4 Before speed 524 Speed now 524
+
+ 20%|██████████████████████████▉                                                                                                            | 599/3000 [08:54<29:35,  1.35it/s]
+Reward -1.0499270489999617 Action: 5 Before speed 543 Speed now 538
+
+ 20%|███████████████████████████                                                                                                            | 601/3000 [08:56<35:07,  1.14it/s]
+Reward -0.723850905999825 Action: 4 Before speed 525 Speed now 591
+Round: 67 with Time 6.93073576300003
+Reward -1.5600213019996771 Action: 4 Before speed 591 Speed now 546
+global_step=602, episodic_return=[-9.632514]
+
+ 20%|███████████████████████████▏                                                                                                           | 605/3000 [08:58<25:24,  1.57it/s]
+Reward -0.3854962049999813 Action: 5 Before speed 540 Speed now 542
+
+ 20%|███████████████████████████▎                                                                                                           | 607/3000 [09:00<29:15,  1.36it/s]
+Reward -1.5874846249997971 Action: 4 Before speed 531 Speed now 531
+Reward -1.6134082950001356 Action: 4 Before speed 531 Speed now 509
+
+ 20%|███████████████████████████▍                                                                                                           | 609/3000 [09:02<33:39,  1.18it/s]
+Reward -0.9210213630003636 Action: 5 Before speed 525 Speed now 534
+
+ 20%|███████████████████████████▌                                                                                                           | 612/3000 [09:04<30:38,  1.30it/s]
+Round: 68 with Time 6.868372101999739
+Reward -1.560008037999887 Action: 4 Before speed 534 Speed now 534
+global_step=611, episodic_return=[-9.570101]
+Reward -0.718790994000301 Action: 5 Before speed 534 Speed now 531
+
+ 20%|███████████████████████████▋                                                                                                           | 615/3000 [09:06<29:46,  1.33it/s]
+Reward -0.9946027280002454 Action: 4 Before speed 528 Speed now 525
+Reward -1.6172704990002784 Action: 4 Before speed 525 Speed now 540
+
+ 21%|███████████████████████████▊                                                                                                           | 617/3000 [09:08<28:51,  1.38it/s]
+Reward -1.0748658800002886 Action: 5 Before speed 532 Speed now 526
+
+ 21%|███████████████████████████▉                                                                                                           | 620/3000 [09:10<32:01,  1.24it/s]
+Reward -0.6611801189997095 Action: 4 Before speed 533 Speed now 533
+Round: 69 with Time 6.92701340099984
+Reward -0.7193642199999886 Action: 5 Before speed 533 Speed now 531
+global_step=620, episodic_return=[-8.729139]
+
+ 21%|████████████████████████████                                                                                                           | 623/3000 [09:12<25:07,  1.58it/s]
+Reward -0.3554761420000432 Action: 5 Before speed 542 Speed now 541
+Reward -1.0212494150000566 Action: 4 Before speed 541 Speed now 532
+
+ 21%|████████████████████████████▏                                                                                                          | 625/3000 [09:14<28:59,  1.37it/s]
+Reward -1.5623282149998885 Action: 4 Before speed 532 Speed now 532
+
+ 21%|████████████████████████████▏                                                                                                          | 627/3000 [09:15<32:51,  1.20it/s]
+Reward -0.9868411540001034 Action: 5 Before speed 534 Speed now 519
+Reward -0.7736955760001365 Action: 4 Before speed 519 Speed now 394
+Round: 70 with Time 6.899047677999988
+Reward -1.5095827320000352 Action: 4 Before speed 394 Speed now 553
+
+ 21%|████████████████████████████▎                                                                                                          | 630/3000 [09:18<30:38,  1.29it/s]
+Reward -0.6591245550002895 Action: 5 Before speed 553 Speed now 538
+
+ 21%|████████████████████████████▍                                                                                                          | 633/3000 [09:20<29:35,  1.33it/s]
+Reward -1.0196608500000366 Action: 4 Before speed 553 Speed now 530
+Reward -1.6188135149999652 Action: 4 Before speed 530 Speed now 568
+
+ 21%|████████████████████████████▌                                                                                                          | 635/3000 [09:21<28:38,  1.38it/s]
+Reward -1.0802115579999736 Action: 5 Before speed 543 Speed now 532
+
+ 21%|████████████████████████████▋                                                                                                          | 638/3000 [09:24<31:48,  1.24it/s]
+Reward -0.6608182869999837 Action: 4 Before speed 534 Speed now 534
+Round: 71 with Time 6.9284335359998295
+Reward -0.752292104999924 Action: 5 Before speed 534 Speed now 528
+global_step=638, episodic_return=[-8.730167]
+Reward -0.6571659729997918 Action: 5 Before speed 528 Speed now 541
+
+ 21%|████████████████████████████▊                                                                                                          | 641/3000 [09:26<25:17,  1.55it/s]
+Reward -1.0175433280001016 Action: 4 Before speed 536 Speed now 530
+
+ 21%|████████████████████████████▉                                                                                                          | 644/3000 [09:28<28:44,  1.37it/s]
+Reward -1.6232716500002424 Action: 4 Before speed 530 Speed now 547
+
+ 22%|█████████████████████████████                                                                                                          | 646/3000 [09:30<34:18,  1.14it/s]
+Reward -0.9868051850003212 Action: 5 Before speed 537 Speed now 535
+Reward -0.7281921540002259 Action: 4 Before speed 535 Speed now 389
+Round: 72 with Time 6.9255663339999955
+Reward -0.6842720600002394 Action: 5 Before speed 389 Speed now 530
+
+ 22%|█████████████████████████████▏                                                                                                         | 649/3000 [09:32<29:21,  1.33it/s]
+Reward -0.6622947709997788 Action: 5 Before speed 530 Speed now 544
+Reward -0.38599508800007243 Action: 5 Before speed 544 Speed now 524
+
+ 22%|█████████████████████████████▎                                                                                                         | 651/3000 [09:34<29:34,  1.32it/s]
+Reward -1.5901629950002643 Action: 4 Before speed 541 Speed now 548
+
+ 22%|█████████████████████████████▍                                                                                                         | 654/3000 [09:36<32:37,  1.20it/s]
+Reward -1.0773166839999249 Action: 5 Before speed 539 Speed now 526
+
+ 22%|█████████████████████████████▌                                                                                                         | 656/3000 [09:38<32:10,  1.21it/s]
+Reward -0.687359946000015 Action: 4 Before speed 535 Speed now 522
+Round: 73 with Time 6.926083178999761
+Reward -0.6899758130002738 Action: 5 Before speed 522 Speed now 545
+global_step=656, episodic_return=[-8.72788]
+Reward -0.6618924280001011 Action: 5 Before speed 545 Speed now 540
+
+ 22%|█████████████████████████████▋                                                                                                         | 659/3000 [09:40<25:02,  1.56it/s]
+Reward -0.9948177009996471 Action: 4 Before speed 528 Speed now 531
+
+ 22%|█████████████████████████████▊                                                                                                         | 662/3000 [09:42<28:31,  1.37it/s]
+Reward -1.620982541000012 Action: 4 Before speed 514 Speed now 539
+
+ 22%|█████████████████████████████▉                                                                                                         | 664/3000 [09:44<34:08,  1.14it/s]
+Reward -0.9929778370001259 Action: 5 Before speed 522 Speed now 540
+Reward -0.6569825560000027 Action: 4 Before speed 540 Speed now 540
+Round: 74 with Time 6.930103262000102
+Reward -0.747365104000437 Action: 5 Before speed 540 Speed now 545
+
+ 22%|██████████████████████████████                                                                                                         | 667/3000 [09:46<29:14,  1.33it/s]
+Reward -0.660004635000405 Action: 5 Before speed 545 Speed now 544
+Reward -0.36142824299986387 Action: 5 Before speed 544 Speed now 542
+
+ 22%|██████████████████████████████▏                                                                                                        | 670/3000 [09:48<28:06,  1.38it/s]
+Reward -1.5649582960003499 Action: 4 Before speed 532 Speed now 532
+
+ 22%|██████████████████████████████▏                                                                                                        | 672/3000 [09:50<32:02,  1.21it/s]
+Reward -1.0452258519999305 Action: 5 Before speed 519 Speed now 547
+Reward -0.9926243909999357 Action: 5 Before speed 547 Speed now 525
+
+ 22%|██████████████████████████████▎                                                                                                        | 674/3000 [09:52<32:09,  1.21it/s]
+Round: 75 with Time 6.905860144000144
+Reward -0.6953704469997319 Action: 5 Before speed 390 Speed now 516
+global_step=674, episodic_return=[-7.807806]
+Reward -0.623280048000197 Action: 5 Before speed 516 Speed now 554
+
+ 23%|██████████████████████████████▍                                                                                                        | 677/3000 [09:53<24:34,  1.58it/s]
+Reward -0.9952644499999224 Action: 4 Before speed 540 Speed now 534
+Reward -1.5862444079997657 Action: 4 Before speed 534 Speed now 534
+
+ 23%|██████████████████████████████▌                                                                                                        | 680/3000 [09:56<28:22,  1.36it/s]
+
+ 23%|██████████████████████████████▋                                                                                                        | 682/3000 [09:58<33:50,  1.14it/s]
+Reward -0.982383432000006 Action: 5 Before speed 535 Speed now 541
+Reward -0.6569325370001025 Action: 4 Before speed 541 Speed now 541
+Round: 76 with Time 6.89288134599974
+Reward -0.7527483890003168 Action: 5 Before speed 541 Speed now 435
+
+ 23%|██████████████████████████████▊                                                                                                        | 686/3000 [10:00<24:51,  1.55it/s]
+Reward -0.660348743999748 Action: 5 Before speed 435 Speed now 539
+Reward -0.39090077199989537 Action: 5 Before speed 539 Speed now 530
+
+ 23%|██████████████████████████████▉                                                                                                        | 688/3000 [10:02<28:40,  1.34it/s]
+Reward -1.616800214000159 Action: 4 Before speed 533 Speed now 487
+Reward -0.6900187340002049 Action: 5 Before speed 487 Speed now 536
+
+ 23%|███████████████████████████████                                                                                                        | 690/3000 [10:04<31:47,  1.21it/s]
+Reward -0.9880148679999365 Action: 5 Before speed 530 Speed now 524
+
+ 23%|███████████████████████████████▏                                                                                                       | 693/3000 [10:06<29:46,  1.29it/s]
+Round: 77 with Time 6.867057340999963
+Reward -0.6882663910000701 Action: 5 Before speed 524 Speed now 524
+global_step=692, episodic_return=[-7.768523]
+Reward -0.6860856620000959 Action: 5 Before speed 524 Speed now 532
+
+ 23%|███████████████████████████████▎                                                                                                       | 696/3000 [10:08<29:04,  1.32it/s]
+Reward -1.029993762000231 Action: 4 Before speed 517 Speed now 525
+Reward -1.5792915010000796 Action: 4 Before speed 525 Speed now 525
+
+ 23%|███████████████████████████████▍                                                                                                       | 698/3000 [10:10<28:22,  1.35it/s]
+Reward -1.0788090729997748 Action: 5 Before speed 525 Speed now 540
+
+ 23%|███████████████████████████████▌                                                                                                       | 700/3000 [10:12<33:41,  1.14it/s]
+Reward -0.6851167620002343 Action: 4 Before speed 528 Speed now 528
+SPS: 1
+Round: 78 with Time 6.993568819999837
+Reward -0.7264343749998261 Action: 5 Before speed 528 Speed now 523
+global_step=701, episodic_return=[-7.8952312]
+
+ 23%|███████████████████████████████▋                                                                                                       | 704/3000 [10:14<24:08,  1.58it/s]
+Reward -0.3469391639996502 Action: 5 Before speed 531 Speed now 530
+
+ 24%|███████████████████████████████▊                                                                                                       | 706/3000 [10:16<28:19,  1.35it/s]
+Reward -1.6188521189996208 Action: 4 Before speed 523 Speed now 559
+Reward -0.6990931259997524 Action: 5 Before speed 559 Speed now 552
+
+ 24%|███████████████████████████████▊                                                                                                       | 708/3000 [10:18<31:51,  1.20it/s]
+Reward -0.979995885000335 Action: 5 Before speed 523 Speed now 541
+
+ 24%|███████████████████████████████▉                                                                                                       | 711/3000 [10:20<29:58,  1.27it/s]
+Round: 79 with Time 6.894087026999841
+Reward -0.7199119219999375 Action: 5 Before speed 541 Speed now 403
+global_step=710, episodic_return=[-7.7965045]
+Reward -0.6577685080001174 Action: 5 Before speed 403 Speed now 538
+
+ 24%|████████████████████████████████▏                                                                                                      | 714/3000 [10:22<28:41,  1.33it/s]
+Reward -1.0146165570004086 Action: 4 Before speed 537 Speed now 533
+Reward -1.5611545420000765 Action: 4 Before speed 533 Speed now 533
+
+ 24%|████████████████████████████████▏                                                                                                      | 716/3000 [10:24<27:52,  1.37it/s]
+Reward -1.0515728780001155 Action: 5 Before speed 536 Speed now 537
+
+ 24%|████████████████████████████████▎                                                                                                      | 719/3000 [10:26<30:53,  1.23it/s]
+Reward -0.6664057319999301 Action: 4 Before speed 545 Speed now 573
+Round: 80 with Time 6.891564727000059
+Reward -0.71539442600033 Action: 5 Before speed 573 Speed now 324
+global_step=719, episodic_return=[-7.794063]
+
+ 24%|████████████████████████████████▍                                                                                                      | 722/3000 [10:28<24:14,  1.57it/s]
+Reward -0.3599376309998661 Action: 5 Before speed 559 Speed now 532
+Reward -0.9849480399998356 Action: 4 Before speed 532 Speed now 541
+
+ 24%|████████████████████████████████▋                                                                                                      | 725/3000 [10:30<27:30,  1.38it/s]
+Reward -0.7240762579999682 Action: 5 Before speed 541 Speed now 519
+
+ 24%|████████████████████████████████▋                                                                                                      | 726/3000 [10:32<31:28,  1.20it/s]
+Reward -1.023225490999721 Action: 5 Before speed 531 Speed now 528
+Reward -0.6276393870002721 Action: 4 Before speed 528 Speed now 528
+Round: 81 with Time 6.898083956999926
+Reward -0.7192876909998631 Action: 5 Before speed 528 Speed now 549
+
+ 24%|████████████████████████████████▊                                                                                                      | 729/3000 [10:34<29:41,  1.27it/s]
+Reward -0.6684765060003883 Action: 5 Before speed 549 Speed now 535
+Reward -0.38551158100017346 Action: 5 Before speed 535 Speed now 539
+
+ 24%|████████████████████████████████▉                                                                                                      | 732/3000 [10:36<28:29,  1.33it/s]
+Reward -1.619225954000194 Action: 4 Before speed 526 Speed now 514
+
+ 24%|█████████████████████████████████                                                                                                      | 735/3000 [10:38<31:31,  1.20it/s]
+Reward -1.1097362660002545 Action: 5 Before speed 514 Speed now 535
+
+ 25%|█████████████████████████████████▏                                                                                                     | 737/3000 [10:40<31:14,  1.21it/s]
+Reward -0.729166042000088 Action: 4 Before speed 527 Speed now 562
+Round: 82 with Time 6.934941178000372
+Reward -0.6925115829999413 Action: 5 Before speed 562 Speed now 611
+global_step=737, episodic_return=[-7.837239]
+Reward -0.6567859639999369 Action: 5 Before speed 611 Speed now 543
+
+ 25%|█████████████████████████████████▎                                                                                                     | 740/3000 [10:42<24:06,  1.56it/s]
+Reward -0.992141072999857 Action: 4 Before speed 542 Speed now 521
+
+ 25%|█████████████████████████████████▍                                                                                                     | 743/3000 [10:44<27:35,  1.36it/s]
+Reward -0.7202897310003209 Action: 5 Before speed 521 Speed now 522
+
+ 25%|█████████████████████████████████▌                                                                                                     | 745/3000 [10:46<32:55,  1.14it/s]
+Reward -0.9890883699999904 Action: 5 Before speed 549 Speed now 523
+Reward -0.7220567479998863 Action: 4 Before speed 523 Speed now 518
+Round: 83 with Time 6.925434623000001
+Reward -0.6901174120002906 Action: 5 Before speed 518 Speed now 552
+
+ 25%|█████████████████████████████████▋                                                                                                     | 748/3000 [10:48<28:04,  1.34it/s]
+Reward -0.6552412870000808 Action: 5 Before speed 552 Speed now 538
+Reward -0.36030363700001544 Action: 5 Before speed 538 Speed now 530
+
+ 25%|█████████████████████████████████▊                                                                                                     | 751/3000 [10:51<27:21,  1.37it/s]
+Reward -1.582836368000153 Action: 4 Before speed 534 Speed now 534
+
+ 25%|█████████████████████████████████▉                                                                                                     | 753/3000 [10:52<31:13,  1.20it/s]
+Reward -1.0817233269999633 Action: 5 Before speed 522 Speed now 535
+Reward -0.9561487739997574 Action: 5 Before speed 535 Speed now 538
+
+ 25%|█████████████████████████████████▉                                                                                                     | 755/3000 [10:54<30:15,  1.24it/s]
+Round: 84 with Time 6.868322901999818
+Reward -0.7201506840001457 Action: 5 Before speed 538 Speed now 539
+global_step=755, episodic_return=[-7.770048]
+Reward -0.6866124960001798 Action: 5 Before speed 539 Speed now 539
+
+ 25%|██████████████████████████████████                                                                                                     | 758/3000 [10:56<23:44,  1.57it/s]
+Reward -1.021180718999858 Action: 4 Before speed 527 Speed now 542
+
+ 25%|██████████████████████████████████▏                                                                                                    | 761/3000 [10:58<27:11,  1.37it/s]
+Reward -0.7191350399998555 Action: 5 Before speed 542 Speed now 517
+
+ 25%|██████████████████████████████████▎                                                                                                    | 763/3000 [11:00<32:54,  1.13it/s]
+Reward -0.9913355670000783 Action: 5 Before speed 534 Speed now 524
+Reward -0.6521784699998534 Action: 4 Before speed 524 Speed now 524
+Round: 85 with Time 6.922032760000093
+Reward -0.7166205559997252 Action: 5 Before speed 524 Speed now 564
+
+ 26%|██████████████████████████████████▍                                                                                                    | 766/3000 [11:02<27:54,  1.33it/s]
+Reward -0.6691184670003167 Action: 5 Before speed 564 Speed now 540
+Reward -0.3825065099999847 Action: 5 Before speed 540 Speed now 530
+
+ 26%|██████████████████████████████████▌                                                                                                    | 769/3000 [11:04<27:07,  1.37it/s]
+Reward -1.5929254149999905 Action: 4 Before speed 527 Speed now 527
+
+ 26%|██████████████████████████████████▋                                                                                                    | 771/3000 [11:06<30:55,  1.20it/s]
+Reward -1.079923427000267 Action: 5 Before speed 539 Speed now 526
+Reward -0.9902574060001825 Action: 5 Before speed 526 Speed now 531
+
+ 26%|██████████████████████████████████▊                                                                                                    | 774/3000 [11:08<28:56,  1.28it/s]
+Round: 86 with Time 6.899386611999944
+Reward -0.6600327000001016 Action: 5 Before speed 531 Speed now 531
+global_step=773, episodic_return=[-7.8013496]
+Reward -0.6619927100000496 Action: 5 Before speed 531 Speed now 542
+
+ 26%|██████████████████████████████████▉                                                                                                    | 777/3000 [11:11<27:55,  1.33it/s]
+Reward -1.024889635999898 Action: 4 Before speed 524 Speed now 533
+Reward -1.6180829989997618 Action: 4 Before speed 533 Speed now 563
+
+ 26%|███████████████████████████████████                                                                                                    | 779/3000 [11:12<26:55,  1.38it/s]
+Reward -1.0775056910001695 Action: 5 Before speed 542 Speed now 519
+
+ 26%|███████████████████████████████████▏                                                                                                   | 781/3000 [11:14<32:12,  1.15it/s]
+Reward -0.695987573000366 Action: 4 Before speed 545 Speed now 545
+Round: 87 with Time 6.930053661999864
+Reward -0.7135248439999486 Action: 5 Before speed 545 Speed now 526
+
+ 26%|███████████████████████████████████▎                                                                                                   | 785/3000 [11:16<23:42,  1.56it/s]
+Reward -0.6602689500000452 Action: 5 Before speed 526 Speed now 543
+Reward -0.3906946339998285 Action: 5 Before speed 543 Speed now 528
+
+ 26%|███████████████████████████████████▍                                                                                                   | 787/3000 [11:18<26:47,  1.38it/s]
+Reward -1.559108685999854 Action: 4 Before speed 547 Speed now 547
+Reward -0.7210224160003236 Action: 5 Before speed 547 Speed now 506
+
+ 26%|███████████████████████████████████▌                                                                                                   | 789/3000 [11:20<30:40,  1.20it/s]
+Reward -0.9828139209998881 Action: 5 Before speed 536 Speed now 532
+
+ 26%|███████████████████████████████████▋                                                                                                   | 792/3000 [11:22<28:50,  1.28it/s]
+Round: 88 with Time 6.90032011600033
+Reward -0.6914395220001097 Action: 5 Before speed 532 Speed now 508
+global_step=791, episodic_return=[-7.8023643]
+Reward -0.6560694210002112 Action: 5 Before speed 508 Speed now 533
+
+ 26%|███████████████████████████████████▊                                                                                                   | 795/3000 [11:24<27:18,  1.35it/s]
+Reward -0.9856508930001837 Action: 4 Before speed 527 Speed now 538
+Reward -1.6199452350000683 Action: 4 Before speed 538 Speed now 519
+
+ 27%|███████████████████████████████████▊                                                                                                   | 797/3000 [11:26<27:12,  1.35it/s]
+Reward -1.051122968999607 Action: 5 Before speed 555 Speed now 526
+
+ 27%|████████████████████████████████████                                                                                                   | 800/3000 [11:29<29:49,  1.23it/s]
+Reward -0.6597444779999933 Action: 4 Before speed 534 Speed now 534
+Round: 89 with Time 6.927741048999906
+Reward -0.7239346619999196 Action: 5 Before speed 534 Speed now 518
+global_step=800, episodic_return=[-7.82945]
+
+ 27%|████████████████████████████████████▏                                                                                                  | 803/3000 [11:30<23:28,  1.56it/s]
+Reward -0.3901855260000957 Action: 5 Before speed 554 Speed now 545
+Reward -0.9857152680001491 Action: 4 Before speed 545 Speed now 527
+
+ 27%|████████████████████████████████████▏                                                                                                  | 805/3000 [11:32<26:21,  1.39it/s]
+Reward -0.749785286000133 Action: 5 Before speed 527 Speed now 520
+
+ 27%|████████████████████████████████████▎                                                                                                  | 807/3000 [11:34<30:28,  1.20it/s]
+Reward -0.9618179610001789 Action: 5 Before speed 528 Speed now 530
+
+ 27%|████████████████████████████████████▍                                                                                                  | 810/3000 [11:36<28:54,  1.26it/s]
+Round: 90 with Time 6.929127970000081
+Reward -0.6899240539996754 Action: 5 Before speed 583 Speed now 539
+global_step=809, episodic_return=[-7.8309665]
+Reward -0.6297029030001795 Action: 5 Before speed 539 Speed now 552
+
+ 27%|████████████████████████████████████▌                                                                                                  | 813/3000 [11:38<27:07,  1.34it/s]
+Reward -0.9897289020000244 Action: 4 Before speed 546 Speed now 525
+Reward -1.58969248600024 Action: 4 Before speed 525 Speed now 525
+
+ 27%|████████████████████████████████████▋                                                                                                  | 815/3000 [11:40<26:44,  1.36it/s]
+Reward -1.052424663000238 Action: 5 Before speed 513 Speed now 524
+
+ 27%|████████████████████████████████████▊                                                                                                  | 818/3000 [11:42<30:11,  1.20it/s]
+Reward -0.7241621519997352 Action: 4 Before speed 538 Speed now 538
+Round: 91 with Time 6.893236359000184
+Reward -0.6851252550000027 Action: 5 Before speed 538 Speed now 381
+global_step=818, episodic_return=[-7.7951136]
+Reward -0.6616736229998423 Action: 5 Before speed 381 Speed now 555
+
+ 27%|████████████████████████████████████▉                                                                                                  | 821/3000 [11:44<22:59,  1.58it/s]
+Reward -1.0155482130003293 Action: 4 Before speed 537 Speed now 540
+
+ 27%|█████████████████████████████████████                                                                                                  | 824/3000 [11:47<26:15,  1.38it/s]
+Reward -0.6861952150002253 Action: 5 Before speed 537 Speed now 530
+
+ 28%|█████████████████████████████████████▏                                                                                                 | 826/3000 [11:49<31:38,  1.15it/s]
+Reward -0.9930853930000012 Action: 5 Before speed 534 Speed now 532
+Reward -0.7197982699999557 Action: 4 Before speed 532 Speed now 509
+Round: 92 with Time 6.901958487999764
+Reward -0.6904471750003722 Action: 5 Before speed 509 Speed now 478
+
+ 28%|█████████████████████████████████████▎                                                                                                 | 829/3000 [11:51<27:06,  1.33it/s]
+Reward -0.663563711000279 Action: 5 Before speed 478 Speed now 547
+Reward -0.39028857600033007 Action: 5 Before speed 547 Speed now 535
+
+ 28%|█████████████████████████████████████▍                                                                                                 | 831/3000 [11:52<26:56,  1.34it/s]
+Reward -1.5923795259999678 Action: 4 Before speed 529 Speed now 529
+
+ 28%|█████████████████████████████████████▌                                                                                                 | 834/3000 [11:55<29:59,  1.20it/s]
+Reward -1.0503846189999422 Action: 5 Before speed 569 Speed now 536
+
+ 28%|█████████████████████████████████████▌                                                                                                 | 836/3000 [11:56<29:53,  1.21it/s]
+Reward -0.7133394030001909 Action: 4 Before speed 528 Speed now 525
+Round: 93 with Time 6.908862454999962
+Reward -0.6727253139997629 Action: 5 Before speed 525 Speed now 581
+global_step=836, episodic_return=[-7.810902]
+Reward -0.6480111569999281 Action: 5 Before speed 581 Speed now 540
+
+ 28%|█████████████████████████████████████▊                                                                                                 | 839/3000 [11:58<22:56,  1.57it/s]
+Reward -1.0146447590000207 Action: 4 Before speed 542 Speed now 543
+
+ 28%|█████████████████████████████████████▉                                                                                                 | 842/3000 [12:00<26:07,  1.38it/s]
+Reward -0.6858061379998617 Action: 5 Before speed 546 Speed now 518
+
+ 28%|█████████████████████████████████████▉                                                                                                 | 844/3000 [12:02<31:34,  1.14it/s]
+Reward -0.9844310099997529 Action: 5 Before speed 525 Speed now 548
+Reward -0.662477034999938 Action: 4 Before speed 548 Speed now 548
+Round: 94 with Time 6.921497439999712
+Reward -0.7227279840003575 Action: 5 Before speed 548 Speed now 568
+
+ 28%|██████████████████████████████████████                                                                                                 | 847/3000 [12:04<27:06,  1.32it/s]
+Reward -0.6837141269998028 Action: 5 Before speed 568 Speed now 529
+Reward -0.361780722000276 Action: 5 Before speed 529 Speed now 536
+
+ 28%|██████████████████████████████████████▎                                                                                                | 850/3000 [12:07<26:17,  1.36it/s]
+Reward -1.5929866719997334 Action: 4 Before speed 521 Speed now 521
+
+ 28%|██████████████████████████████████████▎                                                                                                | 852/3000 [12:08<29:51,  1.20it/s]
+Reward -1.0783389130001524 Action: 5 Before speed 533 Speed now 532
+Reward -0.9715160600003401 Action: 5 Before speed 532 Speed now 545
+
+ 28%|██████████████████████████████████████▍                                                                                                | 854/3000 [12:10<29:29,  1.21it/s]
+Round: 95 with Time 6.952981941999951
+Reward -0.7236598250001407 Action: 5 Before speed 555 Speed now 514
+global_step=854, episodic_return=[-7.854695]
+Reward -0.6613082049998411 Action: 5 Before speed 514 Speed now 533
+
+ 29%|██████████████████████████████████████▌                                                                                                | 857/3000 [12:12<23:01,  1.55it/s]
+Reward -1.0000624050003353 Action: 4 Before speed 537 Speed now 522
+
+ 29%|██████████████████████████████████████▋                                                                                                | 860/3000 [12:14<25:50,  1.38it/s]
+Reward -0.6890372969996861 Action: 5 Before speed 552 Speed now 512
+
+ 29%|██████████████████████████████████████▊                                                                                                | 862/3000 [12:16<31:17,  1.14it/s]
+Reward -0.9811810299997887 Action: 5 Before speed 538 Speed now 536
+Reward -0.6586315169997761 Action: 4 Before speed 536 Speed now 536
+Round: 96 with Time 6.896025644000019
+Reward -0.7217104249998556 Action: 5 Before speed 536 Speed now 666
+
+ 29%|██████████████████████████████████████▉                                                                                                | 866/3000 [12:19<22:41,  1.57it/s]
+Reward -0.6907353789997615 Action: 5 Before speed 666 Speed now 542
+Reward -0.3621457730000657 Action: 5 Before speed 542 Speed now 535
+
+ 29%|███████████████████████████████████████                                                                                                | 868/3000 [12:20<26:20,  1.35it/s]
+Reward -0.7098727099996722 Action: 4 Before speed 528 Speed now 547
+
+ 29%|███████████████████████████████████████▏                                                                                               | 870/3000 [12:22<29:31,  1.20it/s]
+Reward -1.0769643150001684 Action: 5 Before speed 533 Speed now 540
+Reward -0.9991343500000767 Action: 5 Before speed 540 Speed now 527
+
+ 29%|███████████████████████████████████████▎                                                                                               | 873/3000 [12:25<27:55,  1.27it/s]
+Round: 97 with Time 6.937195228999826
+Reward -0.7260744449999947 Action: 5 Before speed 527 Speed now 477
+global_step=872, episodic_return=[-6.938918]
+Reward -0.685411097999804 Action: 5 Before speed 477 Speed now 544
+
+ 29%|███████████████████████████████████████▍                                                                                               | 876/3000 [12:27<26:40,  1.33it/s]
+Reward -1.022201777999726 Action: 5 Before speed 522 Speed now 527
+Reward -0.69249771900013 Action: 4 Before speed 527 Speed now 527
+
+ 29%|███████████████████████████████████████▌                                                                                               | 878/3000 [12:28<25:48,  1.37it/s]
+Reward -1.0856587279999985 Action: 5 Before speed 543 Speed now 541
+
+ 29%|███████████████████████████████████████▌                                                                                               | 880/3000 [12:30<31:05,  1.14it/s]
+Reward -0.6688135379999949 Action: 4 Before speed 525 Speed now 525
+Round: 98 with Time 6.873015599000155
+Reward -0.6628329099999064 Action: 5 Before speed 525 Speed now 525
+global_step=881, episodic_return=[-6.8751483]
+
+ 29%|███████████████████████████████████████▊                                                                                               | 884/3000 [12:33<22:33,  1.56it/s]
+Reward -0.398680078000325 Action: 5 Before speed 530 Speed now 534
+
+ 30%|███████████████████████████████████████▊                                                                                               | 886/3000 [12:34<25:49,  1.36it/s]
+Reward -0.6907698850000088 Action: 4 Before speed 528 Speed now 532
+Reward -0.7188823370001955 Action: 5 Before speed 532 Speed now 532
+
+ 30%|███████████████████████████████████████▉                                                                                               | 888/3000 [12:36<29:02,  1.21it/s]
+Reward -0.988943597999878 Action: 5 Before speed 540 Speed now 518
+
+ 30%|████████████████████████████████████████                                                                                               | 891/3000 [12:38<27:50,  1.26it/s]
+Round: 99 with Time 6.947203389000151
+Reward -0.7500691949999236 Action: 5 Before speed 518 Speed now 536
+global_step=890, episodic_return=[-6.948863]
+Reward -0.6612001539997436 Action: 5 Before speed 536 Speed now 539
+
+ 30%|████████████████████████████████████████▏                                                                                              | 894/3000 [12:40<26:28,  1.33it/s]
+Reward -1.0120548630002304 Action: 5 Before speed 541 Speed now 533
+Reward -0.6647023240002454 Action: 4 Before speed 533 Speed now 533
+
+ 30%|████████████████████████████████████████▎                                                                                              | 896/3000 [12:42<25:26,  1.38it/s]
+Reward -1.0783075829999689 Action: 5 Before speed 582 Speed now 551
+
+ 30%|████████████████████████████████████████▍                                                                                              | 899/3000 [12:45<28:47,  1.22it/s]
+Reward -0.6933229940000274 Action: 4 Before speed 520 Speed now 526
+Round: 100 with Time 6.928180247
+Reward -0.7231113570001071 Action: 5 Before speed 526 Speed now 554
+global_step=899, episodic_return=[-6.930062]
+
+ 30%|████████████████████████████████████████▌                                                                                              | 902/3000 [12:46<22:18,  1.57it/s]
+Reward -0.3924449679998361 Action: 5 Before speed 557 Speed now 535
+Reward -0.9872135000000526 Action: 5 Before speed 535 Speed now 544
+
+ 30%|████████████████████████████████████████▋                                                                                              | 904/3000 [12:48<25:43,  1.36it/s]
+Reward -0.7212556439999389 Action: 5 Before speed 555 Speed now 530
+
+ 30%|████████████████████████████████████████▊                                                                                              | 906/3000 [12:50<29:09,  1.20it/s]
+Reward -0.957426723000026 Action: 5 Before speed 517 Speed now 530
+
+ 30%|████████████████████████████████████████▉                                                                                              | 909/3000 [12:52<27:23,  1.27it/s]
+Round: 101 with Time 6.8932469029996355
+Reward -0.6890418329999193 Action: 5 Before speed 556 Speed now 677
+global_step=908, episodic_return=[-6.895239]
+Reward -0.6945451699998557 Action: 5 Before speed 677 Speed now 538
+
+ 30%|█████████████████████████████████████████                                                                                              | 912/3000 [12:54<26:13,  1.33it/s]
+Reward -1.0176745029998528 Action: 5 Before speed 532 Speed now 534
+Reward -0.6897439360000135 Action: 4 Before speed 534 Speed now 534
+
+ 30%|█████████████████████████████████████████▏                                                                                             | 915/3000 [12:57<28:57,  1.20it/s]
+Reward -1.0820379879996835 Action: 5 Before speed 518 Speed now 538
+
+ 31%|█████████████████████████████████████████▎                                                                                             | 917/3000 [12:58<28:33,  1.22it/s]
+Reward -0.6852568159997645 Action: 4 Before speed 526 Speed now 425
+Round: 102 with Time 6.934950100000151
+Reward -0.6967122549999658 Action: 5 Before speed 425 Speed now 459
+global_step=917, episodic_return=[-6.936862]
+Reward -0.6576378139998269 Action: 5 Before speed 459 Speed now 548
+
+ 31%|█████████████████████████████████████████▍                                                                                             | 920/3000 [13:00<22:14,  1.56it/s]
+Reward -1.010904820000178 Action: 5 Before speed 529 Speed now 527
+
+ 31%|█████████████████████████████████████████▌                                                                                             | 923/3000 [13:03<25:16,  1.37it/s]
+Reward -0.720109549999961 Action: 5 Before speed 527 Speed now 553
+
+ 31%|█████████████████████████████████████████▋                                                                                             | 925/3000 [13:05<30:17,  1.14it/s]
+Reward -0.9678419060001033 Action: 5 Before speed 541 Speed now 527
+Reward -0.6809256410001581 Action: 4 Before speed 527 Speed now 527
+Round: 103 with Time 6.927155830999709
+Reward -0.7226190080000379 Action: 5 Before speed 527 Speed now 622
+
+ 31%|█████████████████████████████████████████▊                                                                                             | 928/3000 [13:07<25:53,  1.33it/s]
+Reward -0.661105131000113 Action: 5 Before speed 622 Speed now 546
+Reward -0.3577525539999442 Action: 5 Before speed 546 Speed now 539
+
+ 31%|█████████████████████████████████████████▊                                                                                             | 930/3000 [13:08<25:47,  1.34it/s]
+Reward -0.7264821869998741 Action: 4 Before speed 528 Speed now 528
+
+ 31%|█████████████████████████████████████████▉                                                                                             | 933/3000 [13:11<28:21,  1.21it/s]
+Reward -1.0751924340002006 Action: 5 Before speed 501 Speed now 529
+
+ 31%|██████████████████████████████████████████                                                                                             | 935/3000 [13:12<28:08,  1.22it/s]
+Reward -0.6841347509998741 Action: 4 Before speed 531 Speed now 531
+Round: 104 with Time 6.892935811999905
+Reward -0.7206791870003144 Action: 5 Before speed 531 Speed now 417
+global_step=935, episodic_return=[-6.8947687]
+Reward -0.6609111640000265 Action: 5 Before speed 417 Speed now 548
+
+ 31%|██████████████████████████████████████████▏                                                                                            | 938/3000 [13:14<22:04,  1.56it/s]
+Reward -0.9876234879998265 Action: 5 Before speed 542 Speed now 527
+
+ 31%|██████████████████████████████████████████▎                                                                                            | 941/3000 [13:16<24:49,  1.38it/s]
+Reward -0.6865192029999889 Action: 5 Before speed 548 Speed now 535
+
+ 31%|██████████████████████████████████████████▍                                                                                            | 943/3000 [13:19<30:07,  1.14it/s]
+Reward -0.9909977519996573 Action: 5 Before speed 529 Speed now 539
+Reward -0.723743986000045 Action: 4 Before speed 539 Speed now 594
+Round: 105 with Time 6.995951148000131
+Reward -0.7537915289999546 Action: 5 Before speed 594 Speed now 520
+
+ 32%|██████████████████████████████████████████▌                                                                                            | 946/3000 [13:21<25:31,  1.34it/s]
+Reward -0.5964430550002362 Action: 5 Before speed 520 Speed now 546
+Reward -0.38800332299979345 Action: 5 Before speed 546 Speed now 520
+
+ 32%|██████████████████████████████████████████▋                                                                                            | 949/3000 [13:23<24:48,  1.38it/s]
+Reward -0.6847736929998973 Action: 4 Before speed 537 Speed now 537
+
+ 32%|██████████████████████████████████████████▊                                                                                            | 951/3000 [13:24<28:22,  1.20it/s]
+Reward -1.071884320999743 Action: 5 Before speed 526 Speed now 535
+Reward -0.99456439900041 Action: 5 Before speed 535 Speed now 520
+
+ 32%|██████████████████████████████████████████▉                                                                                            | 954/3000 [13:27<26:46,  1.27it/s]
+Round: 106 with Time 6.832863416999771
+Reward -0.7184005420003814 Action: 5 Before speed 520 Speed now 532
+global_step=953, episodic_return=[-6.834726]
+Reward -0.6680917769999724 Action: 5 Before speed 532 Speed now 541
+
+ 32%|███████████████████████████████████████████                                                                                            | 957/3000 [13:29<25:19,  1.34it/s]
+Reward -0.9859246969999731 Action: 5 Before speed 536 Speed now 531
+Reward -0.6878851579999719 Action: 4 Before speed 531 Speed now 531
+
+ 32%|███████████████████████████████████████████▏                                                                                           | 959/3000 [13:30<24:26,  1.39it/s]
+
+ 32%|███████████████████████████████████████████▏                                                                                           | 961/3000 [13:32<30:01,  1.13it/s]
+Reward -1.0007137650000004 Action: 5 Before speed 547 Speed now 526
+Reward -0.7124904190000052 Action: 4 Before speed 526 Speed now 530
+Round: 107 with Time 6.924643763000404
+Reward -0.6868939179998961 Action: 5 Before speed 530 Speed now 541
+
+ 32%|███████████████████████████████████████████▍                                                                                           | 965/3000 [13:35<21:54,  1.55it/s]
+Reward -0.6610416890002853 Action: 5 Before speed 541 Speed now 534
+Reward -0.4022987230000581 Action: 5 Before speed 534 Speed now 533
+
+ 32%|███████████████████████████████████████████▌                                                                                           | 967/3000 [13:37<25:13,  1.34it/s]
+Reward -0.7172171799998068 Action: 4 Before speed 521 Speed now 624
+
+ 32%|███████████████████████████████████████████▌                                                                                           | 969/3000 [13:38<28:10,  1.20it/s]
+Reward -1.0714063489999717 Action: 5 Before speed 550 Speed now 537
+Reward -0.968150186999992 Action: 5 Before speed 537 Speed now 522
+
+ 32%|███████████████████████████████████████████▋                                                                                           | 972/3000 [13:41<26:33,  1.27it/s]
+Round: 108 with Time 6.923412027999802
+Reward -0.7133744349998778 Action: 5 Before speed 522 Speed now 561
+global_step=971, episodic_return=[-6.9252954]
+Reward -0.6792877519997091 Action: 5 Before speed 561 Speed now 548
+
+ 32%|███████████████████████████████████████████▉                                                                                           | 975/3000 [13:43<25:16,  1.34it/s]
+Reward -1.0228656760000376 Action: 5 Before speed 541 Speed now 523
+Reward -0.6882335880000028 Action: 4 Before speed 523 Speed now 523
+
+ 33%|███████████████████████████████████████████▉                                                                                           | 977/3000 [13:44<24:31,  1.37it/s]
+Reward -1.0756106149997322 Action: 5 Before speed 523 Speed now 534
+
+ 33%|████████████████████████████████████████████                                                                                           | 980/3000 [13:47<27:49,  1.21it/s]
+Reward -0.7151281159999598 Action: 4 Before speed 537 Speed now 547
+Round: 109 with Time 6.89774643499959
+Reward -0.679283043000396 Action: 5 Before speed 547 Speed now 537
+global_step=980, episodic_return=[-6.8998785]
+
+ 33%|████████████████████████████████████████████▏                                                                                          | 983/3000 [13:49<21:31,  1.56it/s]
+Reward -0.39368706300001577 Action: 5 Before speed 546 Speed now 548
+
+ 33%|████████████████████████████████████████████▎                                                                                          | 985/3000 [13:50<24:40,  1.36it/s]
+Reward -0.6804063240001597 Action: 4 Before speed 523 Speed now 523
+Reward -0.7288686679999046 Action: 5 Before speed 523 Speed now 555
+
+ 33%|████████████████████████████████████████████▍                                                                                          | 987/3000 [13:52<27:41,  1.21it/s]
+Reward -0.9896129779999683 Action: 5 Before speed 539 Speed now 534
+
+ 33%|████████████████████████████████████████████▌                                                                                          | 990/3000 [13:55<26:36,  1.26it/s]
+Round: 110 with Time 6.946562347000054
+Reward -0.7507494930000576 Action: 5 Before speed 534 Speed now 526
+global_step=989, episodic_return=[-6.9486337]
+Reward -0.6449518119998174 Action: 5 Before speed 526 Speed now 542
+
+ 33%|████████████████████████████████████████████▋                                                                                          | 993/3000 [13:57<25:14,  1.32it/s]
+Reward -1.0147172140000293 Action: 5 Before speed 530 Speed now 531
+Reward -0.7216469119998692 Action: 4 Before speed 531 Speed now 566
+
+ 33%|████████████████████████████████████████████▊                                                                                          | 995/3000 [13:58<24:25,  1.37it/s]
+Reward -1.075626003999787 Action: 5 Before speed 544 Speed now 525
+
+ 33%|████████████████████████████████████████████▉                                                                                          | 998/3000 [14:01<26:53,  1.24it/s]
+Reward -0.6330253890000677 Action: 4 Before speed 539 Speed now 539
+Round: 111 with Time 6.923966730999837
+Reward -0.7546830360001877 Action: 5 Before speed 539 Speed now 559
+global_step=998, episodic_return=[-6.9255004]
+
+ 33%|████████████████████████████████████████████▋                                                                                         | 1001/3000 [14:03<21:22,  1.56it/s]
+Reward -0.38688551599989296 Action: 5 Before speed 534 Speed now 534
+Reward -0.9931168080001953 Action: 5 Before speed 534 Speed now 530
+
+ 33%|████████████████████████████████████████████▊                                                                                         | 1004/3000 [14:05<24:11,  1.38it/s]
+Reward -0.7259046120002495 Action: 5 Before speed 530 Speed now 520
+
+ 34%|████████████████████████████████████████████▉                                                                                         | 1005/3000 [14:06<27:42,  1.20it/s]
+Reward -0.99488125400012 Action: 5 Before speed 535 Speed now 539
+
+ 34%|█████████████████████████████████████████████                                                                                         | 1008/3000 [14:08<26:07,  1.27it/s]
+Round: 112 with Time 6.920136112999899
+Reward -0.6755875940002625 Action: 5 Before speed 621 Speed now 542
+global_step=1007, episodic_return=[-6.922474]
+Reward -0.6610144699998273 Action: 5 Before speed 542 Speed now 540
+
+ 34%|█████████████████████████████████████████████▏                                                                                        | 1011/3000 [14:10<24:51,  1.33it/s]
+Reward -1.0229959989997042 Action: 5 Before speed 533 Speed now 530
+Reward -0.694771295999999 Action: 4 Before speed 530 Speed now 530
+
+ 34%|█████████████████████████████████████████████▎                                                                                        | 1014/3000 [14:13<27:37,  1.20it/s]
+Reward -1.1089593500000774 Action: 5 Before speed 530 Speed now 541
+
+ 34%|█████████████████████████████████████████████▍                                                                                        | 1016/3000 [14:15<26:59,  1.22it/s]
+Reward -0.6617573140001696 Action: 4 Before speed 518 Speed now 518
+Round: 113 with Time 6.928963528000168
+Reward -0.7485851639999055 Action: 5 Before speed 518 Speed now 614
+global_step=1016, episodic_return=[-6.930902]
+Reward -0.6295099660001142 Action: 5 Before speed 614 Speed now 550
+
+ 34%|█████████████████████████████████████████████▌                                                                                        | 1019/3000 [14:16<21:10,  1.56it/s]
+Reward -0.9785752479997427 Action: 5 Before speed 536 Speed now 542
+
+ 34%|█████████████████████████████████████████████▋                                                                                        | 1022/3000 [14:19<23:28,  1.40it/s]
+Reward -0.6564150180001889 Action: 5 Before speed 659 Speed now 659
+
+ 34%|█████████████████████████████████████████████▋                                                                                        | 1024/3000 [14:21<28:57,  1.14it/s]
+Reward -0.9883966130000772 Action: 5 Before speed 536 Speed now 532
+Reward -0.6941295030001129 Action: 4 Before speed 532 Speed now 532
+Round: 114 with Time 6.895507795999947
+Reward -0.7154225449999103 Action: 5 Before speed 532 Speed now 536
+
+ 34%|█████████████████████████████████████████████▊                                                                                        | 1027/3000 [14:23<24:45,  1.33it/s]
+Reward -0.6629558019999422 Action: 5 Before speed 536 Speed now 539
+Reward -0.3612278270002207 Action: 5 Before speed 539 Speed now 539
+
+ 34%|██████████████████████████████████████████████                                                                                        | 1030/3000 [14:25<23:44,  1.38it/s]
+Reward -0.6543112170002132 Action: 4 Before speed 530 Speed now 530
+
+ 34%|██████████████████████████████████████████████                                                                                        | 1032/3000 [14:27<27:07,  1.21it/s]
+Reward -1.0500855519999277 Action: 5 Before speed 516 Speed now 534
+
+ 34%|██████████████████████████████████████████████▏                                                                                       | 1034/3000 [14:28<27:10,  1.21it/s]
+Reward -0.7233934500000032 Action: 4 Before speed 540 Speed now 556
+Round: 115 with Time 6.899747066000145
+Reward -0.6870080550002058 Action: 5 Before speed 556 Speed now 551
+global_step=1034, episodic_return=[-6.9017205]
+Reward -0.6598994639998637 Action: 5 Before speed 551 Speed now 544
+
+ 35%|██████████████████████████████████████████████▎                                                                                       | 1037/3000 [14:30<21:03,  1.55it/s]
+Reward -1.0133153259998835 Action: 5 Before speed 530 Speed now 546
+
+ 35%|██████████████████████████████████████████████▍                                                                                       | 1040/3000 [14:33<23:51,  1.37it/s]
+Reward -0.7171080819998679 Action: 5 Before speed 546 Speed now 531
+
+ 35%|██████████████████████████████████████████████▌                                                                                       | 1042/3000 [14:35<28:29,  1.15it/s]
+Reward -0.9567693300000428 Action: 5 Before speed 538 Speed now 527
+Reward -0.6951010319999114 Action: 4 Before speed 527 Speed now 527
+Round: 116 with Time 6.952163751999706
+Reward -0.7339946760002931 Action: 5 Before speed 527 Speed now 527
+
+ 35%|██████████████████████████████████████████████▋                                                                                       | 1045/3000 [14:37<24:37,  1.32it/s]
+Reward -0.667771231000188 Action: 5 Before speed 527 Speed now 530
+Reward -0.3548572619997685 Action: 5 Before speed 530 Speed now 527
+
+ 35%|██████████████████████████████████████████████▊                                                                                       | 1048/3000 [14:39<24:09,  1.35it/s]
+Reward -0.7249965930000144 Action: 4 Before speed 518 Speed now 514
+
+ 35%|██████████████████████████████████████████████▉                                                                                       | 1050/3000 [14:41<26:48,  1.21it/s]
+Reward -1.0575541299999713 Action: 5 Before speed 529 Speed now 542
+Reward -0.9897140430002764 Action: 5 Before speed 542 Speed now 527
+
+ 35%|███████████████████████████████████████████████                                                                                       | 1053/3000 [14:43<25:32,  1.27it/s]
+Round: 117 with Time 6.9047752730002685
+Reward -0.6938445649998357 Action: 5 Before speed 571 Speed now 520
+global_step=1052, episodic_return=[-6.9068785]
+Reward -0.6531223810002302 Action: 5 Before speed 520 Speed now 545
+
+ 35%|███████████████████████████████████████████████▏                                                                                      | 1056/3000 [14:45<24:10,  1.34it/s]
+Reward -0.9931593349997456 Action: 5 Before speed 539 Speed now 528
+
+ 35%|███████████████████████████████████████████████▎                                                                                      | 1058/3000 [14:46<23:35,  1.37it/s]
+Reward -0.7222629550001329 Action: 5 Before speed 528 Speed now 509
+
+ 35%|███████████████████████████████████████████████▎                                                                                      | 1060/3000 [14:49<28:25,  1.14it/s]
+Reward -0.9897174790003191 Action: 5 Before speed 532 Speed now 519
+Reward -0.6575498550000702 Action: 4 Before speed 519 Speed now 519
+Round: 118 with Time 6.864238236000347
+Reward -0.6898020660000839 Action: 5 Before speed 519 Speed now 519
+
+ 35%|███████████████████████████████████████████████▌                                                                                      | 1064/3000 [14:51<20:47,  1.55it/s]
+Reward -0.7046524510001291 Action: 5 Before speed 519 Speed now 543
+Reward -0.3884043819998624 Action: 5 Before speed 543 Speed now 517
+
+ 36%|███████████████████████████████████████████████▌                                                                                      | 1066/3000 [14:53<23:39,  1.36it/s]
+Reward -0.7002590189999864 Action: 4 Before speed 531 Speed now 533
+Reward -0.7331572699999924 Action: 5 Before speed 533 Speed now 553
+
+ 36%|███████████████████████████████████████████████▋                                                                                      | 1068/3000 [14:54<26:42,  1.21it/s]
+Reward -0.9795527520000178 Action: 5 Before speed 520 Speed now 540
+
+ 36%|███████████████████████████████████████████████▊                                                                                      | 1071/3000 [14:57<25:02,  1.28it/s]
+Round: 119 with Time 6.932574020000175
+Reward -0.6638627430002089 Action: 5 Before speed 528 Speed now 426
+global_step=1070, episodic_return=[-6.9341674]
+Reward -0.6908226370001103 Action: 5 Before speed 426 Speed now 549
+
+ 36%|███████████████████████████████████████████████▉                                                                                      | 1074/3000 [14:59<24:02,  1.34it/s]
+Reward -1.0150964899999053 Action: 5 Before speed 543 Speed now 530
+Reward -0.6621439849996023 Action: 4 Before speed 530 Speed now 530
+
+ 36%|████████████████████████████████████████████████                                                                                      | 1076/3000 [15:00<23:14,  1.38it/s]
+Reward -1.067284784000094 Action: 5 Before speed 531 Speed now 528
+
+ 36%|████████████████████████████████████████████████▏                                                                                     | 1079/3000 [15:03<26:20,  1.22it/s]
+Reward -0.6902519479999683 Action: 4 Before speed 520 Speed now 520
+Round: 120 with Time 6.93029511900022
+Reward -0.7214140149999366 Action: 5 Before speed 520 Speed now 512
+global_step=1079, episodic_return=[-6.932123]
+
+ 36%|████████████████████████████████████████████████▎                                                                                     | 1082/3000 [15:05<20:11,  1.58it/s]
+Reward -0.3546161750000465 Action: 5 Before speed 546 Speed now 538
+Reward -1.0281787039998562 Action: 5 Before speed 538 Speed now 535
+
+ 36%|████████████████████████████████████████████████▍                                                                                     | 1084/3000 [15:06<23:20,  1.37it/s]
+Reward -0.7598504910001793 Action: 5 Before speed 535 Speed now 527
+
+ 36%|████████████████████████████████████████████████▌                                                                                     | 1086/3000 [15:08<26:17,  1.21it/s]
+Reward -0.9838568229997691 Action: 5 Before speed 532 Speed now 533
+
+ 36%|████████████████████████████████████████████████▋                                                                                     | 1089/3000 [15:11<24:34,  1.30it/s]
+Round: 121 with Time 6.832015243999649
+Reward -0.6800439640001059 Action: 5 Before speed 533 Speed now 533
+global_step=1088, episodic_return=[-6.834386]
+Reward -0.6944399599997269 Action: 5 Before speed 533 Speed now 536
+
+ 36%|████████████████████████████████████████████████▊                                                                                     | 1092/3000 [15:13<23:49,  1.34it/s]
+Reward -1.023339145999671 Action: 5 Before speed 531 Speed now 527
+Reward -0.7146678819999579 Action: 4 Before speed 527 Speed now 454
+
+ 36%|████████████████████████████████████████████████▊                                                                                     | 1094/3000 [15:14<23:06,  1.37it/s]
+Reward -1.0660002770000574 Action: 5 Before speed 543 Speed now 528
+
+ 37%|████████████████████████████████████████████████▉                                                                                     | 1097/3000 [15:17<25:55,  1.22it/s]
+Reward -0.7025575200000276 Action: 4 Before speed 535 Speed now 535
+Round: 122 with Time 6.935032730999865
+Reward -0.7203862000001209 Action: 5 Before speed 535 Speed now 535
+global_step=1097, episodic_return=[-6.9371023]
+
+ 37%|█████████████████████████████████████████████████▏                                                                                    | 1100/3000 [15:19<20:26,  1.55it/s]
+Reward -0.4025413809999918 Action: 5 Before speed 553 Speed now 532
+Reward -0.9704620239999713 Action: 5 Before speed 532 Speed now 538
+
+ 37%|█████████████████████████████████████████████████▎                                                                                    | 1103/3000 [15:21<23:18,  1.36it/s]
+Reward -0.7600603130003947 Action: 5 Before speed 538 Speed now 489
+
+ 37%|█████████████████████████████████████████████████▎                                                                                    | 1105/3000 [15:23<27:43,  1.14it/s]
+Reward -0.988288919000297 Action: 5 Before speed 533 Speed now 523
+Reward -0.7185091260002991 Action: 4 Before speed 523 Speed now 537
+Round: 123 with Time 6.928621753000243
+Reward -0.6926104130002386 Action: 5 Before speed 537 Speed now 509
+
+ 37%|█████████████████████████████████████████████████▍                                                                                    | 1108/3000 [15:25<23:35,  1.34it/s]
+Reward -0.6545997819998775 Action: 5 Before speed 509 Speed now 536
+Reward -0.38910833199997796 Action: 5 Before speed 536 Speed now 522
+
+ 37%|█████████████████████████████████████████████████▌                                                                                    | 1110/3000 [15:26<23:47,  1.32it/s]
+Reward -0.7193792359998952 Action: 4 Before speed 522 Speed now 519
+
+ 37%|█████████████████████████████████████████████████▋                                                                                    | 1113/3000 [15:29<26:19,  1.19it/s]
+Reward -1.1134584040000846 Action: 5 Before speed 519 Speed now 525
+
+ 37%|█████████████████████████████████████████████████▊                                                                                    | 1115/3000 [15:31<25:40,  1.22it/s]
+Reward -0.6890391280003314 Action: 4 Before speed 534 Speed now 534
+Round: 124 with Time 6.919597723999686
+Reward -0.7199463860001742 Action: 5 Before speed 534 Speed now 538
+global_step=1115, episodic_return=[-6.9215503]
+Reward -0.6600677159999577 Action: 5 Before speed 538 Speed now 533
+
+ 37%|█████████████████████████████████████████████████▉                                                                                    | 1118/3000 [15:32<20:07,  1.56it/s]
+Reward -1.020765374000348 Action: 5 Before speed 549 Speed now 525
+
+ 37%|██████████████████████████████████████████████████                                                                                    | 1121/3000 [15:35<22:43,  1.38it/s]
+Reward -0.7185621710000305 Action: 5 Before speed 525 Speed now 548
+
+ 37%|██████████████████████████████████████████████████▏                                                                                   | 1123/3000 [15:37<27:31,  1.14it/s]
+Reward -0.99305030800042 Action: 5 Before speed 547 Speed now 518
+Reward -0.687956122000287 Action: 4 Before speed 518 Speed now 350
+Round: 125 with Time 6.930217922999873
+Reward -0.7192883090001487 Action: 5 Before speed 350 Speed now 511
+
+ 38%|██████████████████████████████████████████████████▎                                                                                   | 1126/3000 [15:39<23:31,  1.33it/s]
+Reward -0.6640808349998224 Action: 5 Before speed 511 Speed now 534
+Reward -0.3589143369999874 Action: 5 Before speed 534 Speed now 541
+
+ 38%|██████████████████████████████████████████████████▍                                                                                   | 1129/3000 [15:41<22:43,  1.37it/s]
+Reward -0.6575554189998911 Action: 4 Before speed 525 Speed now 525
+
+ 38%|██████████████████████████████████████████████████▌                                                                                   | 1131/3000 [15:43<25:38,  1.21it/s]
+Reward -1.0525651220000327 Action: 5 Before speed 525 Speed now 539
+Reward -0.9862971009997636 Action: 5 Before speed 539 Speed now 537
+
+ 38%|██████████████████████████████████████████████████▌                                                                                   | 1133/3000 [15:44<25:44,  1.21it/s]
+Round: 126 with Time 6.905238929999996
+Reward -0.6998223579998921 Action: 5 Before speed 523 Speed now 588
+global_step=1133, episodic_return=[-6.907677]
+Reward -0.6574346180000248 Action: 5 Before speed 588 Speed now 538
+
+ 38%|██████████████████████████████████████████████████▋                                                                                   | 1136/3000 [15:46<19:52,  1.56it/s]
+Reward -1.0305545139999595 Action: 5 Before speed 525 Speed now 523
+
+ 38%|██████████████████████████████████████████████████▉                                                                                   | 1139/3000 [15:49<22:03,  1.41it/s]
+Reward -0.6570141309998689 Action: 5 Before speed 523 Speed now 523
+
+ 38%|██████████████████████████████████████████████████▉                                                                                   | 1141/3000 [15:51<27:12,  1.14it/s]
+Reward -0.9877450839999256 Action: 5 Before speed 533 Speed now 512
+Reward -0.7190518399997927 Action: 4 Before speed 512 Speed now 511
+Round: 127 with Time 6.9237837719997515
+Reward -0.6949816460000875 Action: 5 Before speed 511 Speed now 356
+
+ 38%|███████████████████████████████████████████████████▏                                                                                  | 1145/3000 [15:53<19:48,  1.56it/s]
+Reward -0.6649666260000231 Action: 5 Before speed 356 Speed now 568
+Reward -0.380669436000062 Action: 5 Before speed 568 Speed now 535
+
+ 38%|███████████████████████████████████████████████████▏                                                                                  | 1147/3000 [15:55<22:33,  1.37it/s]
+Reward -0.6959272629997031 Action: 4 Before speed 528 Speed now 528
+
+ 38%|███████████████████████████████████████████████████▎                                                                                  | 1149/3000 [15:57<25:43,  1.20it/s]
+Reward -1.0800277519997508 Action: 5 Before speed 530 Speed now 535
+Reward -0.9849404579999828 Action: 5 Before speed 535 Speed now 528
+
+ 38%|███████████████████████████████████████████████████▍                                                                                  | 1152/3000 [15:59<24:07,  1.28it/s]
+Round: 128 with Time 6.896789790000184
+Reward -0.6914265800000976 Action: 5 Before speed 509 Speed now 558
+global_step=1151, episodic_return=[-6.8988094]
+Reward -0.66084845999967 Action: 5 Before speed 558 Speed now 545
+
+ 38%|███████████████████████████████████████████████████▌                                                                                  | 1155/3000 [16:01<22:52,  1.34it/s]
+Reward -0.9874777099998937 Action: 5 Before speed 543 Speed now 527
+Reward -0.692671342000267 Action: 4 Before speed 527 Speed now 527
+
+ 39%|███████████████████████████████████████████████████▋                                                                                  | 1157/3000 [16:02<22:15,  1.38it/s]
+Reward -1.0789173439998194 Action: 5 Before speed 541 Speed now 537
+
+ 39%|███████████████████████████████████████████████████▊                                                                                  | 1159/3000 [16:04<26:40,  1.15it/s]
+Reward -0.721955963000255 Action: 4 Before speed 536 Speed now 529
+Round: 129 with Time 6.924791280999671
+Reward -0.7178593210001054 Action: 5 Before speed 529 Speed now 506
+
+ 39%|███████████████████████████████████████████████████▉                                                                                  | 1163/3000 [16:07<19:28,  1.57it/s]
+Reward -0.6616023259998656 Action: 5 Before speed 506 Speed now 551
+Reward -0.3592987670003822 Action: 5 Before speed 551 Speed now 534
+
+ 39%|████████████████████████████████████████████████████                                                                                  | 1165/3000 [16:09<22:14,  1.38it/s]
+Reward -0.671859091999977 Action: 4 Before speed 544 Speed now 544
+Reward -0.736653595000007 Action: 5 Before speed 544 Speed now 518
+
+ 39%|████████████████████████████████████████████████████▏                                                                                 | 1167/3000 [16:10<25:31,  1.20it/s]
+Reward -0.9539392530000441 Action: 5 Before speed 527 Speed now 542
+
+ 39%|████████████████████████████████████████████████████▎                                                                                 | 1170/3000 [16:13<23:57,  1.27it/s]
+Round: 130 with Time 6.89815728900021
+Reward -0.6761260250000305 Action: 5 Before speed 521 Speed now 389
+global_step=1169, episodic_return=[-6.8998632]
+Reward -0.6731100120000519 Action: 5 Before speed 389 Speed now 556
+
+ 39%|████████████████████████████████████████████████████▍                                                                                 | 1173/3000 [16:15<22:41,  1.34it/s]
+Reward -0.9901627959998223 Action: 5 Before speed 549 Speed now 527
+Reward -0.6569879409998975 Action: 4 Before speed 527 Speed now 527
+
+ 39%|████████████████████████████████████████████████████▍                                                                                 | 1175/3000 [16:16<22:07,  1.38it/s]
+Reward -1.0553097209999578 Action: 5 Before speed 512 Speed now 540
+
+ 39%|████████████████████████████████████████████████████▌                                                                                 | 1178/3000 [16:19<25:07,  1.21it/s]
+Reward -0.7132046380002066 Action: 4 Before speed 521 Speed now 589
+Round: 131 with Time 6.84288354399996
+Reward -0.6314906349998637 Action: 5 Before speed 589 Speed now 589
+global_step=1178, episodic_return=[-6.844631]
+
+ 39%|████████████████████████████████████████████████████▊                                                                                 | 1181/3000 [16:21<19:35,  1.55it/s]
+Reward -0.3988014880001174 Action: 5 Before speed 530 Speed now 519
+Reward -1.0113041499998872 Action: 5 Before speed 519 Speed now 529
+
+ 39%|████████████████████████████████████████████████████▉                                                                                 | 1184/3000 [16:23<22:06,  1.37it/s]
+Reward -0.7137106370000765 Action: 5 Before speed 529 Speed now 528
+
+ 40%|████████████████████████████████████████████████████▉                                                                                 | 1185/3000 [16:24<25:22,  1.19it/s]
+Reward -0.9574509260000923 Action: 5 Before speed 538 Speed now 527
+
+ 40%|█████████████████████████████████████████████████████                                                                                 | 1188/3000 [16:27<23:48,  1.27it/s]
+Round: 132 with Time 6.985364135000054
+Reward -0.7183218710001711 Action: 5 Before speed 527 Speed now 512
+global_step=1187, episodic_return=[-6.9870496]
+Reward -0.6544677269998829 Action: 5 Before speed 512 Speed now 538
+
+ 40%|█████████████████████████████████████████████████████▏                                                                                | 1191/3000 [16:29<22:31,  1.34it/s]
+Reward -0.987979303999964 Action: 5 Before speed 537 Speed now 531
+Reward -0.7329998150003121 Action: 4 Before speed 531 Speed now 531
+
+ 40%|█████████████████████████████████████████████████████▎                                                                                | 1193/3000 [16:30<22:55,  1.31it/s]
+
+ 40%|█████████████████████████████████████████████████████▍                                                                                | 1195/3000 [16:33<30:38,  1.02s/it]
+Reward -1.2333882389998507 Action: 5 Before speed 423 Speed now 426
+Reward -0.8683875900001112 Action: 5 Before speed 426 Speed now 457
+Round: 133 with Time 7.834535161000076
+Reward -0.8440136119997987 Action: 5 Before speed 457 Speed now 405
+
+ 40%|█████████████████████████████████████████████████████▍                                                                                | 1197/3000 [16:35<28:05,  1.07it/s]
+Reward -0.838397895000071 Action: 5 Before speed 405 Speed now 421
+
+ 40%|█████████████████████████████████████████████████████▌                                                                                | 1200/3000 [16:37<27:38,  1.09it/s]
+Reward -1.259115970000039 Action: 5 Before speed 420 Speed now 423
+
+ 40%|█████████████████████████████████████████████████████▋                                                                                | 1202/3000 [16:39<28:25,  1.05it/s]
+
+ 40%|█████████████████████████████████████████████████████▋                                                                                | 1203/3000 [16:41<35:33,  1.19s/it]
+Reward -1.744405953000296 Action: 5 Before speed 310 Speed now 327
+
+ 40%|█████████████████████████████████████████████████████▊                                                                                | 1204/3000 [16:42<39:41,  1.33s/it]
+Reward -1.080634485000246 Action: 5 Before speed 330 Speed now 306
+Round: 134 with Time 10.103158255999915
+Reward -1.1391503229997397 Action: 5 Before speed 306 Speed now 318
+
+ 40%|█████████████████████████████████████████████████████▊                                                                                | 1206/3000 [16:45<36:26,  1.22s/it]
+Reward -1.110772311999881 Action: 5 Before speed 318 Speed now 336
+
+ 40%|█████████████████████████████████████████████████████▉                                                                                | 1208/3000 [16:46<30:08,  1.01s/it]
+
+ 40%|██████████████████████████████████████████████████████                                                                                | 1210/3000 [16:49<35:26,  1.19s/it]
+Reward -1.1164882949997263 Action: 4 Before speed 322 Speed now 326
+
+
+ 40%|██████████████████████████████████████████████████████▏                                                                               | 1212/3000 [16:53<46:32,  1.56s/it]
+
+ 40%|██████████████████████████████████████████████████████▏                                                                               | 1213/3000 [16:55<51:53,  1.74s/it]
+Reward -2.1656926619998558 Action: 5 Before speed 259 Speed now 263
+
+ 40%|██████████████████████████████████████████████████████▏                                                                               | 1214/3000 [16:56<49:10,  1.65s/it]
+Round: 135 with Time 13.285807773000215
+Reward -1.4638782680003715 Action: 5 Before speed 246 Speed now 248
+
+ 41%|██████████████████████████████████████████████████████▎                                                                               | 1216/3000 [16:59<45:47,  1.54s/it]
+Reward -1.410784485000022 Action: 5 Before speed 248 Speed now 256
+
+ 41%|██████████████████████████████████████████████████████▎                                                                               | 1217/3000 [17:00<39:14,  1.32s/it]
+
+ 41%|██████████████████████████████████████████████████████▍                                                                               | 1218/3000 [17:02<47:16,  1.59s/it]
+
+ 41%|██████████████████████████████████████████████████████▍                                                                               | 1220/3000 [17:05<45:27,  1.53s/it]
+Reward -1.5027070709998043 Action: 1 Before speed 262 Speed now 259
+
+ 41%|██████████████████████████████████████████████████████▌                                                                               | 1221/3000 [17:08<52:04,  1.76s/it]
+
+ 41%|██████████████████████████████████████████████████████▋                                                                               | 1223/3000 [17:11<51:57,  1.75s/it]
+Reward -1.4706613610001114 Action: 5 Before speed 248 Speed now 277
+Round: 136 with Time 14.707010987000103
+Reward -1.4194898690002447 Action: 5 Before speed 277 Speed now 277
+
+ 41%|██████████████████████████████████████████████████████▋                                                                               | 1224/3000 [17:13<48:58,  1.65s/it]
+
+ 41%|██████████████████████████████████████████████████████▊                                                                               | 1226/3000 [17:15<39:51,  1.35s/it]
+
+ 41%|██████████████████████████████████████████████████████▊                                                                               | 1227/3000 [17:17<47:31,  1.61s/it]
+Reward -2.2179726009999285 Action: 5 Before speed 249 Speed now 267
+
+ 41%|██████████████████████████████████████████████████████▊                                                                               | 1228/3000 [17:19<46:19,  1.57s/it]
+
+ 41%|██████████████████████████████████████████████████████▉                                                                               | 1229/3000 [17:20<45:25,  1.54s/it]
+
+ 41%|██████████████████████████████████████████████████████▉                                                                               | 1230/3000 [17:22<51:56,  1.76s/it]
+
+ 41%|██████████████████████████████████████████████████████▉                                                                               | 1231/3000 [17:24<55:27,  1.88s/it]
+
+ 41%|███████████████████████████████████████████████████████                                                                               | 1233/3000 [17:27<48:53,  1.66s/it]
+Round: 137 with Time 14.702842048000093
+Reward -1.4470190689999072 Action: 5 Before speed 200 Speed now 238
+
+ 41%|███████████████████████████████████████████████████████                                                                               | 1234/3000 [17:29<46:47,  1.59s/it]
+Reward -1.4292125319998377 Action: 5 Before speed 238 Speed now 231
+
+ 41%|███████████████████████████████████████████████████████▏                                                                              | 1235/3000 [17:30<39:51,  1.35s/it]
+
+ 41%|███████████████████████████████████████████████████████▎                                                                              | 1237/3000 [17:33<46:08,  1.57s/it]
+Reward -1.4605344450001212 Action: 4 Before speed 249 Speed now 226
+
+
+ 41%|███████████████████████████████████████████████████████▎                                                                              | 1239/3000 [17:37<51:35,  1.76s/it]
+
+ 41%|███████████████████████████████████████████████████████▍                                                                              | 1240/3000 [17:39<55:00,  1.88s/it]
+Reward -2.1452577610002663 Action: 5 Before speed 242 Speed now 240
+
+ 41%|███████████████████████████████████████████████████████▍                                                                              | 1241/3000 [17:41<51:09,  1.75s/it]
+Round: 138 with Time 14.715616402999785
+Reward -1.4725048660002358 Action: 5 Before speed 269 Speed now 269
+
+ 41%|███████████████████████████████████████████████████████▍                                                                              | 1242/3000 [17:42<48:44,  1.66s/it]
+Reward -1.4066554050000377 Action: 5 Before speed 269 Speed now 266
+
+ 41%|███████████████████████████████████████████████████████▌                                                                              | 1244/3000 [17:44<39:38,  1.35s/it]
+
+ 42%|███████████████████████████████████████████████████████▌                                                                              | 1245/3000 [17:46<47:13,  1.61s/it]
+
+ 42%|███████████████████████████████████████████████████████▋                                                                              | 1247/3000 [17:49<44:50,  1.53s/it]
+Reward -1.4676873939997677 Action: 1 Before speed 250 Speed now 261
+
+ 42%|███████████████████████████████████████████████████████▋                                                                              | 1248/3000 [17:52<51:19,  1.76s/it]
+
+ 42%|███████████████████████████████████████████████████████▊                                                                              | 1250/3000 [17:55<50:56,  1.75s/it]
+Reward -1.4416467480000392 Action: 5 Before speed 255 Speed now 234
+Round: 139 with Time 14.699302249999619
+Reward -1.4717853300003299 Action: 5 Before speed 234 Speed now 249
+
+ 42%|███████████████████████████████████████████████████████▉                                                                              | 1251/3000 [17:57<48:31,  1.66s/it]
+
+ 42%|███████████████████████████████████████████████████████▉                                                                              | 1253/3000 [17:59<39:24,  1.35s/it]
+
+ 42%|████████████████████████████████████████████████████████                                                                              | 1254/3000 [18:01<46:59,  1.61s/it]
+Reward -2.2209711189998416 Action: 5 Before speed 256 Speed now 248
+
+ 42%|████████████████████████████████████████████████████████                                                                              | 1255/3000 [18:03<45:40,  1.57s/it]
+
+ 42%|████████████████████████████████████████████████████████                                                                              | 1256/3000 [18:04<44:29,  1.53s/it]
+
+ 42%|████████████████████████████████████████████████████████▏                                                                             | 1257/3000 [18:06<51:05,  1.76s/it]
+
+ 42%|████████████████████████████████████████████████████████▏                                                                             | 1258/3000 [18:09<54:44,  1.89s/it]
+
+ 42%|████████████████████████████████████████████████████████▎                                                                             | 1260/3000 [18:11<48:12,  1.66s/it]
+Round: 140 with Time 14.69306823800025
+Reward -1.4887220949999573 Action: 5 Before speed 245 Speed now 261
+
+ 42%|████████████████████████████████████████████████████████▎                                                                             | 1261/3000 [18:13<46:16,  1.60s/it]
+Reward -1.4404991950000294 Action: 5 Before speed 261 Speed now 248
+
+ 42%|████████████████████████████████████████████████████████▎                                                                             | 1262/3000 [18:14<39:25,  1.36s/it]
+
+ 42%|████████████████████████████████████████████████████████▍                                                                             | 1264/3000 [18:17<45:28,  1.57s/it]
+
+ 42%|████████████████████████████████████████████████████████▌                                                                             | 1265/3000 [18:19<44:20,  1.53s/it]
+
+ 42%|████████████████████████████████████████████████████████▌                                                                             | 1266/3000 [18:21<51:06,  1.77s/it]
+
+ 42%|████████████████████████████████████████████████████████▌                                                                             | 1267/3000 [18:23<54:26,  1.88s/it]
+Reward -2.1566268359997594 Action: 5 Before speed 245 Speed now 267
+
+ 42%|████████████████████████████████████████████████████████▋                                                                             | 1268/3000 [18:25<50:32,  1.75s/it]
+Round: 141 with Time 14.765304249999645
+Reward -1.4770766999999978 Action: 5 Before speed 255 Speed now 255
+
+ 42%|████████████████████████████████████████████████████████▋                                                                             | 1269/3000 [18:26<48:07,  1.67s/it]
+Reward -1.3716752089999318 Action: 5 Before speed 255 Speed now 253
+
+ 42%|████████████████████████████████████████████████████████▊                                                                             | 1271/3000 [18:28<39:08,  1.36s/it]
+ 42%|████████████████████████████████████████████████████████▊                                                                             | 1272/3000 [18:31<25:10,  1.14it/s]
+Traceback (most recent call last):
+  File "/home/zecplusplus/Documents/Fraunhofer/Anki-Overdrive-Code/Anki-Overdrive-Reinforcement-Learning/my_DQN.py", line 186, in <module>
+    next_obs, rewards, terminations, truncations, infos = envs.step(actions)
+  File "/home/zecplusplus/Documents/Fraunhofer/Anki-Overdrive-Code/Anki-Overdrive-Reinforcement-Learning/anki_venv/lib/python3.9/site-packages/gymnasium/vector/vector_env.py", line 203, in step
+    return self.step_wait()
+  File "/home/zecplusplus/Documents/Fraunhofer/Anki-Overdrive-Code/Anki-Overdrive-Reinforcement-Learning/anki_venv/lib/python3.9/site-packages/gymnasium/vector/sync_vector_env.py", line 149, in step_wait
+    ) = env.step(action)
+  File "/home/zecplusplus/Documents/Fraunhofer/Anki-Overdrive-Code/Anki-Overdrive-Reinforcement-Learning/anki_venv/lib/python3.9/site-packages/gymnasium/wrappers/record_episode_statistics.py", line 89, in step
+    ) = self.env.step(action)
+  File "/home/zecplusplus/Documents/Fraunhofer/Anki-Overdrive-Code/Anki-Overdrive-Reinforcement-Learning/Offset_Agent.py", line 184, in step
+    while not self.car._delegate.flag:
+KeyboardInterrupt
+Exception ignored in: <module 'threading' from '/usr/lib/python3.9/threading.py'>
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/threading.py", line 1477, in _shutdown
+    lock.acquire()
+KeyboardInterrupt:

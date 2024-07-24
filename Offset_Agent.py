@@ -145,19 +145,19 @@ class OverdriveEnv(gym.Env):
         
         if action == 0:
             speed = self.speed_before+100
-            self.car.changeSpeed(min(speed,700),600)
+            self.car.changeSpeed(min(speed,700),900)
         if action == 1:
             speed = self.speed_before-100
-            self.car.changeSpeed(max(speed,250),600)
+            self.car.changeSpeed(max(speed,250),900)
         if action == 2:
             speed = self.speed_before
-            self.car.changeLane(speed,600,50)
+            self.car.changeLane(speed,900,50)
         if action == 3:
             speed = self.speed_before
-            self.car.changeLane(speed,600,0)
+            self.car.changeLane(speed,900,0)
         if action == 4:
             speed = self.speed_before
-            self.car.changeLane(speed,600,-50)
+            self.car.changeLane(speed,900,-50)
         if action == 5:
             pass                        
         

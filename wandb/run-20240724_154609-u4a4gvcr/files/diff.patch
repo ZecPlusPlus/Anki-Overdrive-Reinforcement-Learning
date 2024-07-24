@@ -1,0 +1,76 @@
+diff --git a/my_DQN.py b/my_DQN.py
+index 338f7fe..44ec84c 100644
+--- a/my_DQN.py
++++ b/my_DQN.py
+@@ -19,7 +19,7 @@ from torch.utils.tensorboard import SummaryWriter
+ import threading
+ import stable_baselines3 as sb3
+ from Offset_Agent import OverdriveEnv
+-
++from tqdm import tqdm
+ @dataclass
+ class Args:
+     exp_name: str = os.path.basename(__file__)[: -len(".py")]
+@@ -30,15 +30,15 @@ class Args:
+     """if toggled, `torch.backends.cudnn.deterministic=False`"""
+     cuda: bool = True
+     """if toggled, cuda will be enabled by default"""
+-    track: bool = False
++    track: bool = True
+     """if toggled, this experiment will be tracked with Weights and Biases"""
+-    wandb_project_name: str = "cleanRL"
++    wandb_project_name: str = "cleanRL_classicalRL"
+     """the wandb's project name"""
+     wandb_entity: str = None
+     """the entity (team) of wandb's project"""
+     capture_video: bool = False
+     """whether to capture videos of the agent performances (check out `videos` folder)"""
+-    save_model: bool = False
++    save_model: bool = True
+     """whether to save model into the `runs/{run_name}` folder"""
+     upload_model: bool = False
+     """whether to upload the saved model to huggingface"""
+@@ -47,7 +47,7 @@ class Args:
+     # Algorithm specific arguments
+     env_id: str = "Anki_Overdrive"
+     """the id of the environment"""
+-    total_timesteps: int = 5000
++    total_timesteps: int = 3000
+     """total timesteps of the experiments"""
+     learning_rate: float = 0.00001
+     """the learning rate of the optimizer"""
+@@ -65,7 +65,7 @@ class Args:
+     """the batch size of sample from the reply memory"""
+     start_e: float = 1
+     """the starting epsilon for exploration"""
+-    end_e: float = 0.01
++    end_e: float = 0.00
+     """the ending epsilon for exploration"""
+     exploration_fraction: float = 0.1
+     """the fraction of `total-timesteps` it takes from start-e to go end-e"""
+@@ -97,6 +97,8 @@ class QNetwork(nn.Module):
+         self.network = nn.Sequential(
+             nn.Linear(np.array(env.single_observation_space.shape).prod(), 256),
+             nn.ReLU(),
++            nn.Linear(256, 256),
++            nn.ReLU(),
+             nn.Linear(256, 128),
+             nn.ReLU(),
+             nn.Linear(128, 64),
+@@ -173,7 +175,7 @@ poetry run pip install "stable_baselines3==2.0.0a1"
+ 
+     # TRY NOT TO MODIFY: start the game
+     obs, _ = envs.reset(seed=args.seed)
+-    for global_step in range(args.total_timesteps):
++    for global_step in tqdm(range(args.total_timesteps)):
+         # ALGO LOGIC: put action logic here
+         epsilon = linear_schedule(args.start_e, args.end_e, args.exploration_fraction * args.total_timesteps, global_step)
+         if random.random() < epsilon:
+@@ -184,7 +186,6 @@ poetry run pip install "stable_baselines3==2.0.0a1"
+ 
+         # TRY NOT TO MODIFY: execute the game and log data.
+         next_obs, rewards, terminations, truncations, infos = envs.step(actions)
+-
+         # TRY NOT TO MODIFY: record rewards for plotting purposes
+         if "final_info" in infos:
+             for info in infos["final_info"]:

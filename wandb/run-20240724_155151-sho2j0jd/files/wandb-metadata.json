@@ -1,0 +1,117 @@
+{
+    "os": "Linux-6.8.0-38-generic-x86_64-with-glibc2.39",
+    "python": "3.9.19",
+    "heartbeatAt": "2024-07-24T13:51:51.799826",
+    "startedAt": "2024-07-24T13:51:51.070727",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/zecplusplus/Documents/Fraunhofer/Anki-Overdrive-Code/Anki-Overdrive-Reinforcement-Learning/my_DQN.py",
+    "codePath": "my_DQN.py",
+    "git": {
+        "remote": "https://github.com/ZecPlusPlus/Anki-Overdrive-Reinforcement-Learning.git",
+        "commit": "01ac698280f780ba6eb5ea83ef97bd6733672f92"
+    },
+    "email": "benjaminzec@web.de",
+    "root": "/home/zecplusplus/Documents/Fraunhofer/Anki-Overdrive-Code/Anki-Overdrive-Reinforcement-Learning",
+    "host": "zecplusplus-21crs0kx00",
+    "username": "zecplusplus",
+    "executable": "/home/zecplusplus/Documents/Fraunhofer/Anki-Overdrive-Code/Anki-Overdrive-Reinforcement-Learning/anki_venv/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 2925.5814375000004,
+        "min": 400.0,
+        "max": 4768.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2083.792,
+            "min": 400.0,
+            "max": 4768.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 4768.0
+        },
+        {
+            "current": 2077.63,
+            "min": 400.0,
+            "max": 4768.0
+        },
+        {
+            "current": 2083.748,
+            "min": 400.0,
+            "max": 4768.0
+        },
+        {
+            "current": 4674.153,
+            "min": 400.0,
+            "max": 4768.0
+        },
+        {
+            "current": 4683.607,
+            "min": 400.0,
+            "max": 4768.0
+        },
+        {
+            "current": 3436.539,
+            "min": 400.0,
+            "max": 4768.0
+        },
+        {
+            "current": 2762.29,
+            "min": 400.0,
+            "max": 4768.0
+        },
+        {
+            "current": 2410.933,
+            "min": 400.0,
+            "max": 4768.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 4768.0
+        },
+        {
+            "current": 4691.025,
+            "min": 400.0,
+            "max": 4768.0
+        },
+        {
+            "current": 2075.962,
+            "min": 400.0,
+            "max": 4768.0
+        },
+        {
+            "current": 3122.871,
+            "min": 400.0,
+            "max": 4768.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 4768.0
+        },
+        {
+            "current": 2988.183,
+            "min": 400.0,
+            "max": 4768.0
+        },
+        {
+            "current": 4219.835,
+            "min": 400.0,
+            "max": 4768.0
+        }
+    ],
+    "disk": {
+        "total": 310.44970321655273,
+        "used": 114.6707534790039
+    },
+    "memory": {
+        "total": 30.126358032226562
+    }
+}

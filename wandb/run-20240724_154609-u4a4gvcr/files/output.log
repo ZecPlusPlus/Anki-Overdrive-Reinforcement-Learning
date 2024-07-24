@@ -1,0 +1,307 @@
+/home/zecplusplus/Documents/Fraunhofer/Anki-Overdrive-Code/Anki-Overdrive-Reinforcement-Learning/anki_venv/lib/python3.9/site-packages/gymnasium/spaces/box.py:130: UserWarning: [33mWARN: Box bound precision lowered by casting to float32
+  gym.logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+  0%|                                                         | 2/3000 [00:00<19:26,  2.57it/s]
+Reward 0 Action: 2 Before speed 264 Speed now 264
+
+  0%|                                                         | 3/3000 [00:02<48:10,  1.04it/s]
+
+  0%|                                                       | 4/3000 [00:04<1:03:49,  1.28s/it]
+
+  0%|                                                       | 5/3000 [00:06<1:11:42,  1.44s/it]
+Reward -1.7339393699999164 Action: 0 Before speed 244 Speed now 348
+
+  0%|▏                                                        | 8/3000 [00:09<55:06,  1.11s/it]
+Reward -1.0222775120000733 Action: 4 Before speed 443 Speed now 443
+
+  0%|▏                                                       | 10/3000 [00:10<48:12,  1.03it/s]
+Round: 1 with Time 10.04467488299997
+Reward -0.9302472750000561 Action: 1 Before speed 438 Speed now 349
+global_step=8, episodic_return=[-11.488223]
+
+  0%|▏                                                     | 11/3000 [00:13<1:07:14,  1.35s/it]
+
+  0%|▏                                                     | 12/3000 [00:14<1:07:41,  1.36s/it]
+
+  0%|▏                                                     | 13/3000 [00:15<1:07:42,  1.36s/it]
+
+  0%|▎                                                     | 14/3000 [00:17<1:20:26,  1.62s/it]
+
+  1%|▎                                                     | 16/3000 [00:21<1:21:30,  1.64s/it]
+Reward -2.190544827000167 Action: 1 Before speed 250 Speed now 256
+
+  1%|▎                                                     | 17/3000 [00:22<1:17:10,  1.55s/it]
+
+  1%|▎                                                     | 19/3000 [00:25<1:04:51,  1.31s/it]
+Round: 2 with Time 14.218020197999977
+Reward -1.435436170999992 Action: 1 Before speed 268 Speed now 239
+global_step=17, episodic_return=[-14.219885]
+
+  1%|▎                                                     | 20/3000 [00:26<1:10:00,  1.41s/it]
+
+  1%|▍                                                       | 22/3000 [00:28<54:28,  1.10s/it]
+Reward -0.8677535199999511 Action: 0 Before speed 343 Speed now 449
+
+  1%|▍                                                     | 24/3000 [00:31<1:05:37,  1.32s/it]
+Reward -1.5630781309998838 Action: 1 Before speed 448 Speed now 355
+
+  1%|▍                                                     | 25/3000 [00:32<1:01:33,  1.24s/it]
+
+  1%|▌                                                       | 28/3000 [00:35<52:02,  1.05s/it]
+Reward -1.2053501819998473 Action: 3 Before speed 343 Speed now 343
+Round: 3 with Time 10.448181519999935
+Reward -1.0256646140001067 Action: 4 Before speed 343 Speed now 343
+global_step=26, episodic_return=[-10.449717]
+
+  1%|▌                                                     | 30/3000 [00:39<1:09:58,  1.41s/it]
+Reward -2.2192059180001706 Action: 2 Before speed 247 Speed now 254
+
+  1%|▌                                                     | 31/3000 [00:40<1:04:57,  1.31s/it]
+
+  1%|▌                                                     | 32/3000 [00:42<1:17:56,  1.58s/it]
+
+  1%|▌                                                     | 34/3000 [00:45<1:14:41,  1.51s/it]
+Reward -1.5974577370000134 Action: 0 Before speed 247 Speed now 372
+
+  1%|▋                                                     | 35/3000 [00:46<1:14:56,  1.52s/it]
+
+  1%|▋                                                       | 38/3000 [00:49<53:41,  1.09s/it]
+Round: 4 with Time 12.9827282440001
+Reward -0.8102939000000333 Action: 0 Before speed 358 Speed now 461
+global_step=35, episodic_return=[-12.984727]
+Reward -0.4200555219999842 Action: 2 Before speed 461 Speed now 452
+
+  1%|▋                                                       | 39/3000 [00:50<55:16,  1.12s/it]
+
+  1%|▋                                                     | 40/3000 [00:52<1:00:54,  1.23s/it]
+
+  1%|▋                                                     | 41/3000 [00:54<1:14:36,  1.51s/it]
+
+  1%|▊                                                     | 42/3000 [00:56<1:24:30,  1.71s/it]
+
+  1%|▊                                                     | 43/3000 [00:58<1:30:43,  1.84s/it]
+Reward -2.1367677220000587 Action: 1 Before speed 246 Speed now 242
+
+  2%|▊                                                     | 45/3000 [01:01<1:16:19,  1.55s/it]
+Round: 5 with Time 13.433056835999878
+Reward -1.046951141000136 Action: 4 Before speed 351 Speed now 351
+global_step=44, episodic_return=[-14.33507]
+
+  2%|▊                                                     | 47/3000 [01:02<1:00:49,  1.24s/it]
+
+  2%|▊                                                     | 48/3000 [01:04<1:00:45,  1.23s/it]
+Reward -1.2332257790001222 Action: 1 Before speed 449 Speed now 354
+
+  2%|▉                                                     | 50/3000 [01:07<1:08:04,  1.38s/it]
+
+  2%|▉                                                     | 52/3000 [01:09<1:03:42,  1.30s/it]
+Reward -1.2316464210000504 Action: 0 Before speed 350 Speed now 454
+
+  2%|▉                                                     | 53/3000 [01:11<1:06:39,  1.36s/it]
+
+  2%|█                                                       | 55/3000 [01:13<57:48,  1.18s/it]
+Round: 6 with Time 11.246473644999924
+Reward -1.2891743229999975 Action: 1 Before speed 313 Speed now 245
+global_step=53, episodic_return=[-12.148597]
+
+  2%|█                                                     | 56/3000 [01:15<1:13:17,  1.49s/it]
+
+  2%|█                                                     | 57/3000 [01:17<1:14:34,  1.52s/it]
+
+  2%|█                                                     | 58/3000 [01:18<1:09:56,  1.43s/it]
+
+  2%|█                                                     | 59/3000 [01:20<1:21:06,  1.65s/it]
+
+  2%|█                                                     | 60/3000 [01:22<1:28:37,  1.81s/it]
+Reward -2.167259879999847 Action: 3 Before speed 251 Speed now 233
+
+  2%|█                                                     | 62/3000 [01:25<1:19:40,  1.63s/it]
+
+  2%|█▏                                                    | 64/3000 [01:27<1:02:40,  1.28s/it]
+Round: 7 with Time 14.493089045000033
+Reward -1.406241029000057 Action: 4 Before speed 238 Speed now 265
+global_step=62, episodic_return=[-14.495065]
+
+  2%|█▏                                                    | 65/3000 [01:29<1:14:38,  1.53s/it]
+
+  2%|█▏                                                    | 66/3000 [01:31<1:13:18,  1.50s/it]
+
+  2%|█▏                                                    | 67/3000 [01:32<1:12:35,  1.49s/it]
+
+  2%|█▏                                                    | 68/3000 [01:34<1:24:03,  1.72s/it]
+
+  2%|█▏                                                    | 69/3000 [01:36<1:31:00,  1.86s/it]
+
+  2%|█▎                                                    | 71/3000 [01:39<1:16:38,  1.57s/it]
+Reward -1.4102416780001477 Action: 1 Before speed 250 Speed now 211
+
+  2%|█▎                                                    | 73/3000 [01:41<1:00:15,  1.24s/it]
+Round: 8 with Time 13.888234810999847
+Reward -1.1975840059999427 Action: 2 Before speed 303 Speed now 303
+global_step=71, episodic_return=[-13.890448]
+
+  2%|█▎                                                    | 74/3000 [01:43<1:08:07,  1.40s/it]
+
+  2%|█▎                                                    | 75/3000 [01:45<1:18:23,  1.61s/it]
+
+  3%|█▎                                                    | 76/3000 [01:47<1:25:04,  1.75s/it]
+Reward -2.067347169999948 Action: 4 Before speed 270 Speed now 246
+
+  3%|█▍                                                    | 77/3000 [01:49<1:32:25,  1.90s/it]
+
+  3%|█▍                                                    | 78/3000 [01:51<1:36:15,  1.98s/it]
+
+  3%|█▍                                                    | 79/3000 [01:53<1:38:49,  2.03s/it]
+
+  3%|█▍                                                    | 81/3000 [01:57<1:29:13,  1.83s/it]
+Round: 9 with Time 16.641388190999805
+Reward -1.346516882999822 Action: 1 Before speed 258 Speed now 251
+
+  3%|█▍                                                    | 82/3000 [01:58<1:14:24,  1.53s/it]
+
+  3%|█▍                                                    | 83/3000 [02:00<1:24:48,  1.74s/it]
+
+  3%|█▌                                                    | 84/3000 [02:02<1:30:15,  1.86s/it]
+Reward -2.120745209000006 Action: 2 Before speed 253 Speed now 252
+
+
+  3%|█▌                                                    | 86/3000 [02:06<1:30:53,  1.87s/it]
+
+  3%|█▌                                                    | 87/3000 [02:08<1:35:02,  1.96s/it]
+
+  3%|█▌                                                    | 88/3000 [02:10<1:38:04,  2.02s/it]
+
+  3%|█▌                                                    | 89/3000 [02:12<1:38:38,  2.03s/it]
+
+  3%|█▋                                                    | 91/3000 [02:14<1:14:09,  1.53s/it]
+Round: 10 with Time 16.59088891800002
+Reward -1.3521199300000717 Action: 2 Before speed 246 Speed now 253
+global_step=89, episodic_return=[-16.592953]
+
+  3%|█▋                                                    | 92/3000 [02:17<1:24:20,  1.74s/it]
+
+  3%|█▋                                                    | 93/3000 [02:19<1:29:57,  1.86s/it]
+
+  3%|█▋                                                    | 94/3000 [02:21<1:33:02,  1.92s/it]
+
+  3%|█▋                                                    | 95/3000 [02:23<1:37:20,  2.01s/it]
+
+  3%|█▋                                                    | 96/3000 [02:25<1:39:28,  2.06s/it]
+
+  3%|█▊                                                    | 98/3000 [02:29<1:33:41,  1.94s/it]
+Reward -2.1539298749999034 Action: 1 Before speed 259 Speed now 240
+
+  3%|█▊                                                   | 100/3000 [02:31<1:04:54,  1.34s/it]
+Round: 11 with Time 16.41729594000003
+Reward -1.030361044999836 Action: 2 Before speed 342 Speed now 323
+global_step=98, episodic_return=[-16.41929]
+
+  3%|█▊                                                   | 101/3000 [02:32<1:08:51,  1.43s/it]
+
+  3%|█▊                                                   | 103/3000 [02:35<1:08:54,  1.43s/it]
+Reward -1.416800948999935 Action: 1 Before speed 340 Speed now 252
+
+  3%|█▊                                                   | 104/3000 [02:37<1:21:09,  1.68s/it]
+
+  4%|█▊                                                   | 106/3000 [02:41<1:22:22,  1.71s/it]
+Reward -2.192479012000149 Action: 3 Before speed 240 Speed now 247
+
+  4%|█▉                                                   | 107/3000 [02:42<1:18:58,  1.64s/it]
+
+  4%|█▉                                                   | 109/3000 [02:45<1:04:33,  1.34s/it]
+Round: 12 with Time 13.820327439000039
+Reward -1.406576005000261 Action: 2 Before speed 242 Speed now 251
+global_step=107, episodic_return=[-13.822927]
+
+  4%|█▉                                                   | 110/3000 [02:47<1:17:43,  1.61s/it]
+
+  4%|█▉                                                   | 111/3000 [02:48<1:15:16,  1.56s/it]
+
+  4%|█▉                                                   | 112/3000 [02:50<1:13:19,  1.52s/it]
+
+  4%|█▉                                                   | 113/3000 [02:52<1:25:07,  1.77s/it]
+
+  4%|██                                                   | 114/3000 [02:54<1:30:16,  1.88s/it]
+
+  4%|██                                                   | 116/3000 [02:57<1:13:47,  1.54s/it]
+Reward -1.4726122409997515 Action: 4 Before speed 250 Speed now 260
+
+  4%|██                                                   | 118/3000 [02:59<1:01:48,  1.29s/it]
+Round: 13 with Time 14.25102103099971
+Reward -1.3530970740002886 Action: 1 Before speed 360 Speed now 248
+global_step=116, episodic_return=[-15.153174]
+
+  4%|██                                                   | 119/3000 [03:01<1:15:11,  1.57s/it]
+
+  4%|██                                                   | 120/3000 [03:02<1:13:19,  1.53s/it]
+
+  4%|██▏                                                  | 121/3000 [03:04<1:07:17,  1.40s/it]
+
+  4%|██▏                                                  | 122/3000 [03:06<1:19:05,  1.65s/it]
+
+  4%|██▏                                                  | 123/3000 [03:08<1:26:21,  1.80s/it]
+Reward -2.1555681560002995 Action: 3 Before speed 262 Speed now 249
+
+  4%|██▏                                                  | 125/3000 [03:11<1:17:32,  1.62s/it]
+
+  4%|██▎                                                    | 127/3000 [03:13<59:31,  1.24s/it]
+Round: 14 with Time 13.944016774999909
+Reward -1.080244051000136 Action: 0 Before speed 255 Speed now 351
+global_step=125, episodic_return=[-14.846099]
+
+  4%|██▎                                                  | 128/3000 [03:15<1:13:34,  1.54s/it]
+
+  4%|██▎                                                  | 129/3000 [03:16<1:12:10,  1.51s/it]
+
+  4%|██▎                                                  | 130/3000 [03:18<1:11:59,  1.50s/it]
+
+  4%|██▎                                                  | 131/3000 [03:20<1:23:07,  1.74s/it]
+
+  4%|██▎                                                  | 132/3000 [03:22<1:29:06,  1.86s/it]
+Reward -2.1579296449999674 Action: 5 Before speed 253 Speed now 249
+
+  4%|██▎                                                  | 134/3000 [03:25<1:19:09,  1.66s/it]
+
+  4%|██▍                                                  | 135/3000 [03:27<1:15:39,  1.58s/it]
+Round: 15 with Time 14.669266402000176
+Reward -1.4130878940000002 Action: 4 Before speed 244 Speed now 247
+global_step=134, episodic_return=[-15.571524]
+
+  5%|██▍                                                  | 136/3000 [03:27<1:04:53,  1.36s/it]
+
+  5%|██▍                                                  | 138/3000 [03:31<1:14:31,  1.56s/it]
+
+  5%|██▍                                                  | 139/3000 [03:33<1:13:16,  1.54s/it]
+
+  5%|██▍                                                  | 140/3000 [03:34<1:14:52,  1.57s/it]
+
+  5%|██▍                                                  | 141/3000 [03:36<1:22:00,  1.72s/it]
+Reward -2.07228509100014 Action: 1 Before speed 352 Speed now 259
+
+  5%|██▌                                                  | 143/3000 [03:39<1:15:22,  1.58s/it]
+
+  5%|██▌                                                  | 144/3000 [03:41<1:12:45,  1.53s/it]
+Round: 16 with Time 13.972750781000286
+Reward -1.4010036479999144 Action: 5 Before speed 299 Speed now 244
+global_step=143, episodic_return=[-13.975084]
+
+  5%|██▌                                                  | 145/3000 [03:41<1:02:26,  1.31s/it]
+
+  5%|██▌                                                  | 147/3000 [03:45<1:13:37,  1.55s/it]
+  5%|██▌                                                  | 147/3000 [03:45<1:13:04,  1.54s/it]
+Traceback (most recent call last):
+  File "/home/zecplusplus/Documents/Fraunhofer/Anki-Overdrive-Code/Anki-Overdrive-Reinforcement-Learning/my_DQN.py", line 188, in <module>
+    next_obs, rewards, terminations, truncations, infos = envs.step(actions)
+  File "/home/zecplusplus/Documents/Fraunhofer/Anki-Overdrive-Code/Anki-Overdrive-Reinforcement-Learning/anki_venv/lib/python3.9/site-packages/gymnasium/vector/vector_env.py", line 203, in step
+    return self.step_wait()
+  File "/home/zecplusplus/Documents/Fraunhofer/Anki-Overdrive-Code/Anki-Overdrive-Reinforcement-Learning/anki_venv/lib/python3.9/site-packages/gymnasium/vector/sync_vector_env.py", line 149, in step_wait
+    ) = env.step(action)
+  File "/home/zecplusplus/Documents/Fraunhofer/Anki-Overdrive-Code/Anki-Overdrive-Reinforcement-Learning/anki_venv/lib/python3.9/site-packages/gymnasium/wrappers/record_episode_statistics.py", line 89, in step
+    ) = self.env.step(action)
+  File "/home/zecplusplus/Documents/Fraunhofer/Anki-Overdrive-Code/Anki-Overdrive-Reinforcement-Learning/Offset_Agent.py", line 184, in step
+    while not self.car._delegate.flag:
+KeyboardInterrupt
+Exception ignored in: <module 'threading' from '/usr/lib/python3.9/threading.py'>
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/threading.py", line 1477, in _shutdown
+    lock.acquire()
+KeyboardInterrupt:
