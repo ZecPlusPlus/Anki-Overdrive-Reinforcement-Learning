@@ -5,9 +5,7 @@ import time
 from dataclasses import dataclass
 from drive import Overdrive
 import gymnasium as gym
-import gymnasium as gym
 from gymnasium import spaces
-import numpy as np
 import numpy as np
 import torch
 import torch.nn as nn
@@ -47,15 +45,15 @@ class Args:
     # Algorithm specific arguments
     env_id: str = "Anki_Overdrive"
     """the id of the environment"""
-    total_timesteps: int = 3000
+    total_timesteps: int = 2000
     """total timesteps of the experiments"""
     learning_rate: float = 0.00001
     """the learning rate of the optimizer"""
     num_envs: int = 1
     """the number of parallel game environments"""
-    buffer_size: int = 5000
+    buffer_size: int = 7000
     """the replay memory buffer size"""
-    gamma: float = 0.99
+    gamma: float = 0.9999
     """the discount factor gamma"""
     tau: float = 1.0
     """the target network update rate"""
@@ -69,21 +67,20 @@ class Args:
     """the ending epsilon for exploration"""
     exploration_fraction: float = 0.1
     """the fraction of `total-timesteps` it takes from start-e to go end-e"""
-    learning_starts: int = 200
+    learning_starts: int = 250
     """timestep to start learning"""
-    train_frequency: int = 7
+    train_frequency: int = 8
     """the frequency of training"""
 
 
 def make_env(env_id, seed, idx, capture_video, run_name):
     def thunk():
-        addr = "CB:76:55:B9:54:67" #"C9:96:EB:8F:03:0B" DC:7E:B8:5F:BF:46 "CF:45:33:60:24:69" "CB:76:55:B9:54:67"
+        addr = "CF:45:33:60:24:69" #"C9:96:EB:8F:03:0B" DC:7E:B8:5F:BF:46 "CF:45:33:60:24:69" "CB:76:55:B9:54:67"
         car = Overdrive(addr)  
         env = OverdriveEnv(car)
         env = gym.wrappers.RecordEpisodeStatistics(env)
         env.action_space.seed(seed)
         return env
-
     return thunk
 # Write a class same forward and do  seperated layer torch layer. 
 # Safe the models and the results
@@ -101,7 +98,9 @@ class QNetwork(nn.Module):
             nn.ReLU(),
             nn.Linear(128, 64),
             nn.ReLU(),
-            nn.Linear(64, env.single_action_space.n),
+            nn.Linear(64, 32),
+            nn.ReLU(),
+            nn.Linear(32, env.single_action_space.n),
         )
 
     def forward(self, x):

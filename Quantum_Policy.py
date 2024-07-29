@@ -21,6 +21,7 @@ import pennylane as qml
 import stable_baselines3 as sb3
 from Offset_Agent import OverdriveEnv
 from tqdm import tqdm
+
 @dataclass
 class Args:
     exp_name: str = os.path.basename(__file__)[: -len(".py")]
@@ -78,7 +79,7 @@ class Args:
 
 def make_env(env_id, seed, idx, capture_video, run_name):
     def thunk():
-        addr = "CB:76:55:B9:54:67" #"C9:96:EB:8F:03:0B" DC:7E:B8:5F:BF:46 "CF:45:33:60:24:69" "CB:76:55:B9:54:67"
+        addr = "CF:45:33:60:24:69" #"C9:96:EB:8F:03:0B" DC:7E:B8:5F:BF:46 "CF:45:33:60:24:69" "CB:76:55:B9:54:67"
         car = Overdrive(addr)  
         env = OverdriveEnv(car)
         env = gym.wrappers.RecordEpisodeStatistics(env)
@@ -119,6 +120,7 @@ class QuantumQNodeLayer(nn.Module):
 class QNetwork(nn.Module):
     def __init__(self, env):
         super().__init__()
+       
         self.network = nn.Sequential(
             nn.Linear(np.array(env.single_observation_space.shape).prod(), 128),
             nn.ReLU(),
@@ -133,7 +135,7 @@ class QNetwork(nn.Module):
 
     def forward(self, x):
         return self.network(x)
-
+        
 def linear_schedule(start_e: float, end_e: float, duration: int, t: int):
     slope = (end_e - start_e) / duration
     return max(slope * t + start_e, end_e)

@@ -30,7 +30,7 @@ class CustomOverdrive(Overdrive):
                 self.piece_timestamp[piece] = current_time  # Update the timestamp for the current piece
 
 def main():
-    addr =  "CF:45:33:60:24:69" #DC:7E:B8:5F:BF:46  C9:96:EB:8F:03:0B # CB:76:55:B9:54:67, CF:45:33:60:24:69 Mac-Adress of your AnkiCar -> sudo bluetoothctl -> Scan on -> Look for Anki car(Normally smth with with Anki... Drive 0')
+    addr =  "CB:76:55:B9:54:67" #DC:7E:B8:5F:BF:46  C9:96:EB:8F:03:0B #CB:76:55:B9:54:67, CF:45:33:60:24:69 Mac-Adress of your AnkiCar -> sudo bluetoothctl -> Scan on -> Look for Anki car(Normally smth with with Anki... Drive 0')
     car = CustomOverdrive(addr)
     
     # Register the callback
