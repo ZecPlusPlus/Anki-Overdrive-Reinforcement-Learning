@@ -35,10 +35,10 @@ class OverdriveEnv(gym.Env):
             dtype=np.float32
         )   
         self.current_speed = 250
-        self.track_map = [33,36,18,23,57,39,20,18,34]                                #self.track_map = [33,40,18,20,36,39,18,17,34]
-        self.rotation_pieces = [18,20,23]
-        self.straight_pieces = [33,34,36,57,39]
-        self.action_taken = np.array([2,2])
+        self.track_map = [33,36,18,23,57,39,20,18,34]       # Circle self.track_map = [33,36,18,23,57,39,20,18,34] eight self.track_map = [33,17,17,23,36,18,18,20,34] eight2 self.track_map = [33,20,17,36,10,18,20,17,10,18] #self.track_map = [33,40,18,20,36,39,18,17,34]F
+        self.rotation_pieces = [18,20,23]                 # Circle self.rotation_pieces = [18,20,23]   eight self.rotation_pieces = [17,18,20,23]   eight2 self.rotation_pieces=[17,18,20,23]
+        self.straight_pieces = [33,34,36,57,39]              # Circle self.straight_pieces = [33,34,36,57,39]   eightself.straight_pieces = [33,34,36]   eight2 self.straight_pieces= 33,34,36,10]
+        self.action_taken = np.array([2,2]) 
         self.epsilon = 1e-8
         self.global_time = time.perf_counter()
         # Initial state

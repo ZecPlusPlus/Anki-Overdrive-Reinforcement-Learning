@@ -75,32 +75,24 @@ class Args:
 
 def make_env(env_id, seed, idx, capture_video, run_name):
     def thunk():
-        addr = "CF:45:33:60:24:69" #"C9:96:EB:8F:03:0B" DC:7E:B8:5F:BF:46 "CF:45:33:60:24:69" "CB:76:55:B9:54:67"
+        addr = "CB:76:55:B9:54:67" #"C9:96:EB:8F:03:0B" DC:7E:B8:5F:BF:46 "CF:45:33:60:24:69" "CB:76:55:B9:54:67"
         car = Overdrive(addr)  
         env = OverdriveEnv(car)
         env = gym.wrappers.RecordEpisodeStatistics(env)
         env.action_space.seed(seed)
         return env
     return thunk
-# Write a class same forward and do  seperated layer torch layer. 
-# Safe the models and the results
-# 6 qubits 
-
 
 # ALGO LOGIC: initialize agent here:
 class QNetwork(nn.Module):
     def __init__(self, env):
         super().__init__()
         self.network = nn.Sequential(
-            nn.Linear(np.array(env.single_observation_space.shape).prod(), 256),
+            nn.Linear(np.array(env.single_observation_space.shape).prod(), 1024),  
             nn.ReLU(),
-            nn.Linear(256, 128),
-            nn.ReLU(),
-            nn.Linear(128, 64),
-            nn.ReLU(),
-            nn.Linear(64, 32),
-            nn.ReLU(),
-            nn.Linear(32, env.single_action_space.n),
+            nn.Linear(1024, 16),  
+            nn.Tanh(),
+            nn.Linear(16, env.single_action_space.n), 
         )
 
     def forward(self, x):
