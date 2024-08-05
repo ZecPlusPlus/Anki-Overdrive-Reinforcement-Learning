@@ -25,11 +25,10 @@ class OverdriveEnv(gym.Env):
         self.car.setLocationChangeCallback(self._location_change_callback)
         self.laptime = 0
         # Action space: 0 = speed up, 1 = speed down, 2 = offset(-64) , 3 = offset(-48)  , 4 = offset(-32)  , 5 = offset(-16)  , 6 = offset(0)  , 7 = offset(16), 8 = offset(32), 9 = offset(48) , 10 = offset(64)
-        self.action_space = spaces.Discrete(6)
+        self.action_space = spaces.Discrete(7)
         self.lap_counter = 0
         # Observation space: Transistion time, offset, piece ,next_piece, Curve/straight
         self.observation_space = spaces.Box(
-
             low=np.array([0, -70, 17, 17, 0, 0, 0]),
             high=np.array([3, 70, 40, 40, 1, 5, 5]),
             dtype=np.float32
@@ -142,7 +141,7 @@ class OverdriveEnv(gym.Env):
             self.car.changeSpeed(new_speed, 700)   
         '''
 
-        
+        '''
         if action == 0:
             speed = self.speed_before+100
             self.car.changeSpeed(min(speed,700),900)
@@ -163,8 +162,30 @@ class OverdriveEnv(gym.Env):
            
         if action == 5:
             pass                        
-        
-
+        '''
+        if action == 0:
+            speed = self.speed_before+100
+            self.car.changeSpeed(min(speed,700),900)
+        if action == 1:
+            speed = self.speed_before-100
+            self.car.changeSpeed(max(speed,300),900)
+        if action == 2:
+            speed = self.speed_before
+            self.car.changeLane(speed,600,50)
+        if action == 3:
+            speed = self.speed_before
+            self.car.changeLane(speed,600,25)
+        if action == 4:
+            speed = self.speed_before
+            self.car.changeLane(speed,600,0)
+        if action == 5: 
+            speed = self.speed_before
+            self.car.changeLane(speed,600,-25)   
+        if action == 6:
+            speed = self.speed_before
+            self.car.changeLane(speed,600,-50)
+           
+         
 
         '''
         if action == 0:
@@ -195,7 +216,7 @@ class OverdriveEnv(gym.Env):
         else:    
             reward = 0
 
-        if self.action_before == action and self.action_before in [2,3,4]:
+        if self.action_before == action and self.action_before in [2,3,4,5,6]:
             #print("Dont repeat changing the same offset",reward)
             reward = reward - 0.9
             #print("Now the reward is", reward)

@@ -45,13 +45,13 @@ class Args:
     # Algorithm specific arguments
     env_id: str = "Anki_Overdrive"
     """the id of the environment"""
-    total_timesteps: int = 2000
+    total_timesteps: int = 1700
     """total timesteps of the experiments"""
-    learning_rate: float = 0.00001
+    learning_rate: float = 0.000001
     """the learning rate of the optimizer"""
     num_envs: int = 1
     """the number of parallel game environments"""
-    buffer_size: int = 7000
+    buffer_size: int = 8000
     """the replay memory buffer size"""
     gamma: float = 0.9999
     """the discount factor gamma"""
@@ -65,11 +65,11 @@ class Args:
     """the starting epsilon for exploration"""
     end_e: float = 0.00
     """the ending epsilon for exploration"""
-    exploration_fraction: float = 0.1
+    exploration_fraction: float = 0.12
     """the fraction of `total-timesteps` it takes from start-e to go end-e"""
-    learning_starts: int = 250
+    learning_starts: int = 240
     """timestep to start learning"""
-    train_frequency: int = 8
+    train_frequency: int = 10
     """the frequency of training"""
 
 
@@ -88,11 +88,11 @@ class QNetwork(nn.Module):
     def __init__(self, env):
         super().__init__()
         self.network = nn.Sequential(
-            nn.Linear(np.array(env.single_observation_space.shape).prod(), 1024),  
+            nn.Linear(np.array(env.single_observation_space.shape).prod(), 32),  
             nn.ReLU(),
-            nn.Linear(1024, 16),  
-            nn.Tanh(),
-            nn.Linear(16, env.single_action_space.n), 
+            nn.Linear(32, 16),  
+            nn.ReLU(),
+            nn.Linear(16, env.single_action_space.n)
         )
 
     def forward(self, x):
@@ -167,6 +167,7 @@ poetry run pip install "stable_baselines3==2.0.0a1"
     for global_step in tqdm(range(args.total_timesteps)):
         # ALGO LOGIC: put action logic here
         epsilon = linear_schedule(args.start_e, args.end_e, args.exploration_fraction * args.total_timesteps, global_step)
+        
         if random.random() < epsilon:
             actions = np.array([envs.single_action_space.sample() for _ in range(envs.num_envs)])
         else:

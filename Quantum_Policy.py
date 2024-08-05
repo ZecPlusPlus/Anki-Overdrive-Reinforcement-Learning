@@ -79,7 +79,7 @@ class Args:
 
 def make_env(env_id, seed, idx, capture_video, run_name):
     def thunk():
-        addr =  "CF:45:33:60:24:69" #"C9:96:EB:8F:03:0B" DC:7E:B8:5F:BF:46 "CF:45:33:60:24:69" "CB:76:55:B9:54:67"
+        addr = "CB:76:55:B9:54:67" #"C9:96:EB:8F:03:0B" DC:7E:B8:5F:BF:46 "CF:45:33:60:24:69" "CB:76:55:B9:54:67"
         car = Overdrive(addr)  
         env = OverdriveEnv(car)
         env = gym.wrappers.RecordEpisodeStatistics(env)
@@ -89,19 +89,34 @@ def make_env(env_id, seed, idx, capture_video, run_name):
     return thunk
 # Write a class same forward and do  seperated layer torch layer. 
 # Safe the models and the results
-# 6 qubits 
+# 7 qubits 
 
-n_qubits = 6
-n_layers = 6
+n_qubits = 7
+n_layers = 7
 
 # Define the QNode
 dev = qml.device("default.qubit", wires=n_qubits)
 
 @qml.qnode(dev)
 def qnode(inputs, weights):
-    qml.AngleEmbedding(inputs, wires=range(n_qubits), rotation='Z')
-    qml.Hadamard(0)
+    
+    qml.AngleEmbedding(inputs, wires=range(n_qubits), rotation='Z') #Works always better Angle 
+    for wire in range(n_qubits):
+        qml.Hadamard(wire)
     qml.BasicEntanglerLayers(weights, wires=range(n_qubits))
+    qml.AngleEmbedding(inputs, wires=range(n_qubits), rotation='Z')
+    for wire in range(n_qubits):
+        qml.Hadamard(wire)
+    qml.BasicEntanglerLayers(weights, wires=range(n_qubits))
+    qml.AngleEmbedding(inputs, wires=range(n_qubits), rotation='Z')
+    for wire in range(n_qubits):
+        qml.Hadamard(wire)
+    qml.BasicEntanglerLayers(weights, wires=range(n_qubits))
+    qml.AngleEmbedding(inputs, wires=range(n_qubits), rotation='Z')
+    for wire in range(n_qubits):
+        qml.Hadamard(wire)
+    qml.BasicEntanglerLayers(weights, wires=range(n_qubits))
+    
     return [qml.expval(qml.PauliX(wires=i)) for i in range(n_qubits)]
 
 # Define the weight shapes for the quantum layer
@@ -122,17 +137,16 @@ class QNetwork(nn.Module):
         super().__init__()
        
         self.network = nn.Sequential(
-            nn.Linear(np.array(env.single_observation_space.shape).prod(), 128),
+            QuantumQNodeLayer(),
             nn.ReLU(),
-            nn.Linear(128, 6),
+            QuantumQNodeLayer(),
             nn.ReLU(),
-            QuantumQNodeLayer(), 
+            QuantumQNodeLayer(),
             nn.ReLU(),
-            QuantumQNodeLayer(), 
-            nn.ReLU(),
-            nn.Linear(6, env.single_action_space.n),
+            #Just Quantum Layers
+            
         )
-
+    
     def forward(self, x):
         return self.network(x)
         
