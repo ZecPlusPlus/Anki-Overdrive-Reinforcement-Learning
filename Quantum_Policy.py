@@ -47,7 +47,7 @@ class Args:
     """the entity (team) of wandb's project"""
     capture_video: bool = False
     """whether to capture videos of the agent performances (check out `videos` folder)"""
-    save_model: bool = False
+    save_model: bool = True
     """whether to save model into the `runs/{run_name}` folder"""
     upload_model: bool = False
     """whether to upload the saved model to huggingface"""
@@ -56,7 +56,7 @@ class Args:
     # Algorithm specific arguments
     env_id: str = "Anki_Overdrive_Quantum"
     """the id of the environment"""
-    total_timesteps: int = 2000
+    total_timesteps: int = 50
     """total timesteps of the experiments"""
     learning_rate: float = 0.00001
     """the learning rate of the optimizer"""
@@ -101,7 +101,7 @@ def make_env(env_id, seed, idx, capture_video, run_name):
     """
 
     def thunk():
-        addr = "CB:76:55:B9:54:67" #"C9:96:EB:8F:03:0B" DC:7E:B8:5F:BF:46 "CF:45:33:60:24:69" "CB:76:55:B9:54:67"
+        addr =  "CF:45:33:60:24:69" #"C9:96:EB:8F:03:0B" DC:7E:B8:5F:BF:46 "CF:45:33:60:24:69" "CB:76:55:B9:54:67"
         car = Overdrive(addr)  
         env = OverdriveEnv(car)
         env = gym.wrappers.RecordEpisodeStatistics(env)
@@ -122,14 +122,12 @@ class AddAidWeights(nn.Module):
             The trainable weights that are multiplied with the input.
     """
 
-    def __init__(self, input_size,
-                 process_input: Optional[str] = "None"):
+    def __init__(self):
         
         super(AddAidWeights, self).__init__()
         self.trainable_parameters = nn.Parameter(
-            torch.Tensor(np.ones(input_size).astype(np.float32))
+            torch.Tensor(np.ones(n_qubits).astype(np.float32))
         )
-        self.process_input = process_input
         self.trainable_parameters = Parameter(self.trainable_parameters)
 
     def forward(self, inputs):
@@ -209,8 +207,12 @@ class QNetwork(nn.Module):
         super().__init__()
        
         self.network = nn.Sequential(
+            
             QuantumQNodeLayer(),
             nn.ReLU(),
+            QuantumQNodeLayer(),
+            nn.ReLU()
+            
             #Just Quantum Layers
         )
     
@@ -338,12 +340,15 @@ poetry run pip install "stable_baselines3==2.0.0a1"
                     target_network_param.data.copy_(
                         args.tau * q_network_param.data + (1.0 - args.tau) * target_network_param.data
                     )
+    
 
     if args.save_model:
         model_path = f"runs/{run_name}/{args.exp_name}.cleanrl_model"
         torch.save(q_network.state_dict(), model_path)
         print(f"model saved to {model_path}")
-        from cleanrl_utils.evals.dqn_eval import evaluate
+
+        '''
+        from dqn_eval import evaluate
 
         episodic_returns = evaluate(
             model_path,
@@ -357,13 +362,14 @@ poetry run pip install "stable_baselines3==2.0.0a1"
         )
         for idx, episodic_return in enumerate(episodic_returns):
             writer.add_scalar("eval/episodic_return", episodic_return, idx)
+        
 
         if args.upload_model:
-            from cleanrl_utils.huggingface import push_to_hub
+            from huggingface import push_to_hub
 
             repo_name = f"{args.env_id}-{args.exp_name}-seed{args.seed}"
             repo_id = f"{args.hf_entity}/{repo_name}" if args.hf_entity else repo_name
-            push_to_hub(args, episodic_returns, repo_id, "DQN", f"runs/{run_name}", f"videos/{run_name}-eval")
-
+            push_to_hub(args, episodic_returns, repo_id, "DQN_Quantum", f"runs/{run_name}", f"videos/{run_name}-eval")
+        '''
     envs.close()
     writer.close()
