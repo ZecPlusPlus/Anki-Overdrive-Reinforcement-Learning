@@ -21,7 +21,14 @@ import pennylane as qml
 import stable_baselines3 as sb3
 from Offset_Agent import OverdriveEnv
 from tqdm import tqdm
-
+from torch.nn import  Parameter
+from typing import (
+    Any,
+    Dict,
+    Union,
+    Optional,
+    Sequence
+)
 @dataclass
 class Args:
     exp_name: str = os.path.basename(__file__)[: -len(".py")]
@@ -78,6 +85,21 @@ class Args:
 
 
 def make_env(env_id, seed, idx, capture_video, run_name):
+
+    """
+        Creates a thunk function that initializes and returns an Overdrive environment.
+        
+        Parameters:
+        env_id (str): Identifier for the environment.
+        seed (int): Seed value for the environment's random number generator.
+        idx (int): Index of the environment instance.
+        capture_video (bool): Flag to indicate if video capture is enabled.
+        run_name (str): Name of the run for logging or video capture purposes.
+        
+        Returns:
+        function: A thunk function that initializes the Overdrive environment.
+    """
+
     def thunk():
         addr = "CB:76:55:B9:54:67" #"C9:96:EB:8F:03:0B" DC:7E:B8:5F:BF:46 "CF:45:33:60:24:69" "CB:76:55:B9:54:67"
         car = Overdrive(addr)  
@@ -87,6 +109,33 @@ def make_env(env_id, seed, idx, capture_video, run_name):
         return env
 
     return thunk
+
+
+class AddAidWeights(nn.Module):
+
+    """
+        A PyTorch layer that multiplies the input by a set of trainable weights.
+
+        Attributes:
+        -----------
+        trainable_parameters : torch.nn.Parameter
+            The trainable weights that are multiplied with the input.
+    """
+
+    def __init__(self, input_size,
+                 process_input: Optional[str] = "None"):
+        
+        super(AddAidWeights, self).__init__()
+        self.trainable_parameters = nn.Parameter(
+            torch.Tensor(np.ones(input_size).astype(np.float32))
+        )
+        self.process_input = process_input
+        self.trainable_parameters = Parameter(self.trainable_parameters)
+
+    def forward(self, inputs):
+        output = inputs * self.trainable_parameters
+        return output
+    
 # Write a class same forward and do  seperated layer torch layer. 
 # Safe the models and the results
 # 7 qubits 
@@ -97,25 +146,40 @@ n_layers = 7
 # Define the QNode
 dev = qml.device("default.qubit", wires=n_qubits)
 
+
+def apply_layers(inputs, weights):
+    """
+
+    Parameters:
+    -----------
+    inputs : array-like
+        The input data to be embedded into the quantum circuit.
+    weights : array-like
+        The weights for the quantum layers.
+    """
+    qml.AngleEmbedding(inputs, wires=range(n_qubits), rotation='Z')
+    for wire in range(n_qubits):
+        qml.Hadamard(wire)
+    qml.BasicEntanglerLayers(weights, wires=range(n_qubits))
+
 @qml.qnode(dev)
 def qnode(inputs, weights):
-    
-    qml.AngleEmbedding(inputs, wires=range(n_qubits), rotation='Z') #Works always better Angle 
-    for wire in range(n_qubits):
-        qml.Hadamard(wire)
-    qml.BasicEntanglerLayers(weights, wires=range(n_qubits))
-    qml.AngleEmbedding(inputs, wires=range(n_qubits), rotation='Z')
-    for wire in range(n_qubits):
-        qml.Hadamard(wire)
-    qml.BasicEntanglerLayers(weights, wires=range(n_qubits))
-    qml.AngleEmbedding(inputs, wires=range(n_qubits), rotation='Z')
-    for wire in range(n_qubits):
-        qml.Hadamard(wire)
-    qml.BasicEntanglerLayers(weights, wires=range(n_qubits))
-    qml.AngleEmbedding(inputs, wires=range(n_qubits), rotation='Z')
-    for wire in range(n_qubits):
-        qml.Hadamard(wire)
-    qml.BasicEntanglerLayers(weights, wires=range(n_qubits))
+    """
+    Quantum node that applies a series of quantum operations 
+
+    Parameters:
+    -----------
+    inputs : array-like
+        The input data to be embedded into the quantum circuit.
+    weights : array-like
+        The weights for the quantum layers.
+
+    Returns:
+    --------
+        The expectation values of Pauli-X measurements on all qubits.
+    """
+    for _ in range(4):
+        apply_layers(inputs, weights)
     
     return [qml.expval(qml.PauliX(wires=i)) for i in range(n_qubits)]
 
@@ -124,6 +188,14 @@ weight_shapes = {"weights": (n_layers, n_qubits)}
 
 # Define the QuantumQNodeLayer class
 class QuantumQNodeLayer(nn.Module):
+    """
+        A PyTorch layer that integrates a quantum node using the Pennylane TorchLayer.
+
+        Attributes:
+        -----------
+        quantum_layer : qml.qnn.TorchLayer
+            The quantum layer that interfaces with the quantum node.
+    """
     def __init__(self):
         super(QuantumQNodeLayer, self).__init__()
         self.quantum_layer = qml.qnn.TorchLayer(qnode, weight_shapes)
@@ -139,12 +211,7 @@ class QNetwork(nn.Module):
         self.network = nn.Sequential(
             QuantumQNodeLayer(),
             nn.ReLU(),
-            QuantumQNodeLayer(),
-            nn.ReLU(),
-            QuantumQNodeLayer(),
-            nn.ReLU(),
             #Just Quantum Layers
-            
         )
     
     def forward(self, x):
