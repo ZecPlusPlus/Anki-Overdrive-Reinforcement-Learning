@@ -33,7 +33,7 @@ class OverdriveEnv(gym.Env):
             high=np.array([3, 70, 40, 40, 1, 5, 5]),
             dtype=np.float32
         )   
-        self.current_speed = 250
+        self.current_speed = 300
         self.track_map = [33,36,18,23,57,39,20,18,34]       # Circle self.track_map = [33,36,18,23,57,39,20,18,34] eight self.track_map = [33,17,17,23,36,18,18,20,34] eight2 self.track_map = [33,20,17,36,10,18,20,17,10,18] #self.track_map = [33,40,18,20,36,39,18,17,34]F
         self.rotation_pieces = [18,20,23]                 # Circle self.rotation_pieces = [18,20,23]   eight self.rotation_pieces = [17,18,20,23]   eight2 self.rotation_pieces=[17,18,20,23]
         self.straight_pieces = [33,34,36,57,39]              # Circle self.straight_pieces = [33,34,36,57,39]   eightself.straight_pieces = [33,34,36]   eight2 self.straight_pieces= 33,34,36,10]
@@ -43,7 +43,7 @@ class OverdriveEnv(gym.Env):
         # Initial state
         self.state = [3,self.car._delegate.offset, 34, 33 , 1, 2,2]
         self.start_time = time.perf_counter()
-        
+        self.lap_timer = []
         self.max_steps = 100 # Maximum number of steps per episode
         self.current_steps = 0
         self.lock = threading.Lock()
@@ -52,7 +52,7 @@ class OverdriveEnv(gym.Env):
         self.cumulative_time = 0.0 # Is it okay to cummulate the time and then divide it by pieces?
         self.previous_cumulative_time = None
         self.num_pieces = 0  # Variable to count the number of pieces
-        self.speed_before = 250
+        self.speed_before = 300
         self.action_before = 0
 
     #Need to delete this
@@ -106,11 +106,13 @@ class OverdriveEnv(gym.Env):
             
             self.car.changeLane(new_speed, 700, 0)
             self.car.changeSpeed(new_speed, 700)
+
         elif action == 4:  # speed 600 + offset 0
             new_speed = 500
             
             self.car.changeLane(new_speed, 700, 0)
             self.car.changeSpeed(new_speed, 700)
+
         elif action == 5:  # offset 0
             new_speed = 300
             self.car.changeLane(new_speed, 700, 0)
@@ -234,10 +236,15 @@ class OverdriveEnv(gym.Env):
             current_time = time.perf_counter()
             self.lap_counter +=1
             print("Round:", self.lap_counter, "with Time", current_time - self.lap_time_start)
+           
             #reward -= current_time - self.lap_time_start
             current_lap_timer = current_time - self.lap_time_start
+            self.lap_timer.append(current_lap_timer)
             writer.add_scalar("Timer_lap/train",current_lap_timer, self.lap_counter)    
             done = True
+        if len(self.lap_timer) >= 15 and all(lap < 6 for lap in self.lap_timer[-4:]):
+            #breaking function
+            pass
 
         self.state = self.normalize(np.array(self.state))   
         current_time = time.perf_counter() - self.global_time    
@@ -246,17 +253,16 @@ class OverdriveEnv(gym.Env):
         self.current_steps += 1
         print("Reward",reward,"Action:",action,"Before speed", self.speed_before, "Speed now", self.car.speed)   
 
-        
         self.action_taken = np.roll(self.action_taken,1)
         self.action_taken[-1] = action
-        return np.array(self.state, dtype=np.float32), reward, done, truncated, {}
+        return np.array(self.state, dtype=np.float32), reward, done, truncated, info
 
     def reset(self, seed=None, options=None):
         super().reset(seed=seed)
         # Reset the state to the initial state
         
         if self.car.speed == 0:
-            self.speed_before = 250
+            self.speed_before = 300
             self.car.changeSpeed(self.speed_before, 15000)
         else: 
             self.speed_before = self.car.speed   

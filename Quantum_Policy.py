@@ -56,7 +56,7 @@ class Args:
     # Algorithm specific arguments
     env_id: str = "Anki_Overdrive_Quantum"
     """the id of the environment"""
-    total_timesteps: int = 50
+    total_timesteps: int = 2000
     """total timesteps of the experiments"""
     learning_rate: float = 0.00001
     """the learning rate of the optimizer"""
@@ -282,6 +282,8 @@ poetry run pip install "stable_baselines3==2.0.0a1"
     )
     start_time = time.time()
 
+    episode_lengths = []# for truncation of the training if we learned the best policy 
+
     # TRY NOT TO MODIFY: start the game
     obs, _ = envs.reset(seed=args.seed)
     for global_step in tqdm(range(args.total_timesteps)):
@@ -295,6 +297,7 @@ poetry run pip install "stable_baselines3==2.0.0a1"
 
         # TRY NOT TO MODIFY: execute the game and log data.
         next_obs, rewards, terminations, truncations, infos = envs.step(actions)
+        print(infos)
         # TRY NOT TO MODIFY: record rewards for plotting purposes
         if "final_info" in infos:
             for info in infos["final_info"]:
@@ -302,6 +305,8 @@ poetry run pip install "stable_baselines3==2.0.0a1"
                     print(f"global_step={global_step}, episodic_return={info['episode']['r']}")
                     writer.add_scalar("charts/episodic_return", info["episode"]["r"], global_step)
                     writer.add_scalar("charts/episodic_length", info["episode"]["l"], global_step)
+                    
+                    
 
         # TRY NOT TO MODIFY: save data to reply buffer; handle `final_observation`
         real_next_obs = next_obs.copy()
